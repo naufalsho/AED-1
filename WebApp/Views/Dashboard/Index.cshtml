@@ -1,0 +1,150 @@
+﻿@{
+    ViewData["AppContentNone"] = "true";
+}
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="~/assets/js/pages/app.pages.dashboard.js" asp-append-version="true"></script>
+}
+
+<div class="row">
+    <div class="col-6">
+        <div class="panel panel-inverse">
+            <div class="panel-heading">
+                <h4 class="panel-title">Device Status</h4>
+            </div>
+            <div class="panel-body" style="height: 300px;">
+                <div class="row">
+                    <div id="deviceStockStatusPc" class="col-6"></div>
+                    <div id="deviceStockStatusNb" class="col-6"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <h5>
+                            <b>
+                                Total PC: <span id="totalStatusPcLbl"></span>
+                            </b>
+                        </h5>
+                    </div>
+                    <div class="col-6 text-center">
+                        <h5>
+                            <b>
+                                Total Notebook: <span id="totalStatusNbLbl"></span>
+                            </b>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="panel panel-inverse">
+            <div class="panel-heading">
+                <h4 class="panel-title">Device Allocated on Branch</h4>
+            </div>
+            <div class="panel-body" style="height: 300px;">
+                <div class="row">
+                    <div id="deviceAllocatedPc" class="col-6"></div>
+                    <div id="deviceAllocatedNb" class="col-6"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <h5>
+                            <b>
+                                Total PC: <span id="totalAllocatedPcLbl"></span>
+                            </b>
+                        </h5>
+                    </div>
+                    <div class="col-6 text-center">
+                        <h5>
+                            <b>
+                                Total Notebook: <span id="totalAllocatedNbLbl"></span>
+                            </b>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="panel panel-inverse">
+            <div class="panel-heading">
+                <h4 class="panel-title">Device Based on Device Type</h4>
+            </div>
+            <div class="panel-body" style="height: 300px;">
+                <div>
+                    <div id="deviceStockCategory" class="col-12"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="panel panel-inverse">
+            <div class="panel-heading">
+                <h4 class="panel-title">Device Based on Brand</h4>
+            </div>
+            <div class="panel-body" style="height: 300px;">
+                <div class="row">
+                    <div class="col-12">
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="deviceStockBrandPc" class="col-6"></div>
+                    <div id="deviceStockBrandNb" class="col-6"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <h5>
+                            <b>
+                                Total PC: <span id="totalBrandPcLbl"></span>
+                            </b>
+                        </h5>
+                    </div>
+                    <div class="col-6 text-center">
+                        <h5>
+                            <b>
+                                Total Notebook: <span id="totalBrandNbLbl"></span>
+                            </b>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="panel panel-inverse">
+            <div class="panel-heading">
+                <h4 class="panel-title">Device Growth YoY</h4>
+            </div>
+            <div class="panel-body" style="height: 300px;">
+                <div>
+                    <div id="deviceYoY" class="col-12"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="colEndPeriod" class="col-6">
+        <div class="panel panel-inverse">
+            <div class="panel-heading">
+                <h4 class="panel-title">Device End Period This Month</h4>
+            </div>
+            <div class="panel-body" style="height: 300px;">
+                <div>
+                    <div id="deviceEndPeriod" class="col-12"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="colEndPeriodYear" class="col-6">
+        <div class="panel panel-inverse">
+            <div class="panel-heading">
+                <h4 class="panel-title">Device End Period This Year</h4>
+            </div>
+            <div class="panel-body" style="height: 300px;">
+                <div>
+                    <div id="deviceEndPeriodYear" class="col-12"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

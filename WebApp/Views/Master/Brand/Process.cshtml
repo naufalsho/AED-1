@@ -1,0 +1,47 @@
+﻿@model Domain.Master.TMstBrandDto;
+@using Core;
+
+@{
+    Layout = ViewPath.ModalLayout;
+}
+
+<div>
+    <form id="FormInput" asp-controller="@ViewData[ViewDataType.Controller]" asp-action="@ViewData[ViewDataType.Action]" asp-antiforgery="true" class="form-horizonta">
+         <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Code</label>
+            <div class="col-md-9">
+                <input class="form-control" asp-for="Code" required readonly />
+            </div>
+        </div>
+
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Name</label>
+            <div class="col-md-9">
+                <input class="form-control" asp-for="Name" required />
+            </div>
+        </div>
+
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Country Of Origin</label>
+            <div class="col-md-9">
+                <input class="form-control" list="datalistOptions" id="exampleDataList" asp-for="Country" placeholder="Type to search...">
+                    <datalist id="datalistOptions">
+                        <option value="Indonesia"></option>
+                        <option value="India"></option>
+                        <option value="Japan"></option>
+                        <option value="Korea Selatan"></option>
+                        <option value="China"></option>
+                    </datalist>
+            </div>
+        </div>
+
+        <div id="rowActive mt-2" class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Active? @Model.IsActive</label>
+            <div class="col-md-9">
+                <div class="form-check mt-2 mb-2">
+                    <input type="checkbox" class="form-check-input" asp-for="IsActive" checked="@Model.IsActive" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,71 @@
+@section Scripts {
+    <script src="~/assets/js/pages/app.pages.report.deviceonuser.js" asp-append-version="true"></script>
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Scanner</title>
+</head>
+<body>
+    <video id="videoElement" autoplay></video>
+    <div id="qrResult"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.0.0/dist/jsQR.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const video = document.getElementById('videoElement');
+            const qrResult = document.getElementById('qrResult');
+
+            navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })
+                .then(stream => {
+                    video.srcObject = stream;
+                    video.play();
+                })
+                .catch(err => console.error('Error accessing camera:', err));
+
+            video.addEventListener('loadeddata', () => {
+                const canvas = document.createElement('canvas');
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+                const ctx = canvas.getContext('2d');
+
+                setInterval(() => {
+                    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    const code = jsQR(imageData.data, imageData.width, imageData.height);
+                    if (code) {
+                        qrResult.innerHTML = `QR Code detected: ${code.data}`;
+                        // Kirim data QR Code ke server menggunakan fetch atau AJAX
+                        sendDataToServer(code.data);
+                    } else {
+                        qrResult.innerHTML = 'No QR Code detected';
+                    }
+                }, 100);
+            });
+        });
+
+        @* function sendDataToServer(qrData) {
+            // Kirim data QR Code ke server
+            fetch('/api/scanQRCode', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ qrData: qrData })
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log('QR Code data sent to server successfully.');
+                } else {
+                    console.error('Failed to send QR Code data to server.');
+                }
+            })
+            .catch(error => console.error('Error sending QR Code data:', error));
+        } *@
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+@model IEnumerable<Domain.UnitSpec.UnitSpecDto>
+
+@{
+    Layout = null;
+    var writtenItems = new HashSet<string>();
+}
+
+<table class="table table-bordered" width="100%">
+    <tbody>
+    @foreach (var item in Model)
+    {
+        if (item.SpecItemCode != "Model" && item.SpecItemCode != "Country")
+        {
+            bool isNewItem = !writtenItems.Contains(item.Items);
+
+            if (isNewItem)
+            {
+                writtenItems.Add(item.Items);
+                <tr>
+                    <td style="width: 100px;" colspan="2" class=""><strong>@item.Items</strong></td>
+                </tr>
+            }
+            <tr>
+                <td class="col-md-1" style="padding-left: 60px;">@item.SubItems</td>
+                <td class="col-md-2 bg-default"><strong>@item.Values</strong></td>
+            </tr>
+        }
+        else if (item.SpecItemCode == "Model" || item.SpecItemCode == "Country")
+        {
+            <tr>
+                <td class="col-md-1"><strong>@item.SubItems</strong></td>
+                <td class="col-md-2 bg-default"><strong>@item.Values</strong></td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>

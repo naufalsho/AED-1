@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Development\AED\Production</_PublishTargetUrl>
+    <History>True|2024-06-24T01:33:21.7853304Z;False|2024-06-24T08:29:51.6084986+07:00;False|2024-06-24T08:28:06.2077980+07:00;True|2023-11-09T13:11:46.7030356+07:00;True|2023-10-14T18:19:41.8052203+07:00;</History>
+    <LastFailureDetails />
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=10.0.10.73%3bInitial Catalog=AED%3bUser ID=sa%3bPassword=tnhc1%24d13%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

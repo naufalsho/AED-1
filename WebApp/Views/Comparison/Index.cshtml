@@ -1,0 +1,114 @@
+﻿@model Domain.Comparison.ComparisonDto; 
+
+@section Scripts {
+	<script src="~/assets/js/pages/app.pages.trans.comparison.js" asp-append-version="true"></script>
+}
+
+<div class="border-bottom mb-2">
+	
+<ul class="nav nav-pills mb-2">
+    @foreach(var item in Model.Category)
+    {
+    <li class="nav-item">
+		<a href="#tab-parent" data-bs-toggle="tab" class="nav-link active" data-table="@item.Code">
+			<span class="d-sm-none">@item.Description</span>
+			<span class="d-sm-block d-none">@item.Description</span>
+		</a>
+	</li>
+    }
+</ul>
+
+</div>
+
+<div class="table-responsive">
+    <table id="dTbComparison" class="table table-striped table-bordered">
+            <tr>
+                <th class="col-md-2"></th>
+                <td class="col-auto">
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="FilterClass" class="form-label">Class</label>
+                            <select class="form-select select2" id="FilterClass" asp-items="@Model.SLClass">
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="FilterBrand1" class="form-label">Brand</label>
+                        <select class="form-select select2 FilterBrand" data-brand="1">
+                            <option value="">Please select one</option>
+                            <option value="1">1</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="FilterDistributor1" class="form-label">Distributor</label>
+                        <select class="form-select select2 FilterDistributor"  data-distributor="1">
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="FilterModel1" class="form-label">Product Model</label>
+                        <select class="form-select select2 FilterModel" data-model="1">
+                                <option value="">Please select one</option>
+                            </select>
+                        </div>
+                    </div>
+                </td>
+                <td class="col-auto">
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="FilterBrand2" class="form-label">Brand</label>
+                        <select class="form-select select2 FilterBrand" data-brand="2">
+                            <option value="">Please select one</option>
+                            <option value="2">2</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="FilterDistributor2" class="form-label">Distributor</label>
+                        <select class="form-select select2 FilterDistributor" data-distributor="2">
+                                <option value="">Please select one</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="FilterModel2" class="form-label">Product Model</label>
+                        <select class="form-select select2 FilterModel" data-model="2">
+                                <option value="">Please select one</option>
+                            </select>
+                        </div>
+                    </div>
+                </td>
+                <td class="col-md-2 align-middle text-center">
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="#" id="addMoreBtn" class="btn btn-lg btn-primary w-100">
+                                <div class="d-flex flex-column align-items-center justify-content-center">
+                                    <i class="fas fa-plus fa-3x text-black"></i>
+                                    <div class="text-center">
+                                        <span class="d-block mt-2"><b>Add More</b></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <a href="#" class="btn btn-lg btn-success w-100" id="compareNowBtn" onclick="compareModels()">Compare Now</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+    </table>
+
+</div>
+
+
+<div class="col-md-12">
+    <div class="row justify-content-center img-notfound">
+        <div class="col-auto text-center">
+            <img class="align-middle" src="@Url.Content("~/assets/images/png/undraw_Loading_re_5axr.png")"
+                alt="Not Found Image" width="60%">
+            <h5>Waiting for Searching!</h5>
+        </div>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <div class="table-responsive mt-2">
+    <div id="dTable"></div>
+    </div>
+</div>

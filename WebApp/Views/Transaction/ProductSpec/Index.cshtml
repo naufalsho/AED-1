@@ -1,0 +1,68 @@
+﻿@model Domain.UnitSpec.UnitSpecDto; 
+
+
+@section Scripts {
+    <script src="~/assets/js/pages/app.pages.trans.product.specs.js" asp-append-version="true"></script>
+}
+
+<div class="border-bottom mb-2">
+
+<ul class="nav nav-pills mb-2">
+        @{
+            var i = 1;
+        }
+        @foreach (var item in Model.Category)
+        {
+            <li class="nav-item m-2">
+                <a href="#tab-parent" data-bs-toggle="tab" class="nav-link @(i == 1 ? "active" : "")" data-table="@item.Code">
+                    <span class="d-sm-none">@item.Description</span>
+                    <span class="d-sm-block d-none">@item.Description</span>
+                </a>
+            </li>
+            i++;
+        }
+    </ul>
+
+
+
+</div>
+<div class="border-bottom">
+    <div class="row mb-3 implement">
+        <div class="col-md-4 border-end">
+            <div class="col-md-12">
+                <label for="implementSelect" class="col-form-label">Brand</label>
+            </div>
+            <div class="col-sm-12 border-end">
+                <select id="FilterBrand" class="form-select">
+                    <option value="">Please select one</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4 border-end">
+            <div class="col-md-12">
+                <label for="implementSelect" class="col-form-label">Model</label>
+            </div>
+            <div class="col-sm-12 border-end">
+                <select id="FilterModel" class="form-select">
+                    <option value="">Please select one</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="col-md-12">
+    <div class="row justify-content-center img-notfound">
+        <div class="col-auto text-center">
+            <img class="align-middle" src="@Url.Content("~/assets/images/png/undraw_Loading_re_5axr.png")"
+                alt="Not Found Image" width="60%">
+            <h5>Waiting for Searching!</h5>
+        </div>
+    </div>
+</div>
+<div class="table-responsive mt-2">
+    <div id="dTable"></div>
+</div>

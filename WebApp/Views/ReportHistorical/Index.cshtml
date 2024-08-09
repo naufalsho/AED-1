@@ -1,0 +1,31 @@
+﻿@section Scripts {
+    <script src="~/assets/js/pages/app.pages.report.history.js" asp-append-version="true"></script>
+}
+
+<div class="row mb-20px">
+    <div class="col-3">
+        <label class="d-flex align-items-center fs-13px mb-5px">Company</label>
+        <select id="CompFilter" class="form-select fs-13px"></select>
+    </div>
+    <div class="col-3">
+        <label class="d-flex align-items-center fs-13px mb-5px">Branch</label>
+        <select id="BranchFilter" class="form-select fs-13px"></select>
+    </div>
+</div>
+<div>
+    <table id="dTable" class="table table-striped table-bordered align-middle">
+        <thead>
+            <tr>
+                <th class="col-1 text-center">No</th>
+                <th class="col-2 text-center text-nowrap">Device Category</th>
+                <th class="col-2 text-center text-nowrap">Device Type</th>
+                <th class="col-2 text-center text-nowrap">Brand</th>
+                <th class="col-2 text-center text-nowrap">Product Type</th>
+                <th class="col-2 text-center text-nowrap">Serial Number</th>
+                <th class="col-1 text-center text-nowrap">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,141 @@
+﻿@using Domain.Account
+
+@{
+    var currMenu = ViewData["CurrentMenu"] as UserMenuDto;
+    var groupName = ViewData["GroupMenuName"].ToString();
+    var menuName = ViewData["MenuName"].ToString();
+
+    var title = "";
+
+    if (currMenu == null)
+    {
+        currMenu = new UserMenuDto();
+    }
+
+    if (groupName == menuName)
+    {
+        title = menuName;
+    }
+    else
+    {
+        title = $"{groupName} {menuName}";
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>AED PORTAL | @title</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link href="~/assets/css/custom.css" rel="stylesheet" />
+    <link href="~/assets/css/vendor.min.css" rel="stylesheet" />
+    <link href="~/assets/css/app.min.css" rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/style.css" rel="stylesheet">
+    <link href="~/assets/plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/datatables.net-bs5/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/datatables.net-buttons-bs5/buttons.bootstrap5.min.css" rel="stylesheet" />
+
+    @RenderSection("Styles", required: false)
+</head>
+<body class="@ViewData["AppBodyClass"]">
+    <input id="allowCreate" type="hidden" value="@currMenu.AllowCreate.ToString()" />
+    <input id="allowEdit" type="hidden" value="@currMenu.AllowEdit.ToString()" />
+    <input id="allowDelete" type="hidden" value="@currMenu.AllowDelete.ToString()" />
+    <div id="app" class="app app-without-sidebar @(ViewData["AppHeaderNone"] == null ? "app-header-fixed" : "") @(ViewData["AppMenuNone"] == null ? "app-with-top-menu" : "") @ViewData["AppClass"]">
+        <div id="myModal" class="modal fade" data-backdrop="static" data-keyboard="false" data-bs-focus="false">
+            <div class="modal-dialog modal-dialog-centered">
+                <div id="modalContent" class="modal-content">
+                </div>
+            </div>
+        </div>
+
+        @if (ViewData["AppHeaderNone"] == null)
+        {
+            <partial name="_Header" />
+        }
+
+        @if (ViewData["AppMenuNone"] == null)
+        {
+            <partial name="_TopMenu" />
+        }
+
+        <div id="content" class="app-content @ViewData["AppContentClass"]">
+            @if (ViewData["AppMenuNone"] == null)
+            {
+                if (groupName != menuName)
+                {
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">@groupName</li>
+                        <li class="breadcrumb-item active">@menuName</li>
+                    </ol>
+                }
+
+                @if (ViewData["AppContentNone"] == null)
+                {
+                    <div id="panelDiv" class="panel panel-inverse mt-2">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">@title</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div id="panelLoader" class="panel-loader">
+                                <span class="spinner spinner-sm"></span>
+                            </div>
+                            @RenderBody()
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    // For empty page or page without panel content
+                    @RenderBody()
+                }
+            }
+            else
+            {
+                // For login page or page without menu
+                @RenderBody()
+            }
+        </div>
+        <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top" data-toggle="scroll-to-top"><i class="fa fa-angle-up"></i></a>
+    </div>
+    <script>
+        window.paceOptions = {
+            ajax: { ignoreURLs: ['mainHub', '__browserLink', 'browserLinkSignalR'], trackWebSockets: false }
+        };
+    </script>
+    <script src="~/assets/js/vendor.min.js"></script>
+    <script src="~/assets/js/app.min.js"></script>
+    <script src="~/assets/js/luxon.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.js"></script>
+    <script src="~/assets/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="~/assets/plugins/select2/js/select2.min.js"></script>
+    <script src="~/assets/plugins/datatables.net/jquery.dataTables.min.js"></script>
+    <script src="~/assets/plugins/datatables.net-bs5/dataTables.bootstrap5.min.js"></script>
+    <script src="~/assets/plugins/datatables.net-buttons/dataTables.buttons.min.js"></script>
+    <script src="~/assets/plugins/datatables.net-buttons-bs5/buttons.bootstrap5.min.js"></script>
+    <script src="~/assets/plugins/datatables.net-buttons/buttons.html5.min.js"></script>
+    <script src="~/assets/plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="~/assets/plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="~/assets/plugins/jszip/jszip.min.js"></script>
+
+    <script src="~/assets/js/app.service.common.js" asp-append-version="true"></script>
+
+    <script src="~/assets/js/app.constant.js" asp-append-version="true"></script>
+    <script src="~/assets/js/app.custom.js" asp-append-version="true"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+    @RenderSection("Scripts", required: false)
+
+    <script type="module" src="~/assets/plugins/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="~/assets/plugins/ionicons/ionicons.js"></script>
+</body>
+</html>

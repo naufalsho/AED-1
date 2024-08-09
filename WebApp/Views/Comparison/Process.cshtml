@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Domain.Comparison.ComparisonDto>
+
+@{
+    Layout = null;
+    var writtenItems = new HashSet<string>();
+}
+
+<table class="table table-bordered" width="100%">
+    <tbody>
+        @foreach (var comparison in Model)
+        {
+            if (comparison.SpecItemCode != "Model" && comparison.SpecItemCode != "Country")
+            {
+                bool isNewItem = !writtenItems.Contains(comparison.Items);
+
+                if (isNewItem)
+                {
+                    writtenItems.Add(comparison.Items);
+                    <tr>
+                        <td style="width: 100px;" colspan="2" class=""><strong>@comparison.Items</strong></td>
+                    </tr>
+                }
+
+                <tr>
+                    <td class="col-md-1" style="padding-left: 60px; widht: 100px">@comparison.SubItems</td>
+                    @foreach (var value in comparison.ModelCode.Values)
+                    {
+                        <td class="col-md-2 bg-default"><strong>@value</strong></td>
+                    }
+                </tr>
+            }
+            else if (comparison.SpecItemCode == "Model" || comparison.SpecItemCode == "Country")
+            {
+                <tr>
+                    <td class="col-md-2"><strong>@comparison.SubItems</strong></td>
+                    @foreach (var value in comparison.ModelCode.Values)
+                    {
+                        <td class="col-auto bg-default"><strong>@value</strong></td>
+                    }
+                    <td class="col-md-1"></td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

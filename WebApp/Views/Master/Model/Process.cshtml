@@ -1,0 +1,103 @@
+﻿@model Domain.Master.MasterModel.TMstModelCreatedDto;
+@using Core;
+
+@{
+    Layout = ViewPath.ModalLayout;
+}
+
+<div>
+    <form id="FormInput" asp-controller="@ViewData[ViewDataType.Controller]" asp-action="@ViewData[ViewDataType.Action]" asp-antiforgery="true" class="form-horizonta;" enctype="multipart/form-data">
+         <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Code</label>
+            <div class="col-md-9">
+                <input class="form-control" asp-for="Code" required />
+            </div>
+        </div>
+
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Brand</label>
+            <div class="col-md-9">
+                <select asp-for="BrandCode" asp-items="@Model.Brand" class="form-select">
+                    <option value="">Please select one</option>
+                </select>
+            </div>
+        </div>
+
+         <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Model</label>
+            <div class="col-md-9">
+                <input class="form-control" asp-for="Model" required />
+            </div>
+        </div>
+        
+         <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3 required">Type</label>
+            <div class="col-md-9">
+                <select asp-for="Type"  class="form-select">
+                    <option value="">Please select one</option>
+                    <option value="Attachment">Attachment</option>
+                    <option value="Unit">Unit</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Class</label>
+            <div class="col-md-9">
+                <select asp-for="ClassCode" asp-items="@Model.Class" class="form-select">
+                    <option value="">Please select one</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Distributor</label>
+            <div class="col-md-9">
+                <input class="form-control" list="datalistOptions" asp-for="Distributor" placeholder="Type to search...">
+                    <datalist id="datalistOptions">
+                        <option value="PT. Traktor Nusantara"></option>
+                        <option value="PT. Wahana Inti Selaras"></option>
+                        <option value="PT. Altrak 1978"></option>
+                        <option value="PT. Agrisarana"></option>
+                        <option value="PT. Bina Pertiwi"></option>
+                        <option value="Japan"></option>
+                        <option value="PT. Satrindo Mitra Utama"></option>
+                    </datalist>
+            </div>
+        </div>
+
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Country</label>
+            <div class="col-md-9">
+                <input class="form-control" list="datalistOptions" asp-for="Country" placeholder="Type to search...">
+                    <datalist id="datalistOptions">
+                        <option value="Indonesia"></option>
+                        <option value="India"></option>
+                        <option value="Japan"></option>
+                        <option value="Korea Selatan"></option>
+                        <option value="China"></option>
+                    </datalist>
+            </div>
+        </div>
+
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Model Image</label>
+            <div class="col-md-9">
+                <input class="form-control" accept=".jpg, .jpeg, .png" asp-for="ModelImage">
+            </div>
+        </div>
+
+
+
+        <div id="rowActive mt-2" class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Active?</label>
+            <div class="col-md-9">
+                <div class="form-check mt-2 mb-2">
+                    <input  type="checkbox" class="form-check-input" asp-for="IsActive" checked="@Model.IsActive" autocomplete="off" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+

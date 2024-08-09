@@ -1,0 +1,46 @@
+﻿@model Domain.AccessUser.UserDto
+@using Core;
+
+@{
+    Layout = ViewPath.ModalLayout;
+}
+
+<div>
+    <form id="FormInput" asp-controller="@ViewData[ViewDataType.Controller]" asp-action="@ViewData[ViewDataType.Action]" asp-antiforgery="true">
+        <input type="hidden" asp-for="Id" />
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">User ID</label>
+            <div class="col-md-9">
+                <input asp-for="UserId" class="form-control" readonly="@(ViewData[ViewDataType.Action].ToString().ToLower() == "edit" ? true : false)" required />
+            </div>
+        </div>
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Role</label>
+            <div class="col-md-9">
+                <select asp-for="RoleId" asp-items="@Model.Roles" class="form-select" required>
+                    <option value="">Please select one</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Name</label>
+            <div class="col-md-9">
+                <input asp-for="Name" class="form-control" required />
+            </div>
+        </div>
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Email</label>
+            <div class="col-md-9">
+                <input asp-for="Email" class="form-control" required />
+            </div>
+        </div>
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Active?</label>
+            <div class="col-md-9">
+                <div class="form-check mt-2 mb-2">
+                    <input asp-for="IsActive" type="checkbox" class="form-check-input" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

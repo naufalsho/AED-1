@@ -1,0 +1,120 @@
+@model Domain.Comparison.ImplementDto;
+
+@{
+    Layout = null;
+
+}
+
+<table class="table table-bordered align-middle table-implement" border="1" width="100%" @(ViewBag.Type == "ProductModel" ? "" : "hidden")>
+    <thead>
+        <tr>
+            <td class="col-md-2 bg-default align-middle text-center"><h4>Model</h4></td>
+            @foreach (var item in Model.ListModel)
+            {
+                <td scope="col" class="col-auto text-center">
+                    <img src="~/assets/images/Product/@item.ModelImage" style="width:130px;" alt="Product Image"><br />
+                    <h4>@item.Model</h4>
+                </td>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var group in Model.Implements.GroupBy(m => m.ModelName))
+        {
+            var modelCode = Model.Implements.Where(m => m.ModelName == group.Key).Select(m => m.ModelImage).FirstOrDefault();
+
+
+
+            <tr class="text-center"> 
+                <td class="col-md-2 bg-default align-middle text-center">
+                    <img src="~/assets/images/Product/@modelCode" style="width:130px;" alt="Product Image"><br />
+                    <h4>@group.Key</h4>
+                </td>
+
+                @if (Model.ListModel != null && Model.ListModel.Any())
+                {
+                    @foreach (var value in Model.ListModel)
+                    {
+                        <td class="col-auto">
+                            @if (group.Any(m => m.ModelCode == value.Code && m.ModelName == group.Key))
+                            {
+                                @foreach (var val in group.Where(m => m.ModelCode == value.Code && m.ModelName == group.Key))
+                                {
+                                    <h5>@val.Value</h5>
+
+                                    <br class="d-none d-md-inline" />
+                                }
+                            }
+                            else
+                            {
+                                <h5>Not Implemented</h5>
+                            }
+                        </td>
+                    }
+                }
+                else
+                {
+                    <td>Not Implemented</td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+<table class="table table-bordered align-middle table-product" width="100%" @(ViewBag.Type == "Implement" ? "" : "hidden")>
+    <thead>
+        <tr>
+            <td class="col-md-2 bg-default align-middle text-center"><h4>Model</h4></td>
+            @foreach (var item in Model.ListModel)
+            {
+                <td scope="col" class="col-auto align-middle text-center">
+                    <img src="~/assets/images/Product/@item.ModelImage" style="width:130px;" alt="Product Image"><br />
+                    <h4>@item.Model</h4>
+                </td>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var group in Model.Implements.GroupBy(m => m.ModelName))
+        {
+            var modelCode = Model.Implements.Where(m => m.ModelName == group.Key).Select(m => m.ModelImage).FirstOrDefault();
+
+            <tr>
+                <td class="col-md-2 bg-default align-middle text-center">
+                    <img src="~/assets/images/Product/@modelCode" style="width:130px;" alt="Product Image"><br />
+                    
+                    <h4>@group.Key</h4>
+                </td>
+
+                @if (Model.ListModel != null && Model.ListModel.Any())
+                {
+                    @foreach (var value in Model.ListModel)
+                    {
+                        <td class="col-auto align-moddle text-center">
+                            @if (group.Any(m => m.ModelCodeAttach == value.Code && m.ModelName == group.Key))
+                            {
+                                @foreach (var val in group.Where(m => m.ModelCodeAttach == value.Code && m.ModelName == group.Key))
+                                {
+                                    <h5>@val.Value</h5>
+
+                                    <br class="d-none d-md-inline" />
+                                }
+                            }
+                            else
+                            {
+                                <h5>Not Implemented</h5>
+                            }
+                        </td>
+                    }
+                }
+                else
+                {
+                    <td>Not Implemented</td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+

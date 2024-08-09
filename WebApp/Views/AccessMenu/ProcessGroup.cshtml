@@ -1,0 +1,46 @@
+﻿@model Domain.AccessMenu.MenuGroupDto
+@using Core;
+
+@{
+    Layout = ViewPath.ModalLayout;
+}
+
+<div>
+    <form id="FormInput" asp-controller="@ViewData[ViewDataType.Controller]" asp-action="@ViewData[ViewDataType.Action]" asp-antiforgery="true">
+        <input type="hidden" asp-for="Id" />
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Order</label>
+            <div class="col-md-2">
+                <input asp-for="Order" type="number" class="form-control" min="1" />
+            </div>
+        </div>
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Name</label>
+            <div class="col-md-9">
+                <input asp-for="Name" class="form-control" required />
+            </div>
+        </div>
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Icon</label>
+            <div class="col-md-9">
+                <input asp-for="Icon" class="form-control" />
+            </div>
+        </div>
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Direct Menu?</label>
+            <div class="col-md-9">
+                <div class="form-check mt-2 mb-2">
+                    <input asp-for="IsDirectMenu" type="checkbox" class="form-check-input" />
+                </div>
+            </div>
+        </div>
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Active?</label>
+            <div class="col-md-9">
+                <div class="form-check mt-2 mb-2">
+                    <input asp-for="IsActive" type="checkbox" class="form-check-input" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

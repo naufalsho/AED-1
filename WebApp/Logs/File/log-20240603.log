@@ -1,0 +1,1329 @@
+06/03/2024 12:28:31 [Error] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'System.String Core.ViewPath.get_Dashboard2()'.
+   at WebApp.Controllers.DashboardController.Index()
+   at lambda_method314(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+06/03/2024 12:28:32 [Error] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'System.String Core.ViewPath.get_Dashboard2()'.
+   at WebApp.Controllers.DashboardController.Index()
+   at lambda_method314(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+06/03/2024 12:28:35 [Error] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'System.String Core.ViewPath.get_Dashboard2()'.
+   at WebApp.Controllers.DashboardController.Index()
+   at lambda_method314(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+06/03/2024 12:29:09 [Error] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'System.String Core.ViewPath.get_Dashboard2()'.
+   at WebApp.Controllers.DashboardController.Index()
+   at lambda_method314(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+06/03/2024 12:29:16 [Error] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'System.String Core.ViewPath.get_Dashboard2()'.
+   at WebApp.Controllers.DashboardController.Index()
+   at lambda_method314(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+06/03/2024 12:29:42 [Error] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'System.String Core.ViewPath.get_Dashboard2()'.
+   at WebApp.Controllers.DashboardController.Index()
+   at lambda_method314(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+06/03/2024 12:29:42 [Error] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'System.String Core.ViewPath.get_Dashboard2()'.
+   at WebApp.Controllers.DashboardController.Index()
+   at lambda_method314(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+06/03/2024 12:29:54 [Error] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore._Views_AccessMenu_ProcessMenu.<ExecuteAsync>b__20_0() in C:\Development\Msi\src\WebApp\Views\AccessMenu\ProcessMenu.cshtml:line 14
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCore._Views_AccessMenu_ProcessMenu.ExecuteAsync() in C:\Development\Msi\src\WebApp\Views\AccessMenu\ProcessMenu.cshtml:line 9
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+06/03/2024 12:29:54 [Error] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore._Views_AccessMenu_ProcessMenu.<ExecuteAsync>b__20_0() in C:\Development\Msi\src\WebApp\Views\AccessMenu\ProcessMenu.cshtml:line 14
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCore._Views_AccessMenu_ProcessMenu.ExecuteAsync() in C:\Development\Msi\src\WebApp\Views\AccessMenu\ProcessMenu.cshtml:line 9
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+06/03/2024 12:29:54 [Error] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore._Views_AccessMenu_ProcessMenu.<ExecuteAsync>b__20_0() in C:\Development\Msi\src\WebApp\Views\AccessMenu\ProcessMenu.cshtml:line 14
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCore._Views_AccessMenu_ProcessMenu.ExecuteAsync() in C:\Development\Msi\src\WebApp\Views\AccessMenu\ProcessMenu.cshtml:line 9
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+06/03/2024 12:30:03 [Error] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'System.String Core.ViewPath.get_Dashboard2()'.
+   at WebApp.Controllers.DashboardController.Index()
+   at lambda_method339(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+06/03/2024 12:30:52 [Error] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'System.String Core.ViewPath.get_Dashboard2()'.
+   at WebApp.Controllers.DashboardController.Index()
+   at lambda_method339(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+06/03/2024 12:31:06 [Error] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'System.String Core.ViewPath.get_Dashboard2()'.
+   at WebApp.Controllers.DashboardController.Index()
+   at lambda_method339(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+06/03/2024 12:31:08 [Error] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'System.String Core.ViewPath.get_Dashboard2()'.
+   at WebApp.Controllers.DashboardController.Index()
+   at lambda_method339(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+06/03/2024 14:07:35 [Error] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+WebApp.Controllers.DashboardController.Index (WebApp)
+WebApp.Controllers.DashboardController.IndexAsync (WebApp)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+06/03/2024 14:08:02 [Error] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+WebApp.Controllers.DashboardController.Index (WebApp)
+WebApp.Controllers.DashboardController.IndexAsync (WebApp)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+06/03/2024 14:11:37 [Error] An unhandled exception has occurred while executing the request.
+MSAL.NetCore.4.61.1.0.MsalServiceException:
+	ErrorCode: invalid_request
+Microsoft.Identity.Client.MsalServiceException: AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: ae57ec86-bdd7-458c-aa1e-c080232b8900 Correlation ID: 7a0e43f4-6e03-446e-9ec6-cbf771ce6615 Timestamp: 2024-06-03 07:11:00Z
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ThrowServerException(HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateResponse[T](HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ExecuteRequestAsync[T](Uri endPoint, HttpMethod method, RequestContext requestContext, Boolean expectErrorsOn200OK, Boolean addCommonHeaders, Func`2 onBeforePostRequestData)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, String scopeOverride, String tokenEndpointOverride, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.GetAccessTokenAsync(CancellationToken cancellationToken, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.ExecuteAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<>c__DisplayClass11_1.<<RunAsync>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.Identity.Client.Utils.StopwatchService.MeasureCodeBlockAsync(Func`1 codeBlock)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.RunAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.ApiConfig.Executors.ConfidentialClientExecutor.ExecuteAsync(AcquireTokenCommonParameters commonParameters, AcquireTokenForClientParameters clientParameters, CancellationToken cancellationToken)
+   at WebApp.Controllers.DashboardController.GetAccessToken() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 71
+   at WebApp.Controllers.DashboardController.IndexAsync() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+	StatusCode: 400 
+	ResponseBody: {"error":"invalid_request","error_description":"AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: ae57ec86-bdd7-458c-aa1e-c080232b8900 Correlation ID: 7a0e43f4-6e03-446e-9ec6-cbf771ce6615 Timestamp: 2024-06-03 07:11:00Z","error_codes":[900023],"timestamp":"2024-06-03 07:11:00Z","trace_id":"ae57ec86-bdd7-458c-aa1e-c080232b8900","correlation_id":"7a0e43f4-6e03-446e-9ec6-cbf771ce6615","error_uri":"https://login.microsoftonline.com/error?code=900023"} 
+	Headers: Cache-Control: no-store, no-cache
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+P3P: CP="DSP CUR OTPi IND OTRi ONL FIN"
+client-request-id: 7a0e43f4-6e03-446e-9ec6-cbf771ce6615
+x-ms-request-id: ae57ec86-bdd7-458c-aa1e-c080232b8900
+x-ms-ests-server: 2.1.18167.8 - KRSLR1 ProdSlices
+x-ms-clitelem: 1,900023,0,,
+x-ms-srs: 1.P
+X-XSS-Protection: 0
+Set-Cookie: fpc=AjJCR8701WNKvZ9OTq92VjI; expires=Wed, 03-Jul-2024 07:11:00 GMT; path=/; secure; HttpOnly; SameSite=None, x-ms-gateway-slice=estsfd; path=/; secure; httponly
+Date: Mon, 03 Jun 2024 07:11:00 GMT
+
+06/03/2024 14:12:18 [Error] An unhandled exception has occurred while executing the request.
+MSAL.NetCore.4.61.1.0.MsalServiceException:
+	ErrorCode: invalid_request
+Microsoft.Identity.Client.MsalServiceException: AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: bb5dc17b-a84b-4e2c-b413-f4c952c45e00 Correlation ID: cc42ef91-d69e-4f1e-a8bc-b0bcdf8b925e Timestamp: 2024-06-03 07:11:41Z
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ThrowServerException(HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateResponse[T](HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ExecuteRequestAsync[T](Uri endPoint, HttpMethod method, RequestContext requestContext, Boolean expectErrorsOn200OK, Boolean addCommonHeaders, Func`2 onBeforePostRequestData)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, String scopeOverride, String tokenEndpointOverride, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.GetAccessTokenAsync(CancellationToken cancellationToken, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.ExecuteAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<>c__DisplayClass11_1.<<RunAsync>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.Identity.Client.Utils.StopwatchService.MeasureCodeBlockAsync(Func`1 codeBlock)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.RunAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.ApiConfig.Executors.ConfidentialClientExecutor.ExecuteAsync(AcquireTokenCommonParameters commonParameters, AcquireTokenForClientParameters clientParameters, CancellationToken cancellationToken)
+   at WebApp.Controllers.DashboardController.GetAccessToken() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 71
+   at WebApp.Controllers.DashboardController.IndexAsync() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+	StatusCode: 400 
+	ResponseBody: {"error":"invalid_request","error_description":"AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: bb5dc17b-a84b-4e2c-b413-f4c952c45e00 Correlation ID: cc42ef91-d69e-4f1e-a8bc-b0bcdf8b925e Timestamp: 2024-06-03 07:11:41Z","error_codes":[900023],"timestamp":"2024-06-03 07:11:41Z","trace_id":"bb5dc17b-a84b-4e2c-b413-f4c952c45e00","correlation_id":"cc42ef91-d69e-4f1e-a8bc-b0bcdf8b925e","error_uri":"https://login.microsoftonline.com/error?code=900023"} 
+	Headers: Cache-Control: no-store, no-cache
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+P3P: CP="DSP CUR OTPi IND OTRi ONL FIN"
+client-request-id: cc42ef91-d69e-4f1e-a8bc-b0bcdf8b925e
+x-ms-request-id: bb5dc17b-a84b-4e2c-b413-f4c952c45e00
+x-ms-ests-server: 2.1.18167.8 - KRSLR1 ProdSlices
+x-ms-clitelem: 1,900023,0,,
+x-ms-srs: 1.P
+X-XSS-Protection: 0
+Set-Cookie: fpc=AjJCR8701WNKvZ9OTq92VjI; expires=Wed, 03-Jul-2024 07:11:41 GMT; path=/; secure; HttpOnly; SameSite=None, x-ms-gateway-slice=estsfd; path=/; secure; httponly
+Date: Mon, 03 Jun 2024 07:11:40 GMT
+
+06/03/2024 14:12:19 [Error] An unhandled exception has occurred while executing the request.
+MSAL.NetCore.4.61.1.0.MsalServiceException:
+	ErrorCode: invalid_request
+Microsoft.Identity.Client.MsalServiceException: AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 7bf8d092-ac7a-432c-b3cc-492b2d3c5a01 Correlation ID: 3ffc337e-2367-4129-9417-8b849503db68 Timestamp: 2024-06-03 07:11:42Z
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ThrowServerException(HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateResponse[T](HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ExecuteRequestAsync[T](Uri endPoint, HttpMethod method, RequestContext requestContext, Boolean expectErrorsOn200OK, Boolean addCommonHeaders, Func`2 onBeforePostRequestData)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, String scopeOverride, String tokenEndpointOverride, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.GetAccessTokenAsync(CancellationToken cancellationToken, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.ExecuteAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<>c__DisplayClass11_1.<<RunAsync>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.Identity.Client.Utils.StopwatchService.MeasureCodeBlockAsync(Func`1 codeBlock)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.RunAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.ApiConfig.Executors.ConfidentialClientExecutor.ExecuteAsync(AcquireTokenCommonParameters commonParameters, AcquireTokenForClientParameters clientParameters, CancellationToken cancellationToken)
+   at WebApp.Controllers.DashboardController.GetAccessToken() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 71
+   at WebApp.Controllers.DashboardController.IndexAsync() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+	StatusCode: 400 
+	ResponseBody: {"error":"invalid_request","error_description":"AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 7bf8d092-ac7a-432c-b3cc-492b2d3c5a01 Correlation ID: 3ffc337e-2367-4129-9417-8b849503db68 Timestamp: 2024-06-03 07:11:42Z","error_codes":[900023],"timestamp":"2024-06-03 07:11:42Z","trace_id":"7bf8d092-ac7a-432c-b3cc-492b2d3c5a01","correlation_id":"3ffc337e-2367-4129-9417-8b849503db68","error_uri":"https://login.microsoftonline.com/error?code=900023"} 
+	Headers: Cache-Control: no-store, no-cache
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+P3P: CP="DSP CUR OTPi IND OTRi ONL FIN"
+client-request-id: 3ffc337e-2367-4129-9417-8b849503db68
+x-ms-request-id: 7bf8d092-ac7a-432c-b3cc-492b2d3c5a01
+x-ms-ests-server: 2.1.18105.6 - JPE ProdSlices
+x-ms-clitelem: 1,900023,0,,
+x-ms-srs: 1.P
+X-XSS-Protection: 0
+Set-Cookie: fpc=AjJCR8701WNKvZ9OTq92VjI; expires=Wed, 03-Jul-2024 07:11:42 GMT; path=/; secure; HttpOnly; SameSite=None, x-ms-gateway-slice=estsfd; path=/; secure; httponly
+Date: Mon, 03 Jun 2024 07:11:42 GMT
+
+06/03/2024 14:12:20 [Error] An unhandled exception has occurred while executing the request.
+MSAL.NetCore.4.61.1.0.MsalServiceException:
+	ErrorCode: invalid_request
+Microsoft.Identity.Client.MsalServiceException: AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 2044e18b-4d77-4e3c-a0d1-9382ba672300 Correlation ID: b65429f3-c5f8-4401-b72c-7fe27ab66d4f Timestamp: 2024-06-03 07:11:43Z
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ThrowServerException(HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateResponse[T](HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ExecuteRequestAsync[T](Uri endPoint, HttpMethod method, RequestContext requestContext, Boolean expectErrorsOn200OK, Boolean addCommonHeaders, Func`2 onBeforePostRequestData)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, String scopeOverride, String tokenEndpointOverride, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.GetAccessTokenAsync(CancellationToken cancellationToken, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.ExecuteAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<>c__DisplayClass11_1.<<RunAsync>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.Identity.Client.Utils.StopwatchService.MeasureCodeBlockAsync(Func`1 codeBlock)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.RunAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.ApiConfig.Executors.ConfidentialClientExecutor.ExecuteAsync(AcquireTokenCommonParameters commonParameters, AcquireTokenForClientParameters clientParameters, CancellationToken cancellationToken)
+   at WebApp.Controllers.DashboardController.GetAccessToken() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 71
+   at WebApp.Controllers.DashboardController.IndexAsync() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+	StatusCode: 400 
+	ResponseBody: {"error":"invalid_request","error_description":"AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 2044e18b-4d77-4e3c-a0d1-9382ba672300 Correlation ID: b65429f3-c5f8-4401-b72c-7fe27ab66d4f Timestamp: 2024-06-03 07:11:43Z","error_codes":[900023],"timestamp":"2024-06-03 07:11:43Z","trace_id":"2044e18b-4d77-4e3c-a0d1-9382ba672300","correlation_id":"b65429f3-c5f8-4401-b72c-7fe27ab66d4f","error_uri":"https://login.microsoftonline.com/error?code=900023"} 
+	Headers: Cache-Control: no-store, no-cache
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+P3P: CP="DSP CUR OTPi IND OTRi ONL FIN"
+client-request-id: b65429f3-c5f8-4401-b72c-7fe27ab66d4f
+x-ms-request-id: 2044e18b-4d77-4e3c-a0d1-9382ba672300
+x-ms-ests-server: 2.1.18216.5 - KRSLR1 ProdSlices
+x-ms-clitelem: 1,900023,0,,
+x-ms-srs: 1.P
+X-XSS-Protection: 0
+Set-Cookie: fpc=AjJCR8701WNKvZ9OTq92VjI; expires=Wed, 03-Jul-2024 07:11:43 GMT; path=/; secure; HttpOnly; SameSite=None, x-ms-gateway-slice=estsfd; path=/; secure; httponly
+Date: Mon, 03 Jun 2024 07:11:42 GMT
+
+06/03/2024 14:12:20 [Error] An unhandled exception has occurred while executing the request.
+MSAL.NetCore.4.61.1.0.MsalServiceException:
+	ErrorCode: invalid_request
+Microsoft.Identity.Client.MsalServiceException: AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: a2285b19-c379-43e1-99db-053eff879200 Correlation ID: 4daf8414-939f-4659-8334-133107396bf6 Timestamp: 2024-06-03 07:11:43Z
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ThrowServerException(HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateResponse[T](HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ExecuteRequestAsync[T](Uri endPoint, HttpMethod method, RequestContext requestContext, Boolean expectErrorsOn200OK, Boolean addCommonHeaders, Func`2 onBeforePostRequestData)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, String scopeOverride, String tokenEndpointOverride, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.GetAccessTokenAsync(CancellationToken cancellationToken, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.ExecuteAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<>c__DisplayClass11_1.<<RunAsync>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.Identity.Client.Utils.StopwatchService.MeasureCodeBlockAsync(Func`1 codeBlock)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.RunAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.ApiConfig.Executors.ConfidentialClientExecutor.ExecuteAsync(AcquireTokenCommonParameters commonParameters, AcquireTokenForClientParameters clientParameters, CancellationToken cancellationToken)
+   at WebApp.Controllers.DashboardController.GetAccessToken() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 71
+   at WebApp.Controllers.DashboardController.IndexAsync() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+	StatusCode: 400 
+	ResponseBody: {"error":"invalid_request","error_description":"AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: a2285b19-c379-43e1-99db-053eff879200 Correlation ID: 4daf8414-939f-4659-8334-133107396bf6 Timestamp: 2024-06-03 07:11:43Z","error_codes":[900023],"timestamp":"2024-06-03 07:11:43Z","trace_id":"a2285b19-c379-43e1-99db-053eff879200","correlation_id":"4daf8414-939f-4659-8334-133107396bf6","error_uri":"https://login.microsoftonline.com/error?code=900023"} 
+	Headers: Cache-Control: no-store, no-cache
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+P3P: CP="DSP CUR OTPi IND OTRi ONL FIN"
+client-request-id: 4daf8414-939f-4659-8334-133107396bf6
+x-ms-request-id: a2285b19-c379-43e1-99db-053eff879200
+x-ms-ests-server: 2.1.18167.8 - KRC ProdSlices
+x-ms-clitelem: 1,900023,0,,
+x-ms-srs: 1.P
+X-XSS-Protection: 0
+Set-Cookie: fpc=AjJCR8701WNKvZ9OTq92VjI; expires=Wed, 03-Jul-2024 07:11:43 GMT; path=/; secure; HttpOnly; SameSite=None, x-ms-gateway-slice=estsfd; path=/; secure; httponly
+Date: Mon, 03 Jun 2024 07:11:43 GMT
+
+06/03/2024 14:12:21 [Error] An unhandled exception has occurred while executing the request.
+MSAL.NetCore.4.61.1.0.MsalServiceException:
+	ErrorCode: invalid_request
+Microsoft.Identity.Client.MsalServiceException: AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 6fd96f82-259d-4317-a2c8-86878be95c00 Correlation ID: 3ce9b7e6-7c44-47d7-be07-9e1af7f6dc42 Timestamp: 2024-06-03 07:11:44Z
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ThrowServerException(HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateResponse[T](HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ExecuteRequestAsync[T](Uri endPoint, HttpMethod method, RequestContext requestContext, Boolean expectErrorsOn200OK, Boolean addCommonHeaders, Func`2 onBeforePostRequestData)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, String scopeOverride, String tokenEndpointOverride, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.GetAccessTokenAsync(CancellationToken cancellationToken, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.ExecuteAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<>c__DisplayClass11_1.<<RunAsync>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.Identity.Client.Utils.StopwatchService.MeasureCodeBlockAsync(Func`1 codeBlock)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.RunAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.ApiConfig.Executors.ConfidentialClientExecutor.ExecuteAsync(AcquireTokenCommonParameters commonParameters, AcquireTokenForClientParameters clientParameters, CancellationToken cancellationToken)
+   at WebApp.Controllers.DashboardController.GetAccessToken() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 71
+   at WebApp.Controllers.DashboardController.IndexAsync() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+	StatusCode: 400 
+	ResponseBody: {"error":"invalid_request","error_description":"AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 6fd96f82-259d-4317-a2c8-86878be95c00 Correlation ID: 3ce9b7e6-7c44-47d7-be07-9e1af7f6dc42 Timestamp: 2024-06-03 07:11:44Z","error_codes":[900023],"timestamp":"2024-06-03 07:11:44Z","trace_id":"6fd96f82-259d-4317-a2c8-86878be95c00","correlation_id":"3ce9b7e6-7c44-47d7-be07-9e1af7f6dc42","error_uri":"https://login.microsoftonline.com/error?code=900023"} 
+	Headers: Cache-Control: no-store, no-cache
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+P3P: CP="DSP CUR OTPi IND OTRi ONL FIN"
+client-request-id: 3ce9b7e6-7c44-47d7-be07-9e1af7f6dc42
+x-ms-request-id: 6fd96f82-259d-4317-a2c8-86878be95c00
+x-ms-ests-server: 2.1.18167.8 - SEASLR1 ProdSlices
+x-ms-clitelem: 1,900023,0,,
+x-ms-srs: 1.P
+X-XSS-Protection: 0
+Set-Cookie: fpc=AjJCR8701WNKvZ9OTq92VjI; expires=Wed, 03-Jul-2024 07:11:44 GMT; path=/; secure; HttpOnly; SameSite=None, x-ms-gateway-slice=estsfd; path=/; secure; httponly
+Date: Mon, 03 Jun 2024 07:11:44 GMT
+
+06/03/2024 14:12:22 [Error] An unhandled exception has occurred while executing the request.
+MSAL.NetCore.4.61.1.0.MsalServiceException:
+	ErrorCode: invalid_request
+Microsoft.Identity.Client.MsalServiceException: AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 6fd96f82-259d-4317-a2c8-86879ee95c00 Correlation ID: 64e198a0-b283-48d1-b4fa-c47a1ccca46b Timestamp: 2024-06-03 07:11:45Z
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ThrowServerException(HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateResponse[T](HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ExecuteRequestAsync[T](Uri endPoint, HttpMethod method, RequestContext requestContext, Boolean expectErrorsOn200OK, Boolean addCommonHeaders, Func`2 onBeforePostRequestData)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, String scopeOverride, String tokenEndpointOverride, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.GetAccessTokenAsync(CancellationToken cancellationToken, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.ExecuteAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<>c__DisplayClass11_1.<<RunAsync>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.Identity.Client.Utils.StopwatchService.MeasureCodeBlockAsync(Func`1 codeBlock)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.RunAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.ApiConfig.Executors.ConfidentialClientExecutor.ExecuteAsync(AcquireTokenCommonParameters commonParameters, AcquireTokenForClientParameters clientParameters, CancellationToken cancellationToken)
+   at WebApp.Controllers.DashboardController.GetAccessToken() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 71
+   at WebApp.Controllers.DashboardController.IndexAsync() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+	StatusCode: 400 
+	ResponseBody: {"error":"invalid_request","error_description":"AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 6fd96f82-259d-4317-a2c8-86879ee95c00 Correlation ID: 64e198a0-b283-48d1-b4fa-c47a1ccca46b Timestamp: 2024-06-03 07:11:45Z","error_codes":[900023],"timestamp":"2024-06-03 07:11:45Z","trace_id":"6fd96f82-259d-4317-a2c8-86879ee95c00","correlation_id":"64e198a0-b283-48d1-b4fa-c47a1ccca46b","error_uri":"https://login.microsoftonline.com/error?code=900023"} 
+	Headers: Cache-Control: no-store, no-cache
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+P3P: CP="DSP CUR OTPi IND OTRi ONL FIN"
+client-request-id: 64e198a0-b283-48d1-b4fa-c47a1ccca46b
+x-ms-request-id: 6fd96f82-259d-4317-a2c8-86879ee95c00
+x-ms-ests-server: 2.1.18167.8 - SEASLR1 ProdSlices
+x-ms-clitelem: 1,900023,0,,
+x-ms-srs: 1.P
+X-XSS-Protection: 0
+Set-Cookie: fpc=AjJCR8701WNKvZ9OTq92VjI; expires=Wed, 03-Jul-2024 07:11:45 GMT; path=/; secure; HttpOnly; SameSite=None, x-ms-gateway-slice=estsfd; path=/; secure; httponly
+Date: Mon, 03 Jun 2024 07:11:44 GMT
+
+06/03/2024 14:12:22 [Error] An unhandled exception has occurred while executing the request.
+MSAL.NetCore.4.61.1.0.MsalServiceException:
+	ErrorCode: invalid_request
+Microsoft.Identity.Client.MsalServiceException: AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 7ce3429b-7a09-442f-9930-4d3814b31a01 Correlation ID: bfdf41a3-6e0a-4d80-a05d-d93b16eb6a5e Timestamp: 2024-06-03 07:11:45Z
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ThrowServerException(HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateResponse[T](HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ExecuteRequestAsync[T](Uri endPoint, HttpMethod method, RequestContext requestContext, Boolean expectErrorsOn200OK, Boolean addCommonHeaders, Func`2 onBeforePostRequestData)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, String scopeOverride, String tokenEndpointOverride, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.GetAccessTokenAsync(CancellationToken cancellationToken, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.ExecuteAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<>c__DisplayClass11_1.<<RunAsync>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.Identity.Client.Utils.StopwatchService.MeasureCodeBlockAsync(Func`1 codeBlock)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.RunAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.ApiConfig.Executors.ConfidentialClientExecutor.ExecuteAsync(AcquireTokenCommonParameters commonParameters, AcquireTokenForClientParameters clientParameters, CancellationToken cancellationToken)
+   at WebApp.Controllers.DashboardController.GetAccessToken() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 71
+   at WebApp.Controllers.DashboardController.IndexAsync() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+	StatusCode: 400 
+	ResponseBody: {"error":"invalid_request","error_description":"AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 7ce3429b-7a09-442f-9930-4d3814b31a01 Correlation ID: bfdf41a3-6e0a-4d80-a05d-d93b16eb6a5e Timestamp: 2024-06-03 07:11:45Z","error_codes":[900023],"timestamp":"2024-06-03 07:11:45Z","trace_id":"7ce3429b-7a09-442f-9930-4d3814b31a01","correlation_id":"bfdf41a3-6e0a-4d80-a05d-d93b16eb6a5e","error_uri":"https://login.microsoftonline.com/error?code=900023"} 
+	Headers: Cache-Control: no-store, no-cache
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+P3P: CP="DSP CUR OTPi IND OTRi ONL FIN"
+client-request-id: bfdf41a3-6e0a-4d80-a05d-d93b16eb6a5e
+x-ms-request-id: 7ce3429b-7a09-442f-9930-4d3814b31a01
+x-ms-ests-server: 2.1.18105.6 - KRC ProdSlices
+x-ms-clitelem: 1,900023,0,,
+x-ms-srs: 1.P
+X-XSS-Protection: 0
+Set-Cookie: fpc=AjJCR8701WNKvZ9OTq92VjI; expires=Wed, 03-Jul-2024 07:11:45 GMT; path=/; secure; HttpOnly; SameSite=None, x-ms-gateway-slice=estsfd; path=/; secure; httponly
+Date: Mon, 03 Jun 2024 07:11:44 GMT
+
+06/03/2024 14:12:22 [Error] An unhandled exception has occurred while executing the request.
+MSAL.NetCore.4.61.1.0.MsalServiceException:
+	ErrorCode: invalid_request
+Microsoft.Identity.Client.MsalServiceException: AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 1d62e198-9762-4c12-bbae-9d9f35dd7900 Correlation ID: c4d3e1fb-8200-41e1-9883-58885396a20b Timestamp: 2024-06-03 07:11:45Z
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ThrowServerException(HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateResponse[T](HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ExecuteRequestAsync[T](Uri endPoint, HttpMethod method, RequestContext requestContext, Boolean expectErrorsOn200OK, Boolean addCommonHeaders, Func`2 onBeforePostRequestData)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, String scopeOverride, String tokenEndpointOverride, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.GetAccessTokenAsync(CancellationToken cancellationToken, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.ExecuteAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<>c__DisplayClass11_1.<<RunAsync>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.Identity.Client.Utils.StopwatchService.MeasureCodeBlockAsync(Func`1 codeBlock)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.RunAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.ApiConfig.Executors.ConfidentialClientExecutor.ExecuteAsync(AcquireTokenCommonParameters commonParameters, AcquireTokenForClientParameters clientParameters, CancellationToken cancellationToken)
+   at WebApp.Controllers.DashboardController.GetAccessToken() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 71
+   at WebApp.Controllers.DashboardController.IndexAsync() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+	StatusCode: 400 
+	ResponseBody: {"error":"invalid_request","error_description":"AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 1d62e198-9762-4c12-bbae-9d9f35dd7900 Correlation ID: c4d3e1fb-8200-41e1-9883-58885396a20b Timestamp: 2024-06-03 07:11:45Z","error_codes":[900023],"timestamp":"2024-06-03 07:11:45Z","trace_id":"1d62e198-9762-4c12-bbae-9d9f35dd7900","correlation_id":"c4d3e1fb-8200-41e1-9883-58885396a20b","error_uri":"https://login.microsoftonline.com/error?code=900023"} 
+	Headers: Cache-Control: no-store, no-cache
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+P3P: CP="DSP CUR OTPi IND OTRi ONL FIN"
+client-request-id: c4d3e1fb-8200-41e1-9883-58885396a20b
+x-ms-request-id: 1d62e198-9762-4c12-bbae-9d9f35dd7900
+x-ms-ests-server: 2.1.18167.8 - SEASLR1 ProdSlices
+x-ms-clitelem: 1,900023,0,,
+x-ms-srs: 1.P
+X-XSS-Protection: 0
+Set-Cookie: fpc=AjJCR8701WNKvZ9OTq92VjI; expires=Wed, 03-Jul-2024 07:11:45 GMT; path=/; secure; HttpOnly; SameSite=None, x-ms-gateway-slice=estsfd; path=/; secure; httponly
+Date: Mon, 03 Jun 2024 07:11:45 GMT
+
+06/03/2024 14:12:22 [Error] An unhandled exception has occurred while executing the request.
+MSAL.NetCore.4.61.1.0.MsalServiceException:
+	ErrorCode: invalid_request
+Microsoft.Identity.Client.MsalServiceException: AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 6d509a0c-d504-49a6-82d2-c3b041c31701 Correlation ID: 896417f8-cf3c-4387-8b40-2a78b2ca075b Timestamp: 2024-06-03 07:11:45Z
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ThrowServerException(HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateResponse[T](HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ExecuteRequestAsync[T](Uri endPoint, HttpMethod method, RequestContext requestContext, Boolean expectErrorsOn200OK, Boolean addCommonHeaders, Func`2 onBeforePostRequestData)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, String scopeOverride, String tokenEndpointOverride, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.GetAccessTokenAsync(CancellationToken cancellationToken, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.ExecuteAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<>c__DisplayClass11_1.<<RunAsync>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.Identity.Client.Utils.StopwatchService.MeasureCodeBlockAsync(Func`1 codeBlock)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.RunAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.ApiConfig.Executors.ConfidentialClientExecutor.ExecuteAsync(AcquireTokenCommonParameters commonParameters, AcquireTokenForClientParameters clientParameters, CancellationToken cancellationToken)
+   at WebApp.Controllers.DashboardController.GetAccessToken() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 71
+   at WebApp.Controllers.DashboardController.IndexAsync() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+	StatusCode: 400 
+	ResponseBody: {"error":"invalid_request","error_description":"AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 6d509a0c-d504-49a6-82d2-c3b041c31701 Correlation ID: 896417f8-cf3c-4387-8b40-2a78b2ca075b Timestamp: 2024-06-03 07:11:45Z","error_codes":[900023],"timestamp":"2024-06-03 07:11:45Z","trace_id":"6d509a0c-d504-49a6-82d2-c3b041c31701","correlation_id":"896417f8-cf3c-4387-8b40-2a78b2ca075b","error_uri":"https://login.microsoftonline.com/error?code=900023"} 
+	Headers: Cache-Control: no-store, no-cache
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+P3P: CP="DSP CUR OTPi IND OTRi ONL FIN"
+client-request-id: 896417f8-cf3c-4387-8b40-2a78b2ca075b
+x-ms-request-id: 6d509a0c-d504-49a6-82d2-c3b041c31701
+x-ms-ests-server: 2.1.18105.6 - KRC ProdSlices
+x-ms-clitelem: 1,900023,0,,
+x-ms-srs: 1.P
+X-XSS-Protection: 0
+Set-Cookie: fpc=AjJCR8701WNKvZ9OTq92VjI; expires=Wed, 03-Jul-2024 07:11:45 GMT; path=/; secure; HttpOnly; SameSite=None, x-ms-gateway-slice=estsfd; path=/; secure; httponly
+Date: Mon, 03 Jun 2024 07:11:45 GMT
+
+06/03/2024 14:12:22 [Error] An unhandled exception has occurred while executing the request.
+MSAL.NetCore.4.61.1.0.MsalServiceException:
+	ErrorCode: invalid_request
+Microsoft.Identity.Client.MsalServiceException: AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 56e88edf-92c3-4976-b0bf-04bb6a8e3300 Correlation ID: 15ee5b25-2054-4f12-af7f-d60be9711ac0 Timestamp: 2024-06-03 07:11:45Z
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ThrowServerException(HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateResponse[T](HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ExecuteRequestAsync[T](Uri endPoint, HttpMethod method, RequestContext requestContext, Boolean expectErrorsOn200OK, Boolean addCommonHeaders, Func`2 onBeforePostRequestData)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, String scopeOverride, String tokenEndpointOverride, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.GetAccessTokenAsync(CancellationToken cancellationToken, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.ExecuteAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<>c__DisplayClass11_1.<<RunAsync>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.Identity.Client.Utils.StopwatchService.MeasureCodeBlockAsync(Func`1 codeBlock)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.RunAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.ApiConfig.Executors.ConfidentialClientExecutor.ExecuteAsync(AcquireTokenCommonParameters commonParameters, AcquireTokenForClientParameters clientParameters, CancellationToken cancellationToken)
+   at WebApp.Controllers.DashboardController.GetAccessToken() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 71
+   at WebApp.Controllers.DashboardController.IndexAsync() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+	StatusCode: 400 
+	ResponseBody: {"error":"invalid_request","error_description":"AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 56e88edf-92c3-4976-b0bf-04bb6a8e3300 Correlation ID: 15ee5b25-2054-4f12-af7f-d60be9711ac0 Timestamp: 2024-06-03 07:11:45Z","error_codes":[900023],"timestamp":"2024-06-03 07:11:45Z","trace_id":"56e88edf-92c3-4976-b0bf-04bb6a8e3300","correlation_id":"15ee5b25-2054-4f12-af7f-d60be9711ac0","error_uri":"https://login.microsoftonline.com/error?code=900023"} 
+	Headers: Cache-Control: no-store, no-cache
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+P3P: CP="DSP CUR OTPi IND OTRi ONL FIN"
+client-request-id: 15ee5b25-2054-4f12-af7f-d60be9711ac0
+x-ms-request-id: 56e88edf-92c3-4976-b0bf-04bb6a8e3300
+x-ms-ests-server: 2.1.18167.8 - KRSLR1 ProdSlices
+x-ms-clitelem: 1,900023,0,,
+x-ms-srs: 1.P
+X-XSS-Protection: 0
+Set-Cookie: fpc=AjJCR8701WNKvZ9OTq92VjI; expires=Wed, 03-Jul-2024 07:11:45 GMT; path=/; secure; HttpOnly; SameSite=None, x-ms-gateway-slice=estsfd; path=/; secure; httponly
+Date: Mon, 03 Jun 2024 07:11:45 GMT
+
+06/03/2024 14:12:23 [Error] An unhandled exception has occurred while executing the request.
+MSAL.NetCore.4.61.1.0.MsalServiceException:
+	ErrorCode: invalid_request
+Microsoft.Identity.Client.MsalServiceException: AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 79ebe263-0418-49ae-85dc-fae0653ef500 Correlation ID: f7308d51-2525-4e7b-b6cc-c0715aedcb9a Timestamp: 2024-06-03 07:11:46Z
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ThrowServerException(HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateResponse[T](HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ExecuteRequestAsync[T](Uri endPoint, HttpMethod method, RequestContext requestContext, Boolean expectErrorsOn200OK, Boolean addCommonHeaders, Func`2 onBeforePostRequestData)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, String scopeOverride, String tokenEndpointOverride, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.GetAccessTokenAsync(CancellationToken cancellationToken, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.ExecuteAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<>c__DisplayClass11_1.<<RunAsync>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.Identity.Client.Utils.StopwatchService.MeasureCodeBlockAsync(Func`1 codeBlock)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.RunAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.ApiConfig.Executors.ConfidentialClientExecutor.ExecuteAsync(AcquireTokenCommonParameters commonParameters, AcquireTokenForClientParameters clientParameters, CancellationToken cancellationToken)
+   at WebApp.Controllers.DashboardController.GetAccessToken() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 71
+   at WebApp.Controllers.DashboardController.IndexAsync() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+	StatusCode: 400 
+	ResponseBody: {"error":"invalid_request","error_description":"AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 79ebe263-0418-49ae-85dc-fae0653ef500 Correlation ID: f7308d51-2525-4e7b-b6cc-c0715aedcb9a Timestamp: 2024-06-03 07:11:46Z","error_codes":[900023],"timestamp":"2024-06-03 07:11:46Z","trace_id":"79ebe263-0418-49ae-85dc-fae0653ef500","correlation_id":"f7308d51-2525-4e7b-b6cc-c0715aedcb9a","error_uri":"https://login.microsoftonline.com/error?code=900023"} 
+	Headers: Cache-Control: no-store, no-cache
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+P3P: CP="DSP CUR OTPi IND OTRi ONL FIN"
+client-request-id: f7308d51-2525-4e7b-b6cc-c0715aedcb9a
+x-ms-request-id: 79ebe263-0418-49ae-85dc-fae0653ef500
+x-ms-ests-server: 2.1.18105.6 - KRC ProdSlices
+x-ms-clitelem: 1,900023,0,,
+x-ms-srs: 1.P
+X-XSS-Protection: 0
+Set-Cookie: fpc=AjJCR8701WNKvZ9OTq92VjI; expires=Wed, 03-Jul-2024 07:11:46 GMT; path=/; secure; HttpOnly; SameSite=None, x-ms-gateway-slice=estsfd; path=/; secure; httponly
+Date: Mon, 03 Jun 2024 07:11:45 GMT
+
+06/03/2024 14:12:23 [Error] An unhandled exception has occurred while executing the request.
+MSAL.NetCore.4.61.1.0.MsalServiceException:
+	ErrorCode: invalid_request
+Microsoft.Identity.Client.MsalServiceException: AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 5926fad0-4c1c-43fa-a02f-b6d995d17a00 Correlation ID: f49395bb-71e2-46b7-927b-b01ed17a948d Timestamp: 2024-06-03 07:11:46Z
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ThrowServerException(HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateResponse[T](HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ExecuteRequestAsync[T](Uri endPoint, HttpMethod method, RequestContext requestContext, Boolean expectErrorsOn200OK, Boolean addCommonHeaders, Func`2 onBeforePostRequestData)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, String scopeOverride, String tokenEndpointOverride, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.GetAccessTokenAsync(CancellationToken cancellationToken, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.ExecuteAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<>c__DisplayClass11_1.<<RunAsync>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.Identity.Client.Utils.StopwatchService.MeasureCodeBlockAsync(Func`1 codeBlock)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.RunAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.ApiConfig.Executors.ConfidentialClientExecutor.ExecuteAsync(AcquireTokenCommonParameters commonParameters, AcquireTokenForClientParameters clientParameters, CancellationToken cancellationToken)
+   at WebApp.Controllers.DashboardController.GetAccessToken() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 71
+   at WebApp.Controllers.DashboardController.IndexAsync() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+	StatusCode: 400 
+	ResponseBody: {"error":"invalid_request","error_description":"AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 5926fad0-4c1c-43fa-a02f-b6d995d17a00 Correlation ID: f49395bb-71e2-46b7-927b-b01ed17a948d Timestamp: 2024-06-03 07:11:46Z","error_codes":[900023],"timestamp":"2024-06-03 07:11:46Z","trace_id":"5926fad0-4c1c-43fa-a02f-b6d995d17a00","correlation_id":"f49395bb-71e2-46b7-927b-b01ed17a948d","error_uri":"https://login.microsoftonline.com/error?code=900023"} 
+	Headers: Cache-Control: no-store, no-cache
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+P3P: CP="DSP CUR OTPi IND OTRi ONL FIN"
+client-request-id: f49395bb-71e2-46b7-927b-b01ed17a948d
+x-ms-request-id: 5926fad0-4c1c-43fa-a02f-b6d995d17a00
+x-ms-ests-server: 2.1.18167.8 - KRSLR1 ProdSlices
+x-ms-clitelem: 1,900023,0,,
+x-ms-srs: 1.P
+X-XSS-Protection: 0
+Set-Cookie: fpc=AjJCR8701WNKvZ9OTq92VjI; expires=Wed, 03-Jul-2024 07:11:46 GMT; path=/; secure; HttpOnly; SameSite=None, x-ms-gateway-slice=estsfd; path=/; secure; httponly
+Date: Mon, 03 Jun 2024 07:11:46 GMT
+
+06/03/2024 14:12:23 [Error] An unhandled exception has occurred while executing the request.
+MSAL.NetCore.4.61.1.0.MsalServiceException:
+	ErrorCode: invalid_request
+Microsoft.Identity.Client.MsalServiceException: AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: ef0664b2-a59a-4102-8bd9-43c2d5324d00 Correlation ID: acdfd09c-067c-4805-9bfc-4f72f92d114c Timestamp: 2024-06-03 07:11:46Z
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ThrowServerException(HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateResponse[T](HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ExecuteRequestAsync[T](Uri endPoint, HttpMethod method, RequestContext requestContext, Boolean expectErrorsOn200OK, Boolean addCommonHeaders, Func`2 onBeforePostRequestData)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, String scopeOverride, String tokenEndpointOverride, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.GetAccessTokenAsync(CancellationToken cancellationToken, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.ExecuteAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<>c__DisplayClass11_1.<<RunAsync>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.Identity.Client.Utils.StopwatchService.MeasureCodeBlockAsync(Func`1 codeBlock)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.RunAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.ApiConfig.Executors.ConfidentialClientExecutor.ExecuteAsync(AcquireTokenCommonParameters commonParameters, AcquireTokenForClientParameters clientParameters, CancellationToken cancellationToken)
+   at WebApp.Controllers.DashboardController.GetAccessToken() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 71
+   at WebApp.Controllers.DashboardController.IndexAsync() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+	StatusCode: 400 
+	ResponseBody: {"error":"invalid_request","error_description":"AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: ef0664b2-a59a-4102-8bd9-43c2d5324d00 Correlation ID: acdfd09c-067c-4805-9bfc-4f72f92d114c Timestamp: 2024-06-03 07:11:46Z","error_codes":[900023],"timestamp":"2024-06-03 07:11:46Z","trace_id":"ef0664b2-a59a-4102-8bd9-43c2d5324d00","correlation_id":"acdfd09c-067c-4805-9bfc-4f72f92d114c","error_uri":"https://login.microsoftonline.com/error?code=900023"} 
+	Headers: Cache-Control: no-store, no-cache
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+P3P: CP="DSP CUR OTPi IND OTRi ONL FIN"
+client-request-id: acdfd09c-067c-4805-9bfc-4f72f92d114c
+x-ms-request-id: ef0664b2-a59a-4102-8bd9-43c2d5324d00
+x-ms-ests-server: 2.1.18167.8 - KRC ProdSlices
+x-ms-clitelem: 1,900023,0,,
+x-ms-srs: 1.P
+X-XSS-Protection: 0
+Set-Cookie: fpc=AjJCR8701WNKvZ9OTq92VjI; expires=Wed, 03-Jul-2024 07:11:46 GMT; path=/; secure; HttpOnly; SameSite=None, x-ms-gateway-slice=estsfd; path=/; secure; httponly
+Date: Mon, 03 Jun 2024 07:11:46 GMT
+
+06/03/2024 14:12:42 [Error] An unhandled exception has occurred while executing the request.
+MSAL.NetCore.4.61.1.0.MsalServiceException:
+	ErrorCode: invalid_request
+Microsoft.Identity.Client.MsalServiceException: AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 20232a7d-08d6-42bf-a15a-4c2a7b8c2e00 Correlation ID: 831e8d62-6d4b-4161-a1c1-e92d5142b4d6 Timestamp: 2024-06-03 07:12:05Z
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ThrowServerException(HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateResponse[T](HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.ExecuteRequestAsync[T](Uri endPoint, HttpMethod method, RequestContext requestContext, Boolean expectErrorsOn200OK, Boolean addCommonHeaders, Func`2 onBeforePostRequestData)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendHttpAndClearTelemetryAsync(String tokenEndpoint, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.OAuth2.TokenClient.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, String scopeOverride, String tokenEndpointOverride, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.SendTokenRequestAsync(IDictionary`2 additionalBodyParameters, CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.GetAccessTokenAsync(CancellationToken cancellationToken, ILoggerAdapter logger)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.ExecuteAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<>c__DisplayClass11_1.<<RunAsync>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.Identity.Client.Utils.StopwatchService.MeasureCodeBlockAsync(Func`1 codeBlock)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.RunAsync(CancellationToken cancellationToken)
+   at Microsoft.Identity.Client.ApiConfig.Executors.ConfidentialClientExecutor.ExecuteAsync(AcquireTokenCommonParameters commonParameters, AcquireTokenForClientParameters clientParameters, CancellationToken cancellationToken)
+   at WebApp.Controllers.DashboardController.GetAccessToken() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 71
+   at WebApp.Controllers.DashboardController.IndexAsync() in C:\Development\Msi\src\WebApp\Controllers\DashboardController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+	StatusCode: 400 
+	ResponseBody: {"error":"invalid_request","error_description":"AADSTS900023: Specified tenant identifier 'your_tenant_id' is neither a valid DNS name, nor a valid external domain. Trace ID: 20232a7d-08d6-42bf-a15a-4c2a7b8c2e00 Correlation ID: 831e8d62-6d4b-4161-a1c1-e92d5142b4d6 Timestamp: 2024-06-03 07:12:05Z","error_codes":[900023],"timestamp":"2024-06-03 07:12:05Z","trace_id":"20232a7d-08d6-42bf-a15a-4c2a7b8c2e00","correlation_id":"831e8d62-6d4b-4161-a1c1-e92d5142b4d6","error_uri":"https://login.microsoftonline.com/error?code=900023"} 
+	Headers: Cache-Control: no-store, no-cache
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+P3P: CP="DSP CUR OTPi IND OTRi ONL FIN"
+client-request-id: 831e8d62-6d4b-4161-a1c1-e92d5142b4d6
+x-ms-request-id: 20232a7d-08d6-42bf-a15a-4c2a7b8c2e00
+x-ms-ests-server: 2.1.18105.6 - JPE ProdSlices
+x-ms-clitelem: 1,900023,0,,
+x-ms-srs: 1.P
+X-XSS-Protection: 0
+Set-Cookie: fpc=AjJCR8701WNKvZ9OTq92VjI; expires=Wed, 03-Jul-2024 07:12:05 GMT; path=/; secure; HttpOnly; SameSite=None, x-ms-gateway-slice=estsfd; path=/; secure; httponly
+Date: Mon, 03 Jun 2024 07:12:05 GMT
+
+06/03/2024 14:13:00 [Error] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+WebApp.Controllers.DashboardController.IndexAsync (WebApp)
+WebApp.Controllers.DashboardController.Index (WebApp)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+06/03/2024 14:13:02 [Error] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+WebApp.Controllers.DashboardController.IndexAsync (WebApp)
+WebApp.Controllers.DashboardController.Index (WebApp)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+06/03/2024 16:39:34 [Error] Failed executing DbCommand ("77"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC YourStoredProcedureName"
+06/03/2024 16:39:34 [Error] An exception occurred while iterating over the results of a query for context type '"Data.ApplicationContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'YourStoredProcedureName'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3b6c11f9-635e-4d53-a4a1-c6f3fa3d67a5
+Error Number:2812,State:62,Class:16"
+Microsoft.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'YourStoredProcedureName'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3b6c11f9-635e-4d53-a4a1-c6f3fa3d67a5
+Error Number:2812,State:62,Class:16
+06/03/2024 16:40:11 [Error] Failed executing DbCommand ("60"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC YourStoredProcedureName"
+06/03/2024 16:40:11 [Error] An exception occurred while iterating over the results of a query for context type '"Data.ApplicationContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'YourStoredProcedureName'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3b6c11f9-635e-4d53-a4a1-c6f3fa3d67a5
+Error Number:2812,State:62,Class:16"
+Microsoft.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'YourStoredProcedureName'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3b6c11f9-635e-4d53-a4a1-c6f3fa3d67a5
+Error Number:2812,State:62,Class:16

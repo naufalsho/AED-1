@@ -1,0 +1,67 @@
+﻿@model Domain.MasterGeneral.MstGeneralDto
+@using Core;
+
+@{
+    Layout = ViewPath.ModalLayout;
+}
+
+<div>
+    <form id="FormInput" asp-controller="@ViewData[ViewDataType.Controller]" asp-action="@ViewData[ViewDataType.Action]" asp-antiforgery="true">
+        <input type="hidden" asp-for="Id" />
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Code</label>
+            <div class="col-md-9">
+                <input asp-for="Code" class="form-control" readonly="@(ViewData[ViewDataType.Action].ToString().ToLower().Contains("edit") ? true : false)" required />
+            </div>
+        </div>
+        <div class="row mb-15px">
+            <label id="lblParent" class="form-label col-form-label col-md-3"></label>
+            <div class="col-md-9">
+                <select asp-for="ParentId" asp-items="@Model.Parents" class="form-select">
+                    <option value="">Please select one</option>
+                </select>
+            </div>
+        </div>
+        @if (Model.IsNeedOrder)
+        {
+            <div class="row mb-15px">
+                <label class="form-label col-form-label col-md-3">Order</label>
+                <div class="col-md-9">
+                    <input asp-for="Order" class="form-control" required />
+                </div>
+            </div>
+        }
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Name</label>
+            <div class="col-md-9">
+                <input asp-for="Name" class="form-control" required />
+            </div>
+        </div>
+        @if (Model.IsNeedAbbr)
+        {
+            <div class="row mb-15px">
+                <label class="form-label col-form-label col-md-3">Abbreviation</label>
+                <div class="col-md-9">
+                    <input asp-for="Abbreviation" class="form-control" required />
+                </div>
+            </div>
+        }
+        @if (Model.IsNeedColor)
+        {
+            <div class="row mb-15px">
+                <label class="form-label col-form-label col-md-3">Chart Color</label>
+                <div class="col-md-9">
+                    <input asp-for="ChartColor" class="form-control" required />
+                </div>
+            </div>
+        }
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Active?</label>
+            <div class="col-md-9">
+                <div class="form-check mt-2 mb-2">
+                    <input asp-for="IsActive" type="checkbox" class="form-check-input" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

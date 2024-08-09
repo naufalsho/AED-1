@@ -1,0 +1,67 @@
+﻿@using Core
+@model Domain.Master.MasterSpecItem.TMstSpecItemsCreatedDto;
+@{
+    Layout = ViewPath.ModalLayout;
+}
+
+<div>
+    <form id="FormInput" asp-controller="@ViewData[ViewDataType.Controller]" asp-action="@ViewData[ViewDataType.Action]" asp-antiforgery="true" class="form-horizontal">
+         <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Code</label>
+            <div class="col-md-9">
+                <input class="form-control" asp-for="Code" required />
+            </div>
+        </div>
+
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Category</label>
+            <div class="col-md-9">
+                <select asp-for="CategoryCode" asp-items="@Model.Category" class="form-select">
+                    <option value="">Please select one</option>
+                </select>
+            </div>
+        </div>
+
+         <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Item</label>
+            <div class="col-md-9">
+                <input class="form-control" list="datalistOptions" asp-for="Items" placeholder="Type to search..." oninput="filterOptions()">
+                <datalist id="datalistOptions">
+                    <option value="Engine"></option>
+                    <option value="Transmission"></option>
+                    <option value="Clutch"></option>
+                    <option value="Linkage and Hydraulics"></option>
+                    <option value="Brakes"></option>
+                    @* <option value="Steering"></option>
+                    <option value="Standard wheel & tyres"></option>
+                    <option value="Weight & Dimensions"></option>
+                    <option value="General Spec"></option>
+                    <option value="Loading Deck"></option>
+                    <option value="Operating Weight"></option>
+                    <option value="WORKING RANGES"></option>
+                    <option value="DIMENSIONS"></option>
+                    <option value="DOZER BLADE"></option> *@
+                </datalist>
+            </div>
+        </div>
+        
+         <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Sub Item</label>
+            <div class="col-md-9">
+                <input class="form-control" asp-for="SubItems" required />
+            </div>
+        </div>
+
+
+        <div id="rowActive mt-2" class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Active?</label>
+            <div class="col-md-9">
+                <div class="form-check mt-2 mb-2">
+                    <input type="checkbox" class="form-check-input" asp-for="IsActive" checked="@Model.IsActive" autocomplete="off" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+

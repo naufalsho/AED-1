@@ -1,0 +1,49 @@
+﻿@{
+    var currController = ViewContext.RouteData.Values["controller"].ToString();
+    var userMenus = ViewData["UserMenus"] as IEnumerable<Domain.Account.UserMenuGroupDto>;
+}
+
+<div id="top-menu" class="app-top-menu">
+    <div class="menu">
+        @foreach (var userMenu in userMenus)
+        {
+            if (userMenu.IsDirectMenu)
+            {
+                <div class="menu-item @(currController == userMenu.Menus.FirstOrDefault().Controller ? "active" : "")">
+                    <a asp-controller="@userMenu.Menus.FirstOrDefault().Controller" asp-action="Index" class="menu-link">
+                        <div class="menu-icon">
+                            <ion-icon name="@userMenu.Icon"></ion-icon>
+                        </div>
+                        <div class="menu-text">@userMenu.Menus.FirstOrDefault().Name</div>
+                    </a>
+                </div>
+            }
+            else
+            {
+                var menuActive = userMenu.Menus.Where(m => m.Controller == currController).Any() ? "active" : "";
+
+                <div class="menu-item has-sub @menuActive">
+                    <a href="#" class="menu-link">
+                        <div class="menu-icon">
+                            <ion-icon name="@userMenu.Icon"></ion-icon>
+                        </div>
+                        <div class="menu-text">@userMenu.Name</div>
+                        <div class="menu-caret"></div>
+                    </a>
+                    <div class="menu-submenu">
+                        @foreach (var childMenu in userMenu.Menus)
+                        {
+                            <div class="menu-item @(currController == childMenu.Controller ? "active" : "")">
+                                <a asp-controller="@childMenu.Controller" asp-action="Index" class="menu-link"><div class="menu-text">@childMenu.Name</div></a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        }
+        <div class="menu-item menu-control menu-control-start">
+        </div>
+        <div class="menu-item menu-control menu-control-end">
+        </div>
+    </div>
+</div>

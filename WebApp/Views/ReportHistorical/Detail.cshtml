@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Domain.Report.ReportDeviceHistoryDto>
+@using Core;
+
+@{
+    Layout = ViewPath.ModalLayout;
+
+    var cnt = 1;
+}
+
+<div style="overflow-x: auto;">
+    <table id="dTableDetail" class="table table-striped table-bordered align-middle">
+        <thead>
+            <tr>
+                <th class="text-center">No</th>
+                <th class="text-center text-nowrap">BAST Date</th>
+                <th class="text-center text-nowrap">Undeploy Date</th>
+                <th class="text-center text-nowrap">Period From</th>
+                <th class="text-center text-nowrap">Period To</th>
+                <th class="text-center text-nowrap">NRP</th>
+                <th class="text-center text-nowrap">Employee Name</th>
+                <th class="text-center text-nowrap">Company</th>
+                <th class="text-center text-nowrap">Branch</th>
+                <th class="text-center text-nowrap">Department</th>
+                <th class="text-center text-nowrap">Job Group</th>
+                <th class="text-center text-nowrap">Job Title</th>
+                <th class="text-center text-nowrap">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="text-center">@(cnt++)</td>
+                    <td class="text-center text-nowrap">@item.BASTCompDate?.ToShortDateString()</td>
+                    <td class="text-center text-nowrap">@item.UndeployDate?.ToShortDateString()</td>
+                    <td class="text-center text-nowrap">@item.PeriodFrom?.ToShortDateString()</td>
+                    <td class="text-center text-nowrap">@item.PeriodTo?.ToShortDateString()</td>
+                    <td class="text-center text-nowrap">@item.NRP</td>
+                    <td class="text-nowrap">@item.EmpName</td>
+                    <td class="text-nowrap">@item.CompanyName</td>
+                    <td class="text-nowrap">@item.BranchName</td>
+                    <td class="text-nowrap">@item.DepartmentName</td>
+                    <td class="text-nowrap">@item.JobGroupName</td>
+                    <td class="text-nowrap">@item.JobTitleName</td>
+                    <td class="text-nowrap">@item.EmpStatus</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,51 @@
+﻿@using Core;
+
+@{
+    Layout = null;
+    
+    string btnAddOn = "", btnClose = "";
+    string modalType = ViewData[ViewDataType.ModalType]?.ToString();
+
+    switch (modalType)
+    {
+        case var value when value == ModalType.Create:
+            btnAddOn = "<button type='button' class='btn btn-primary' id='btnModalAct'>Save Data</button>";
+            btnClose = "<button type='button' class='btn btn-default modal-close'>Close</button>";
+            break;
+        case var value when value == ModalType.Edit:
+            btnAddOn = "<button type='button' class='btn btn-warning' id='btnModalAct'>Update Data</button>";
+            btnClose = "<button type='button' class='btn btn-default modal-close'>Close</button>";
+            break;
+        case var value when value == ModalType.Delete:
+            btnAddOn = "<button type='button' class='btn btn-danger' id='btnModalAct'>Delete Data</button>";
+            btnClose = "<button type='button' class='btn btn-default modal-close'>Close</button>";
+            break;
+        case var value when value == ModalType.Undeploy:
+            btnAddOn = "<button type='button' class='btn btn-info' id='btnModalAct'>Undeploy Device</button>";
+            btnClose = "<button type='button' class='btn btn-default modal-close'>Close</button>";
+            break;
+        default:
+            btnAddOn = "";
+            btnClose = "<button type='button' class='btn btn-default modal-close'>Close</button>";
+            break;
+    }
+}
+
+
+
+
+<div class="modal-header bg-blue text-white">
+    
+    <h4 class="modal-title">
+        <span class="fa fa-file"></span>
+        <span class="modal-title-text">@Html.Raw(ViewData[ViewDataType.ModalTitle] ?? "Default Title")</span>
+    </h4>
+    <button type="button" class="btn-close modal-close" aria-hidden="true"></button>
+</div>
+<div class="modal-body">
+    @RenderBody()
+</div>
+<div class="modal-footer">
+    @Html.Raw(btnClose)
+    @Html.Raw(btnAddOn)
+</div>

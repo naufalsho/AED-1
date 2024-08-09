@@ -1,0 +1,48 @@
+﻿@using Core
+@using Microsoft.AspNetCore.Mvc.Rendering
+@model Domain.Transaction.SpecValues.TTrnSpecValuesDto
+
+@section Scripts {
+    <script src="~/assets/js/pages/app.pages.trans.spec.values.js" asp-append-version="true"></script>
+}
+
+@{
+    HashSet<string> writtenItems = new HashSet<string>();
+}
+
+<form id="FormInput" asp-controller="@ViewData[ViewDataType.Controller]" asp-action="Create" asp-antiforgery="true" class="form-horizontal">
+    <table class="table">
+        <tbody>
+            @for (int i = 0; i < Model.SpecValues.Count; i++)
+            {
+                var specValue = Model.SpecValues[i];
+                if (!writtenItems.Contains(specValue.Items))
+                {
+                    <tr>
+                        <td colspan="3"><strong>@specValue.Items</strong></td>
+                    </tr>
+                    writtenItems.Add(specValue.Items);
+                }
+                <tr>
+                    <td>
+                        <input type="hidden" asp-for="@Model.CategoryCode" />
+                        <input type="hidden" asp-for="@Model.Id" class="form-control" readonly />
+                        <input type="hidden" asp-for="@Model.ModelCode" class="form-control" />
+                        <input type="hidden" asp-for="@Model.SpecValues[i].SpecItemCode" class="form-control" />
+                    </td>
+                    <td>
+                        <span>@specValue.SubItems</span>
+                    </td>
+                    <td>
+                        <input asp-for="@Model.SpecValues[i].Value" class="form-control" />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="border-top btn-action">
+        <button type="button" id="btnModalAct" class="btn btn-primary mt-2 btn-submit" onclick="handleFormSubmit()">Save Data</button>
+        @* <button type="submit" id="btnModalAct" class="btn btn-primary mt-2 btn-submit">Save Data</button> *@
+    </div>
+</form>

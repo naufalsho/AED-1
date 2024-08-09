@@ -1,0 +1,41 @@
+﻿@model Domain.Master.MasterCategory.TMstCategoryCreatedDto;
+@using Core;
+
+@{
+    Layout = ViewPath.ModalLayout;
+}
+
+    <form id="FormInput" asp-controller="@ViewData[ViewDataType.Controller]" asp-action="@ViewData[ViewDataType.Action]" asp-antiforgery="true" class="form-horizonta">
+         <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Code</label>
+            <div class="col-md-9">
+                <input class="form-control" required readonly asp-for="Code" />
+            </div>
+        </div>
+
+         <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Description</label>
+            <div class="col-md-9">
+            <input class="form-control" required asp-for="Description" />
+            </div>
+        </div>
+
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Brand</label>
+            <div class="col-md-9">
+                <select asp-for="BrandCode" asp-items="@Model.Brands" multiple class="form-select">
+                    <option value="">Please select one</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="rowActive mt-2" class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Active?</label>
+            <div class="col-md-9">
+                <div class="form-check mt-2 mb-2">
+                    <input  type="checkbox" asp-for="IsActive" class="form-check-input" autocomplete="off" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

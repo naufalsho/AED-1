@@ -1,0 +1,37 @@
+﻿@section Scripts {
+	<script src="~/assets/js/pages/app.pages.master.class.js" asp-append-version="true"></script>
+}
+
+
+<ul class="nav nav-pills mb-2">
+	<li class="nav-item">
+		<a href="#tab-parent" data-bs-toggle="tab" class="nav-link active" data-table="class">
+			<span class="d-sm-none">Class</span>
+			<span class="d-sm-block d-none">Class</span>
+		</a>
+	</li>
+	<li class="nav-item">
+		<a href="#tab-general" data-bs-toggle="tab" class="nav-link" data-table="classValue">
+			<span class="d-sm-none">Class Value</span>
+			<span class="d-sm-block d-none">Class Value</span>
+		</a>
+	</li>
+</ul>
+
+<div class="table-responsive">
+	<table id="dTable" class="table table-striped table-responsive table-bordered nowrap align-middle" width="100%">
+		<thead>
+			<tr>
+				<th class="">No</th>
+				<th class="">Code</th>
+				<th class="text-center">Name</th>
+				<th class="">Created</th>
+				<th class="">Last Update</th>
+				<th class="text-center">Is Active</th>
+				<th class="text-center">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,36 @@
+﻿@* @model Domain.MasterYardArea.YardAreaDto; *@
+@using Core;
+
+@{
+    Layout = ViewPath.ModalLayout;
+}
+
+<div>
+    <form id="FormInput" asp-controller="@ViewData[ViewDataType.Controller]" asp-action="@ViewData[ViewDataType.Action]" asp-antiforgery="true" class="form-horizonta">
+        <input type="hidden"  class="id" />
+
+
+         <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Code</label>
+            <div class="col-md-9">
+                <input class="form-control" required />
+            </div>
+        </div>
+
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Name</label>
+            <div class="col-md-9">
+                <input class="form-control" required />
+            </div>
+        </div>
+
+        <div id="rowActive mt-2" class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Active?</label>
+            <div class="col-md-9">
+                <div class="form-check mt-2 mb-2">
+                    <input  type="checkbox" class="form-check-input" autocomplete="off" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

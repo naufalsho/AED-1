@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAp1WfMqQ+MEuZfzBNKhoraQAAAAACAAAAAAADZgAAwAAAABAAAABN0qdd9tXz9uSIgzfrRGKXAAAAAASAAACgAAAAEAAAAFSQdOLHEDBidz/e53s7DDYgAAAA2l11rHm8T08tLsmU75fdkf+wLY3S/008GMCz2m+z570UAAAAJfQCcaDPOitN81eV5MFCskNq0JU=</EncryptedPassword>
+    <History>False|2024-06-24T09:26:01.9672967Z;False|2024-06-24T15:06:50.9390804+07:00;False|2024-06-24T14:54:03.4382552+07:00;False|2024-06-24T14:49:12.5260252+07:00;False|2024-06-24T14:45:14.6055477+07:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=10.0.10.73%3bInitial Catalog=AED%3bUser ID=sa%3bPassword=tnhc1%24d13%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

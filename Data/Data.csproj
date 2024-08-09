@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Core\Core.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Using Include="BCrypt.Net.BCrypt" Alias="BCryptNet" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="log4net.AspNetCore" Version="1.0.0" />
+	</ItemGroup>
+
+</Project>
