@@ -41,6 +41,13 @@
     <link href="~/assets/plugins/datatables.net-bs5/dataTables.bootstrap5.min.css" rel="stylesheet" />
     <link href="~/assets/plugins/datatables.net-buttons-bs5/buttons.bootstrap5.min.css" rel="stylesheet" />
 
+   @*  <link rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+ *@
     @RenderSection("Styles", required: false)
 </head>
 <body class="@ViewData["AppBodyClass"]">
@@ -71,7 +78,7 @@
                 if (groupName != menuName)
                 {
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item">@groupName</li>
+                        <li class="breadcrumb-item"><a href="#" onclick="history.go(-1)">Back@* @groupName *@</a></li>
                         <li class="breadcrumb-item active">@menuName</li>
                     </ol>
                 }
@@ -131,7 +138,12 @@
     <script src="~/assets/js/app.constant.js" asp-append-version="true"></script>
     <script src="~/assets/js/app.custom.js" asp-append-version="true"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>@* 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Bootstrap JS -->*@
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> 
 
     @RenderSection("Scripts", required: false)
 

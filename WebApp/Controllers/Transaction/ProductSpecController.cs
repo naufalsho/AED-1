@@ -38,14 +38,28 @@ namespace WebApp.Controllers.Transaction
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string type)
         {
             var result = await _mstCategoryService.GetAll();
+            int typeNum = 0;
+            if(type == "Acgon-agri")
+            {
+                typeNum = 1;
+            }else if(type == "Acgon-construction")
+            {
+                typeNum = 2;
+            }else if (type == "MHD")
+            {
+                typeNum = 3;
+            }else if (type == "Power")
+            {
+                typeNum = 4;
+            }
 
             UnitSpecDto ret = new UnitSpecDto
             {
                 Category = result.Value
-                                .Where(r => r.Type == 1)
+                                .Where(r => r.Type == typeNum)
                                 .Select(r => new TMstCategoryDto
                                 {
                                     Code = r.Code,
@@ -55,7 +69,7 @@ namespace WebApp.Controllers.Transaction
                                 .ToList() 
             };
 
-                
+           
             return View(ViewPath.ProductSpec, ret);
         }
 

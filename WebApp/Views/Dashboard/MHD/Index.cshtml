@@ -1,0 +1,171 @@
+﻿@{
+    ViewData["AppContentNone"] = "true";
+    ViewBag.Title = "Power BI Dashboard";
+}
+
+<style>
+    .product-card .item {
+        background-color: #fff;
+        box-shadow: 0 4px 5px #cacaca;
+        border-radius: 8px;
+        padding: 15px;
+        border: solid 2px rgb(65, 64, 64);
+        cursor: pointer;
+        transition: .5s ease;
+        opacity: 0.3;
+    }
+
+        .product-card .item img {
+            width: 100%;
+            height: 150px; /* Adjust the height as needed */
+            object-fit: contain; /* Keeps the aspect ratio intact while fitting the image */
+        }
+
+    .item:hover {
+        display: block;
+    }
+
+    .item.active {
+        border: 2px solid #007aff;
+        opacity: 1;
+    }
+
+
+    .card-link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+        .card-link .panel:hover {
+            background-color: #007aff;
+            color: white;
+        }
+</style>
+
+<div class="alert alert-primary text-left pt-4" role="alert"><h4>Please Select The Products</h4></div>
+
+<div class="row text-center" data-step="3"
+     data-intro="Another step. Intro.js main features!"
+     data-hint="Another step. Intro.js main features!"
+     data-hintPosition="top-middle"
+     data-position="bottom-right-aligned">
+
+
+    <div class="container">
+        <div class="card">
+            <h1 id="product-title" class="text-center mt-3">The Products</h1> <hr>
+            <div class="card-body">
+                <!-- Content The Products -->
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="product-card">
+                            <div class="content-wrapper">
+                                <a class="card-link">
+                                    <div class="item" data-id="1">
+                                        <img src="~/assets/images/product/toyota_forklift.png" alt="Toyota" class="img-fluid mx-auto" />
+                                        <h5 class="m-b-5"><b>Toyota</b></h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="product-card">
+                            <div class="content-wrapper">
+                                <a class="card-link">
+                                    <div class="item" data-id="2">
+                                        <img src="~/assets/images/product/bt_raymond.png" alt="BT Raymond" class="img-fluid mx-auto" />
+                                        <h5 class="m-b-5"><b>BT Raymond</b></h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-for mt-5">
+        </div>
+
+    </div>
+    @section Scripts {
+        <script>
+            $(document).ready(function () {
+
+                // Get the current URL path
+                var pathArray = window.location.pathname.split('/');
+
+                // Get the last segment from the path, which should be 'MHD'
+                var productType = pathArray[pathArray.length - 1];
+
+                // Update the text in the h1 element with id 'product-title'
+                $('#product-title').text('The Products - ' + productType);
+
+
+                const commonMenuData = [
+                    {
+                        url: '@Url.Action("OCC", "Embed")/calculator',
+                        icon: "fa-calculator",
+                        text: "Productivity Calculator Unit",
+                        target: "_self"
+                    },
+                    {
+                        url: '@Url.Action("", "ProductSpec", new { type = "MHD" })',
+                        icon: "fa-list",
+                        text: "Product Unit Specification",
+                        target: "_self"
+                    },
+                    {
+                        url: '@Url.Action("", "Comparison", new { type = "MHD" })',
+                        icon: "fa-repeat",
+                        text: "Product Unit Comparison",
+                        target: "_self"
+                    },
+                ];
+
+                const menuData = {
+                    1: [
+                        ...commonMenuData,
+                    ],
+                    2: [
+                        ...commonMenuData,
+                    ],
+                };
+
+                $('.item').on('click', function () {
+                    // Remove 'active' class from all items
+                    $('.item').removeClass('active');
+
+                    // Add 'active' class to the clicked item
+                    $(this).addClass('active');
+
+                    // Get the data-id of the clicked item
+                    const id = $(this).data('id');
+
+                    // Get the corresponding menu data
+                    const items = menuData[id] || [];
+
+                    // Generate HTML for menu items
+                    const content = items.map(item => `
+                                    <div class="col-md-3 mb-4">
+                                        <a href="${item.url}" class="card-link" target="${item.target}">
+                                            <div class="panel panel-inverse">
+                                                <div class="panel-body">
+                                                    <div class="text-center">
+                                                        <i class="fa ${item.icon} fa-5x text-muted mb-4"></i>
+                                                        <h5 class="m-b-5"><b>${item.text}</b></h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                `).join('');
+
+                    // Update the menu-for container with the generated HTML
+                    $('.menu-for').html(`<div class="row">${content}</div>`).show();
+                });
+
+            });
+        </script>
+    }

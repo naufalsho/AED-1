@@ -110,9 +110,12 @@ app.UseEndpoints(endpoints =>
     //{
     //    Authorization = new[] { new HangfireAuthFilter(builder.Configuration.GetValue<string>("AppSettings:SchedulerRole")) }
     //});
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=ProductSpec}/{action=Index}/{type?}");
 });
 
-var hangfireJobOpt = new RecurringJobOptions()
+var hangfireJobOpt = new RecurringJobOptions()  
 {
     TimeZone = TimeZoneInfo.Local
 };

@@ -24,7 +24,7 @@ namespace WebApp.Controllers
         //     return View();
         // }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string type)
         {
             
             // var accessToken = await GetAccessToken();
@@ -34,6 +34,19 @@ namespace WebApp.Controllers
             // ViewBag.EmbedToken = embedToken.Token;
             // ViewBag.ReportId = "YOUR_REPORT_ID";            
             return View(ViewPath.Dashboard2);
+        }
+
+        public async Task<IActionResult> Acgon()
+        {
+            return View(ViewPath.Dashboard3);
+        }
+        public async Task<IActionResult> MHD()
+        {
+            return View(ViewPath.Dashboard4);
+        }
+        public async Task<IActionResult> Power()
+        {
+            return View(ViewPath.Dashboard5);
         }
 
         private async Task<EmbedToken> GetEmbedToken(string accessToken, Guid groupId, Guid reportId)

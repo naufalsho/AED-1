@@ -22,16 +22,32 @@ namespace WebApp.Controllers.Transaction
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string type)
         {
             var categoryResult = await _mstCategoryService.GetAll();
-
+            int typeNum = 0;
+            if (type == "Acgon-agri")
+            {
+                typeNum = 1;
+            }
+            else if (type == "Acgon-construction")
+            {
+                typeNum = 2;
+            }
+            else if (type == "MHD")
+            {
+                typeNum = 3;
+            }
+            else if (type == "Power")
+            {
+                typeNum = 4;
+            }
 
             var ret = new ComparisonDto
             {
                 SLClass = await _commonSvc.SLGetClass(),
                 Category = categoryResult.Value
-                                        .Where(r => r.Type == 0)
+                                        .Where(r => r.Type == typeNum)
                                         .Select(r => new TMstCategoryDto
                                         {
                                             Code = r.Code,
