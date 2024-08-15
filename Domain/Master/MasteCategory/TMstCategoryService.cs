@@ -302,6 +302,33 @@ namespace Domain.Master.MasterCategory
                 return Result.Fail(ResponseStatusCode.InternalServerError + ":" + ex.GetMessage());
             }
         }
+
+        public async Task<Result<IEnumerable<DescriptionGroupDto>>> GetDescriptionGroups()
+        {
+            // Fetch all categories using the existing GetAll() method
+            var categoryResult = await GetAll();
+
+            if (!categoryResult.IsSuccess)
+            {
+                return Result.Fail<IEnumerable<DescriptionGroupDto>>(categoryResult.Reasons.First().Message);
+            }
+
+            // Map TMstCategoryDto to DescriptionGroupDto
+
+            var groupedDescriptions = categoryResult.Value
+                .GroupBy(c => new { c.Description, c.DescriptionImage })
+                .Select(g => new DescriptionGroupDto
+                {
+                    Description = g.Key.Description,
+                    DescriptionImage = g.Key.DescriptionImage,
+                    Brand = g.SelectMany(c => c.CategoryDetails)
+                              .Select(cd => cd.Brand)
+                              .ToList()
+                })
+                .ToList() as IEnumerable<DescriptionGroupDto>;
+
+            return Result.Ok(groupedDescriptions);
+        }
     }
 
 }

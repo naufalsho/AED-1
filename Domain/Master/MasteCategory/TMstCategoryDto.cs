@@ -72,6 +72,12 @@ namespace Domain.Master.MasterCategory
         public TMstBrandDto Brand { get; set; }
     }
 
+    public class DescriptionGroupDto
+    {
+        public string Description { get; set; }
+        public string DescriptionImage { get; set; }
+        public List<TMstBrandDto> Brand { get; set; }
+    }
 
 
 

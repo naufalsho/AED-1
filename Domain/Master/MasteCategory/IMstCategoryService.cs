@@ -14,5 +14,6 @@ namespace Domain.Master.MasterCategory
         Task<Result<TMstCategoryDto>> Create(UserClaimModel user, TMstCategoryCreatedDto data);
         Task<Result<TMstCategoryDto>> Update(UserClaimModel user, TMstCategoryUpdatedDto data);
         Task<Result<TMstCategoryDto>> Delete(UserClaimModel user, string id);
+        Task<Result<IEnumerable<DescriptionGroupDto>>> GetDescriptionGroups();
     }
 }

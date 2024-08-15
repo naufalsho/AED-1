@@ -190,6 +190,19 @@ namespace Domain
             CreateMap<VwDsDeviceStockByStatus, DeviceStockByStatusDto>()
                 .ForMember(dest => dest.DeviceStatusUI, opt => opt.MapFrom(x => AssetStatus.GetAssetStatusUI(x.DeviceStatus)));
             CreateMap<VwDsDeviceAllocated, DeviceAllocatedDto>();
+
+
+            // Mapping from TMstCategoryDto to DescriptionGroupDto
+            CreateMap<TMstCategoryDto, DescriptionGroupDto>()
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.DescriptionImage, opt => opt.MapFrom(src => src.DescriptionImage))
+                .ForMember(dest => dest.Brand, opt => opt.MapFrom(src => src.CategoryDetails.Select(cd => cd.Brand).FirstOrDefault()));
+
+            // Mapping from TMstCategoryDetailDto to TMstBrandDto
+            CreateMap<TMstCategoryDetailDto, TMstBrandDto>()
+                .ForMember(dest => dest.Code, opt => opt.MapFrom(src => src.Brand.Code))
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Brand.Name))
+                .ForMember(dest => dest.Country, opt => opt.MapFrom(src => src.Brand.Country));
             #endregion
 
             #region Upload

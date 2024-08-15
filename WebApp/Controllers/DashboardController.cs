@@ -1,6 +1,8 @@
 ﻿using Core;
 using Core.Helpers;
 using Domain.Dashboard;
+using Domain.Master;
+using Domain.Master.MasterCategory;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Client;
 using Microsoft.PowerBI.Api;
@@ -12,10 +14,14 @@ namespace WebApp.Controllers
     public class DashboardController : BasePageController
     {
         private readonly IDashboardService _dsSvc;
+        private readonly IMstCategoryService _mstCategoryService;
+        private readonly IMstBrandService _mstBrandService;
         private string urlPowerBiServiceApiRoot;
 
-        public DashboardController(IDashboardService dsSvc)
+        public DashboardController(IDashboardService dsSvc, IMstCategoryService mstCategoryService, IMstBrandService mstBrandService)
         {
+            _mstCategoryService = mstCategoryService;
+            _mstBrandService = mstBrandService;
             _dsSvc = dsSvc;
         }
 
@@ -24,17 +30,34 @@ namespace WebApp.Controllers
         //     return View();
         // }
 
-        public async Task<IActionResult> Index(string type)
+        public async Task<IActionResult> Index()
         {
-            
+
             // var accessToken = await GetAccessToken();
             // var embedToken = await GetEmbedToken(accessToken, Guid.Empty, Guid.Empty);
 
             // ViewBag.EmbedUrl = $"https://app.powerbi.com/reportEmbed?reportId=YOUR_REPORT_ID&groupId=YOUR_GROUP_ID";
             // ViewBag.EmbedToken = embedToken.Token;
-            // ViewBag.ReportId = "YOUR_REPORT_ID";            
-            return View(ViewPath.Dashboard2);
+            // ViewBag.ReportId = "YOUR_REPORT_ID";
+
+            // Fetch the description groups data
+            var result = await _mstCategoryService.GetDescriptionGroups();
+
+            if (result.IsSuccess)
+            {
+                return View(ViewPath.Dashboard2, result.Value);
+            }
+            else
+            {
+                var resp = ResponseHelper.CreateFailResult(result.Reasons.First().Message);
+
+                return StatusCode(int.Parse(resp.StatusCode), resp.Message);
+            }
+
+            
         }
+
+
 
         public async Task<IActionResult> Agcon()
         {
