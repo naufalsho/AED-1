@@ -57,7 +57,7 @@
             <div class="card-body">
                 <!-- Content The Products -->
                 <div class="row mt-4">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="product-card">
                             <div class="content-wrapper">
                                 <a class="card-link">
@@ -69,13 +69,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="product-card">
                             <div class="content-wrapper">
                                 <a class="card-link">
                                     <div class="item" data-id="2">
                                         <img src="~/assets/images/product/ingersoll_rand.png" alt="Ingersoll-Rand" class="img-fluid mx-auto" />
                                         <h5 class="m-b-5"><b>Ingersoll-Rand</b></h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="product-card">
+                            <div class="content-wrapper">
+                                <a class="card-link">
+                                    <div class="item" data-id="2">
+                                        <img src="~/assets/images/product/fg_wilson.png" alt="FG-Wilson" class="img-fluid mx-auto" />
+                                        <h5 class="m-b-5"><b>FG Wilson</b></h5>
                                     </div>
                                 </a>
                             </div>
@@ -99,7 +111,7 @@
                 var productType = pathArray[pathArray.length - 1];
 
                 // Update the text in the h1 element with id 'product-title'
-                $('#product-title').text('The Products - ' + productType);
+                $('#product-title').text(productType + ' Products');
 
 
                 const commonMenuData = [
@@ -125,10 +137,10 @@
 
                 const menuData = {
                     1: [
-                        ...commonMenuData,
+                       
                     ],
                     2: [
-                        ...commonMenuData,
+                       
                     ],
                 };
 

@@ -57,7 +57,7 @@ namespace Domain.Comparison
                     FROM ImplementMatriks A
                     INNER JOIN MstModel B ON A.ModelCode = B.Code
                     INNER JOIN MstClassValue C ON C.Code = A.ClassValueCode
-                    WHERE B.IsActive = 1  {attchCondition}
+                    WHERE B.IsActive = 1  {attchCondition} 
                 ";
 
                 var attachments = await connection.QueryAsync<ImplementDto>(sql);
@@ -90,7 +90,7 @@ namespace Domain.Comparison
 
                 var modelCodeCondition = param.ModelCode != null ? $"AND Code = '{param.ModelCode}'" : "";
 
-                var modelsQuery = $"SELECT * FROM MstModel WHERE Type = 'Unit' AND IsActive = 1 {modelCodeCondition}";
+                var modelsQuery = $"SELECT * FROM MstModel WHERE Type = 'Unit' AND Distributor='PT. Traktor Nusantara' AND IsActive = 1 {modelCodeCondition}";
                 var models = await connection.QueryAsync<TMstModelDto>(modelsQuery);
 
                 var attchCondition = param.ModelCode != null ? $"AND ModelCode = '{param.ModelCode}'" : "";

@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Core.Models.Entities;
 using Core.Models.Entities.Tables.Master;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Domain.Master.MasterCategory
@@ -12,6 +13,7 @@ namespace Domain.Master.MasterCategory
         public string Description { get; set; }
         public string Tag { get; set; }
         public int Type{ get; set; }
+        public string DescriptionImage { get; set; }
         public bool? IsActived { get; set; }
 
         public List<TMstCategoryDetailDto> CategoryDetails { get; set; }  
@@ -30,13 +32,12 @@ namespace Domain.Master.MasterCategory
 
         [StringLength(100, ErrorMessage = "Tag cannot exceed 100 characters.")]
         public string Tag { get; set; }
-
+        public IFormFile DescriptionImage { get; set; }
         public bool IsActive { get; set; }
 
         public string CreatedBy { get; set; }
         public IEnumerable<SelectListItem> Brands { get; set; }
         public List<string> BrandCode { get; set; }
-
 
     }
 
@@ -52,6 +53,7 @@ namespace Domain.Master.MasterCategory
 
         [StringLength(100, ErrorMessage = "Tag cannot exceed 100 characters.")]
         public string Tag { get; set; }
+        public IFormFile DescriptionImage { get; set; }
 
         public bool IsActive { get; set; }
 
@@ -60,9 +62,6 @@ namespace Domain.Master.MasterCategory
         public List<string> BrandCode { get; set; }
 
     }
-
-
-
 
 
     public class TMstCategoryDetailDto

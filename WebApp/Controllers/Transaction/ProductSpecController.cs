@@ -42,10 +42,10 @@ namespace WebApp.Controllers.Transaction
         {
             var result = await _mstCategoryService.GetAll();
             int typeNum = 0;
-            if(type == "Acgon-agri")
+            if(type == "Mf")
             {
                 typeNum = 1;
-            }else if(type == "Acgon-construction")
+            }else if(type == "Cannycom")
             {
                 typeNum = 2;
             }else if (type == "MHD")

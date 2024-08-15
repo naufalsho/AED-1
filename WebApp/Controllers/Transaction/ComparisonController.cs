@@ -26,22 +26,22 @@ namespace WebApp.Controllers.Transaction
         {
             var categoryResult = await _mstCategoryService.GetAll();
             int typeNum = 0;
-            if (type == "Acgon-agri")
+            if (type == "Mf")
             {
                 typeNum = 1;
             }
-            else if (type == "Acgon-construction")
+            else if (type == "Cannycom")
             {
                 typeNum = 2;
             }
-            else if (type == "MHD")
-            {
-                typeNum = 3;
-            }
-            else if (type == "Power")
-            {
-                typeNum = 4;
-            }
+            //else if (type == "MHD")
+            //{
+            //    typeNum = 3;
+            //}
+            //else if (type == "Power")
+            //{
+            //    typeNum = 4;
+            //}
 
             var ret = new ComparisonDto
             {

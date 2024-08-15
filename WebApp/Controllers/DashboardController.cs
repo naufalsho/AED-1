@@ -36,7 +36,7 @@ namespace WebApp.Controllers
             return View(ViewPath.Dashboard2);
         }
 
-        public async Task<IActionResult> Acgon()
+        public async Task<IActionResult> Agcon()
         {
             return View(ViewPath.Dashboard3);
         }

@@ -2,8 +2,8 @@
 
 @{
     var currMenu = ViewData["CurrentMenu"] as UserMenuDto;
-    var groupName = ViewData["GroupMenuName"].ToString();
-    var menuName = ViewData["MenuName"].ToString();
+    var groupName = ViewData["GroupMenuName"]?.ToString();
+    var menuName = ViewData["MenuName"]?.ToString();
 
     var title = "";
 
@@ -41,13 +41,13 @@
     <link href="~/assets/plugins/datatables.net-bs5/dataTables.bootstrap5.min.css" rel="stylesheet" />
     <link href="~/assets/plugins/datatables.net-buttons-bs5/buttons.bootstrap5.min.css" rel="stylesheet" />
 
-   @*  <link rel="stylesheet"
+    <link rel="stylesheet"
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
     <link rel="stylesheet"
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
- *@
+
     @RenderSection("Styles", required: false)
 </head>
 <body class="@ViewData["AppBodyClass"]">
@@ -80,6 +80,19 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#" onclick="history.go(-1)">Back@* @groupName *@</a></li>
                         <li class="breadcrumb-item active">@menuName</li>
+                    </ol>
+                }
+                else if(groupName == "Home")
+                {
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/" >Home@*  @groupName *@ </a></li>
+                        <li class="breadcrumb-item active">Dashboard</li>
+                    </ol>
+                }else if(menuName == null)
+                {
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#" onclick="history.go(-1)">Back@* @groupName *@</a></li>
+                        <li class="breadcrumb-item active"></li>
                     </ol>
                 }
 
@@ -138,8 +151,8 @@
     <script src="~/assets/js/app.constant.js" asp-append-version="true"></script>
     <script src="~/assets/js/app.custom.js" asp-append-version="true"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>@* 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>@*
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <!-- Bootstrap JS -->*@

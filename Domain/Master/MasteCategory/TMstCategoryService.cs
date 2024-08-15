@@ -46,6 +46,36 @@ namespace Domain.Master.MasterCategory
                 param.CreatedBy = user.NameIdentifier;
                 param.CreatedDate = DateTime.Now;
 
+                // Cek apakah file dikirim dari form
+                if (data.DescriptionImage != null && data.DescriptionImage.Length > 0)
+                {
+                    string folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "assets", "images", "product");
+
+                    if (!string.IsNullOrEmpty(param.DescriptionImage))
+                    {
+                        var previousFilePath = Path.Combine(folderPath, param.DescriptionImage);
+                        if (File.Exists(previousFilePath))
+                        {
+                            File.Delete(previousFilePath);
+                        }
+                    }
+
+                    var fileExtension = Path.GetExtension(data.DescriptionImage.FileName);
+
+                    string fileName = $"{data.Code}{fileExtension}";
+
+
+                    param.DescriptionImage = fileName;
+
+                    var filePath = Path.Combine(folderPath, fileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await data.DescriptionImage.CopyToAsync(stream);
+                    }
+                }
+
+
                 var categoryDetails = new List<TMstCategoryDetail>();
                 if(data.BrandCode != null)
                 { 
@@ -111,7 +141,8 @@ namespace Domain.Master.MasterCategory
             {
                 var repoResult = await _uow.MstCategory.Set().
                     Include(c => c.CategoryDetails)
-                    .ThenInclude(cd => cd.Brand).ToListAsync();
+                    .ThenInclude(cd => cd.Brand)
+                    .Where(a => !a.IsDelete).ToListAsync();
 
 
                 var result = _mapper.Map<IEnumerable<TMstCategoryDto>>(repoResult);
@@ -215,6 +246,9 @@ namespace Domain.Master.MasterCategory
                 }
 
                 string createdBy = repoResult.CreatedBy;
+                string previousImageFileName = repoResult.DescriptionImage;
+
+
                 var categoryDetails = data.BrandCode.Select(brandCode => new TMstCategoryDetail
                 {
                     CategoryCode = data.Code,
@@ -228,6 +262,34 @@ namespace Domain.Master.MasterCategory
                 repoResult.CreatedBy = createdBy;
                 repoResult.UpdatedBy = user.NameIdentifier;
                 repoResult.UpdatedDate = DateTime.Now;
+                if (data.DescriptionImage != null && data.DescriptionImage.Length > 0)
+                {
+                    if (!string.IsNullOrEmpty(previousImageFileName))
+                    {
+                        var previousImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "assets", "images", "product", previousImageFileName);
+                        if (File.Exists(previousImagePath))
+                        {
+                            File.Delete(previousImagePath);
+                        }
+                    }
+
+
+                    var fileExtension = Path.GetExtension(data.DescriptionImage.FileName);
+
+                    string fileName = $"{data.Code}{fileExtension}";
+                    repoResult.DescriptionImage = fileName;
+
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "assets", "images", "product", fileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await data.DescriptionImage.CopyToAsync(stream);
+                    }
+                }
+                else
+                {
+                    repoResult.DescriptionImage = previousImageFileName;
+                }
 
                 _uow.MstCategory.Update(repoResult);
                 await _uow.CompleteAsync();

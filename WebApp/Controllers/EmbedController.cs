@@ -35,7 +35,7 @@ namespace WebApp.Controllers
                 { "canycom", ("OOC Tractor Canycom", "https://traknus.sharepoint.com/sites/ITNonSAP/_layouts/15/Doc.aspx?sourcedoc={03ce000e-fe0a-4be3-bba5-a9d375f835d6}&action=embedview&AllowTyping=True&ActiveCell='OOC'!P8&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True") },
                 { "kubota", ("OOC Tractor Kubota", "https://traknus.sharepoint.com/sites/ITNonSAP/_layouts/15/Doc.aspx?sourcedoc={52a17a3c-ca9d-4eab-8324-feacb444dfc5}&action=embedview&AllowTyping=True&ActiveCell='OOC%20'!P7&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True") },
                 { "mf", ("OOC Tractor MF", "https://traknus.sharepoint.com/sites/ITNonSAP/_layouts/15/Doc.aspx?sourcedoc={f777703d-67b2-4f4a-8dbb-de5e9f7044b7}&action=embedview&AllowTyping=True&ActiveCell='OOC'!A1&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True") },
-                { "calculator", ("Owning Operation & Productivity Unit Agcon", "https://traknus.sharepoint.com/sites/ITNonSAP/_layouts/15/Doc.aspx?sourcedoc={6145644b-2cff-4afa-a1a0-6f49da0d6681}&action=embedview&AllowTyping=True&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True") }
+                { "calculator", ("Productivity Calculator Unit", "https://traknus.sharepoint.com/sites/ITNonSAP/_layouts/15/Doc.aspx?sourcedoc={6145644b-2cff-4afa-a1a0-6f49da0d6681}&action=embedview&AllowTyping=True&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True") }
             };
 
 

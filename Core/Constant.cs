@@ -123,8 +123,9 @@
         #endregion
 
         #region  Home
-        public static string Dashboard2 => "~/Views/Dashboard/Index2.cshtml";
-        public static string Dashboard3 => "~/Views/Dashboard/Acgon/Index.cshtml";
+        public static string Dashboard => "~/Views/Dashboard/Index.cshtml";
+        public static string Dashboard2 => "~/Views/Dashboard/Index3.cshtml";
+        public static string Dashboard3 => "~/Views/Dashboard/Agcon/Index.cshtml";
         public static string Dashboard4 => "~/Views/Dashboard/MHD/Index.cshtml";
         public static string Dashboard5 => "~/Views/Dashboard/Power/Index.cshtml";
 

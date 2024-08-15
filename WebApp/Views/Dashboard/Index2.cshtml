@@ -27,12 +27,21 @@
             height: auto;
         }
 
+        .business-card .image-wrapper {
+            width: 100%; /* Make the image-wrapper fill the parent width */
+            height: 200px; /* Set a fixed height for the image-wrapper */
+            overflow: hidden; /* Hide overflow to maintain aspect ratio */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         .business-card img {
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Scale the image to cover the container while maintaining aspect ratio */
+            transition: opacity 0.3s ease, transform 0.3s ease;
             opacity: 0.3;
-            transition: opacity 0.3s ease;
-            transition: all .5s ease-in-out;
         }
 
         .business-card .read-more-btn {
@@ -59,7 +68,7 @@
 </style>
 <!-- Business Sector Section -->
     
-    <div class="container">
+    
         <div class="card">
             <div class="card-body">
             <h1 class="business-title text-center">BUSINESS SECTOR</h1><hr>
@@ -71,10 +80,10 @@
                                 <img src="assets/images/product/M00001.png" alt="Industrial">
                             </div>
                             <div class="text-wrapper">
-                                <h3>ACGON</h3>
+                                <h3>AGCON</h3>
                             </div>
                             <div class="button-wrapper">
-                                <a href="@Url.Action("Acgon", "Dashboard")" class="btn btn-primary read-more-btn">Read More</a>
+                                <a href="@Url.Action("Agcon", "Dashboard")" class="btn btn-primary read-more-btn">Continue</a>
                             </div>
                         </div>
                     </div>
@@ -83,13 +92,13 @@
                     <div class="business-card">
                         <div class="content-wrapper">
                             <div class="image-wrapper">
-                                <img src="assets/images/product/M00001.png" alt="Agriculture">
+                                <img src="assets/images/product/toyota_forklift.png" alt="Agriculture">
                             </div>
                             <div class="text-wrapper">
                                 <h3>MHD</h3>
                             </div>
                             <div class="button-wrapper">
-                                <a href="@Url.Action("MHD", "Dashboard")" class="btn btn-primary read-more-btn">Read More</a>
+                                <a href="@Url.Action("MHD", "Dashboard")" class="btn btn-primary read-more-btn">Continue</a>
                             </div>
                         </div>
                     </div>
@@ -98,13 +107,13 @@
                     <div class="business-card">
                         <div class="content-wrapper">
                             <div class="image-wrapper">
-                                <img src="assets/images/product/perkins.png" alt="Power Generation and Air Solution">
+                                <img src="assets/images/product/genset_power.png" alt="Power Generation and Air Solution">
                             </div>
                             <div class="text-wrapper">
                                 <h3>POWER</h3>
                             </div>
                             <div class="button-wrapper">
-                                <a href="@Url.Action("Power", "Dashboard")" class="btn btn-primary read-more-btn">Read More</a>
+                                <a href="@Url.Action("Power", "Dashboard")" class="btn btn-primary read-more-btn">Continue</a>
                             </div>
                         </div>
                     </div>
@@ -113,4 +122,4 @@
             </div>
         </div>
         
-    </div>
+    

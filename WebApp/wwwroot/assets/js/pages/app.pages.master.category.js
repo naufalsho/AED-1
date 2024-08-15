@@ -18,7 +18,7 @@ const response = [
         isActive: true
     },
     {
-        id: 1,
+        id: 2,
         code: 'C002',
         desc: 'Canycom',
         brand: [
@@ -29,7 +29,7 @@ const response = [
         isActive: true
     },
     {
-        id: 1,
+        id: 3,
         code: 'C003',
         desc: 'MF',
         brand: [
@@ -50,7 +50,7 @@ const response = [
             dropdownParent: $("#FormInput")
         });
 
-        ModalAction(getData);
+        ModalActionWithFile(getData);
     });
 
     $('#app').on('click', '.btn-delete', function (e) {
@@ -96,6 +96,17 @@ function initDt(response) {
                             }
                             return '';
                         }).join(' ');
+                    }
+                },
+                {
+                    data: 'descriptionImage',
+                    className: 'text-center',
+                    render: function (data) {
+                        if (data != null && data != '') {
+                            return `<img src="/assets/images/Product/${data}" style="max-width:50px; max-height:50px;" alt="Product Image" class="img-fluid rounded img-background">`;
+                        } else {
+                            return ``;
+                        }
                     }
                 },
 				{ data: 'createdBy' },
