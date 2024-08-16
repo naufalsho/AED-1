@@ -305,30 +305,45 @@ namespace Domain.Master.MasterCategory
 
         public async Task<Result<IEnumerable<DescriptionGroupDto>>> GetDescriptionGroups()
         {
-            // Fetch all categories using the existing GetAll() method
-            var categoryResult = await GetAll();
-
-            if (!categoryResult.IsSuccess)
+            try
             {
-                return Result.Fail<IEnumerable<DescriptionGroupDto>>(categoryResult.Reasons.First().Message);
+                // Fetch and filter categories based on the distributor
+                var categoryResult = await (from category in _uow.MstCategory.Set()
+                                                        .Include(c => c.CategoryDetails)
+                                                        .ThenInclude(cd => cd.Brand)
+                                            from categoryDetail in category.CategoryDetails
+                                            join model in _uow.MstModel.Set()
+                                                on categoryDetail.BrandCode equals model.BrandCode
+                                            where !category.IsDelete && model.Distributor == "PT. Traktor Nusantara"
+                                            select new
+                                            {
+                                                category.Description,
+                                                category.DescriptionImage,
+                                                Brand = categoryDetail.Brand
+                                            })
+                                            .Distinct()
+                                            .ToListAsync();
+
+                // Map TMstBrand to TMstBrandDto and group the results by Description and DescriptionImage
+                var groupedDescriptions = categoryResult
+                    .GroupBy(r => new { r.Description, r.DescriptionImage })
+                    .Select(g => new DescriptionGroupDto
+                    {
+                        Description = g.Key.Description,
+                        DescriptionImage = g.Key.DescriptionImage,
+                        Brand = _mapper.Map<List<TMstBrandDto>>(g.Select(r => r.Brand).Distinct().ToList())
+                    })
+                    .ToList();
+
+                // Wrap the grouped descriptions in a Result and return
+                return Result.Ok(groupedDescriptions.AsEnumerable());
             }
-
-            // Map TMstCategoryDto to DescriptionGroupDto
-
-            var groupedDescriptions = categoryResult.Value
-                .GroupBy(c => new { c.Description, c.DescriptionImage })
-                .Select(g => new DescriptionGroupDto
-                {
-                    Description = g.Key.Description,
-                    DescriptionImage = g.Key.DescriptionImage,
-                    Brand = g.SelectMany(c => c.CategoryDetails)
-                              .Select(cd => cd.Brand)
-                              .ToList()
-                })
-                .ToList() as IEnumerable<DescriptionGroupDto>;
-
-            return Result.Ok(groupedDescriptions);
+            catch (Exception ex)
+            {
+                return Result.Fail<IEnumerable<DescriptionGroupDto>>($"An error occurred: {ex.Message}");
+            }
         }
+
     }
 
 }
