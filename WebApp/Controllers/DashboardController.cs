@@ -42,7 +42,7 @@ namespace WebApp.Controllers
                     foreach (var brand in group.Brands)
                     {
                         // Fetch brand-specific features (this logic can be adjusted as per your requirements)
-                        brand.Features = await GetBrandFeaturesAsync(brand.Name);
+                        brand.Features = await GetBrandFeaturesAsync(brand.Name, group.Code);
                     }
                 }
 
@@ -56,9 +56,9 @@ namespace WebApp.Controllers
         }
 
         // Action to get brand-specific features
-        public async Task<IActionResult> BrandDetails(string brandName)
+        public async Task<IActionResult> BrandDetails(string brandName, string codeCategory)
         {
-            var brandFeatures = await GetBrandFeaturesAsync(brandName);
+            var brandFeatures = await GetBrandFeaturesAsync(brandName, codeCategory);
 
             if (brandFeatures == null)
             {
@@ -68,14 +68,18 @@ namespace WebApp.Controllers
             return View("BrandDetails", brandFeatures);
         }
 
-        private async Task<List<FeatureDto>> GetBrandFeaturesAsync(string brandName)
+        private async Task<List<FeatureDto>> GetBrandFeaturesAsync(string brandName, string codeCategory)
         {
+            string encryptedType = EncryptionHelper.AesEncrypt(codeCategory);
             // Simulate fetching brand-specific features from a service or database
             // You can adjust this logic to actually fetch data from your database if needed
             var features = new List<FeatureDto>
         {
-            new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = Url.Action("Specification", "Dashboard", new { brandName }) },
-            new FeatureDto { Name = "Product Comparison", IconClass = "fa-repeat", Url = Url.Action("Comparison", "Dashboard", new { brandName }) },
+            //new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = Url.Action("Specification", "Dashboard", new { brandName }) },
+            new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = Url.Action("Index", "ProductSpec", new { category = encryptedType }) },
+            new FeatureDto { Name = "Product Comparison", IconClass = "fa-repeat", Url = Url.Action("Index", "Comparison", new { category = encryptedType }) },
+            //new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = Url.Action("", "ProductSpec") },
+            //new FeatureDto { Name = "Product Comparison", IconClass = "fa-repeat", Url = Url.Action("", "Comparison") },
             new FeatureDto { Name = "Application Handbook", IconClass = "fa-book-open-reader", Url = "http://10.0.10.74:9590/moodle/login/index.php" },
             new FeatureDto {Name = "Implement Compability", IconClass = "fa-folder-open", Url = Url.Action("", "ImplementCompability") },
             //new FeatureDto { Name = "Productivity Calculator", IconClass = "fa-calculator", Url = Url.Action("Calculator", "Dashboard", new { brandName }) },
@@ -93,24 +97,9 @@ namespace WebApp.Controllers
         }
 
         // Placeholder actions for demonstration purposes
-        public IActionResult Calculator(string brandName) => Content($"Calculator for {brandName}");
-        public IActionResult Specification(string brandName) => Content($"Specification for {brandName}");
-        public IActionResult Comparison(string brandName) => Content($"Comparison for {brandName}");
-
-
-
-        public async Task<IActionResult> Agcon()
-        {
-            return View(ViewPath.Dashboard3);
-        }
-        public async Task<IActionResult> MHD()
-        {
-            return View(ViewPath.Dashboard4);
-        }
-        public async Task<IActionResult> Power()
-        {
-            return View(ViewPath.Dashboard5);
-        }
+        //public IActionResult Calculator(string brandName) => Content($"Calculator for {brandName}");
+        //public IActionResult Specification(string brandName) => Content($"Specification for {brandName}");
+        //public IActionResult Comparison(string brandName) => Content($"Comparison for {brandName}");
 
         private async Task<EmbedToken> GetEmbedToken(string accessToken, Guid groupId, Guid reportId)
         {

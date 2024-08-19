@@ -59,8 +59,8 @@
     }
     public class DescriptionGroupDto
     {
+        public string Code { get; set; }
         public string Description { get; set; }
-        public string DescriptionImage { get; set; }
         public List<BrandWithFeaturesDto> Brands { get; set; }
     }
 

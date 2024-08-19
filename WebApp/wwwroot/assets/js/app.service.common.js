@@ -168,5 +168,21 @@
         return dfd.promise();
     }
 
+    commonService.prototype.getDecryptedCategory = function (encrypt) {
+        var dfd = $.Deferred();
+        $.getJSON(`/get/getDecryptedCategory/${encrypt}`).done(function (result) {
+
+            dfd.resolve(result);
+        }).fail(function (response) {
+            HandleHttpRequestFail(response);
+            dfd.reject(response);
+        });
+
+        return dfd.promise();
+    }
+
+
+
+
     webapp.CommonService = commonService;
 }();

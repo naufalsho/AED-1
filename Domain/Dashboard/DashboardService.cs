@@ -243,6 +243,7 @@ namespace Domain.Dashboard
         public async Task<Result<IEnumerable<DescriptionGroupDto>>> GetDescriptionGroupsAsync()
         {
             var categoryResult = await (from category in _uow.MstCategory.Set()
+                                        .Where(a => a.Tag == "TN")
                                         .Include(c => c.CategoryDetails)
                                         .ThenInclude(cd => cd.Brand)
                                         from categoryDetail in category.CategoryDetails
@@ -251,6 +252,7 @@ namespace Domain.Dashboard
                                         where !category.IsDelete 
                                         select new
                                         {
+                                            category.Code,
                                             category.Description,
                                             Brand = _mapper.Map<BrandWithFeaturesDto>(categoryDetail.Brand)
                                         })
@@ -258,9 +260,10 @@ namespace Domain.Dashboard
                 .ToListAsync();
 
             var groupedDescriptions = categoryResult
-                .GroupBy(r => new { r.Description })
+                .GroupBy(r => new { r.Code, r.Description })
                 .Select(g => new DescriptionGroupDto
                 {
+                    Code = g.Key.Code,
                     Description = g.Key.Description,
                     Brands = g.Select(r => r.Brand)
                               .Distinct()

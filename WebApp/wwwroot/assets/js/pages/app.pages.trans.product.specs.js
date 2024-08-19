@@ -14,6 +14,10 @@ panelHideLoader('#panelDiv', '#panelLoader');
 
 
 !function () {
+
+    // Usage
+    const categoryValue = getQueryParameter('category');
+   
     // getData();
 
     $(window).off('show.bs.modal').on('show.bs.modal', function () {
@@ -22,20 +26,25 @@ panelHideLoader('#panelDiv', '#panelLoader');
 
     $('a[data-bs-toggle="tab"]').on('show.bs.tab', function () {
         let thisEle = $(this);
-        Category = thisEle.data('table');
+        /*Category = thisEle.data('table');*/
         $(".img-notfound").prop("hidden", false)
         $(dTable).empty()
 
         $('.form-select').val(null).select2().trigger('change.select2');
 
-        commonService.getBrandByCategory(Category).done(function (response) {
-            if(response.length > 0 ) $('#FilterBrand').prop("disabled", false)
-            $('#FilterBrand').empty()
-            $('#FilterBrand').append('<option value="" disabled selected>Please select one</option>');
-            $.each(response, function (index, element) {
-                $('#FilterBrand').append(`<option value="${element.code}">${element.name}</option>`);
-            })
+        commonService.getDecryptedCategory(categoryValue).done(function (response) {
+            Category = response;
+
+            commonService.getBrandByCategory(Category).done(function (response) {
+                if (response.length > 0) $('#FilterBrand').prop("disabled", false)
+                $('#FilterBrand').empty()
+                $('#FilterBrand').append('<option value="" disabled selected>Please select one</option>');
+                $.each(response, function (index, element) {
+                    $('#FilterBrand').append(`<option value="${element.code}">${element.name}</option>`);
+                })
+            });
         });
+        
 
     });
 
@@ -102,4 +111,8 @@ function getData() {
         });
 }
 
+function getQueryParameter(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
 

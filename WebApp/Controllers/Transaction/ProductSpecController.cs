@@ -37,41 +37,80 @@ namespace WebApp.Controllers.Transaction
             _mstCategoryService = mstCategoryService;
         }
 
+        //[HttpGet]
+        //public async Task<IActionResult> Index( )
+        //{
+        //    var result = await _mstCategoryService.GetAll();
+        //    //int typeNum = 0;
+        //    //if(type == "Mf")
+        //    //{
+        //    //    typeNum = 1;
+        //    //}else if(type == "Cannycom")
+        //    //{
+        //    //    typeNum = 2;
+        //    //}else if (type == "MHD")
+        //    //{
+        //    //    typeNum = 3;
+        //    //}else if (type == "Power")
+        //    //{
+        //    //    typeNum = 4;
+        //    //}
+
+        //    UnitSpecDto ret = new UnitSpecDto
+        //    {
+        //        Category = result.Value
+        //                        .Where(r => r.Type == 1)
+        //                        .Select(r => new TMstCategoryDto
+        //                        {
+        //                            Code = r.Code,
+        //                            Description = r.Description,
+        //                            Type = r.Type 
+        //                        })
+        //                        .ToList() 
+        //    };
+
+
+        //    return View(ViewPath.ProductSpec, ret);
+        //}
+
         [HttpGet]
-        public async Task<IActionResult> Index(string type)
+        public async Task<IActionResult> Index(string category)
         {
-            var result = await _mstCategoryService.GetAll();
-            int typeNum = 0;
-            if(type == "Mf")
+            try
             {
-                typeNum = 1;
-            }else if(type == "Cannycom")
-            {
-                typeNum = 2;
-            }else if (type == "MHD")
-            {
-                typeNum = 3;
-            }else if (type == "Power")
-            {
-                typeNum = 4;
+                // Decrypt the 'encryptedType' parameter
+                string decryptedType = EncryptionHelper.AesDecrypt(category);
+
+
+                // Convert the decryptedType to the necessary type (e.g., integer)
+                string codeCategory = decryptedType;
+
+                // Fetch the categories
+                var result = await _mstCategoryService.GetAll();
+
+                // Filter the categories based on the decrypted type
+                UnitSpecDto ret = new UnitSpecDto
+                {
+                    Category = result.Value
+                                    .Where(r => r.Code == codeCategory)
+                                    .Select(r => new TMstCategoryDto
+                                    {
+                                        Code = r.Code,
+                                        Description = r.Description,
+                                        Type = r.Type
+                                    })
+                                    .ToList()
+                };
+
+                return View(ViewPath.ProductSpec, ret);
             }
-
-            UnitSpecDto ret = new UnitSpecDto
+            catch (Exception ex)
             {
-                Category = result.Value
-                                .Where(r => r.Type == typeNum)
-                                .Select(r => new TMstCategoryDto
-                                {
-                                    Code = r.Code,
-                                    Description = r.Description,
-                                    Type = r.Type 
-                                })
-                                .ToList() 
-            };
-
-           
-            return View(ViewPath.ProductSpec, ret);
+                // Handle decryption errors, log if necessary
+                return BadRequest("Invalid type parameter.");
+            }
         }
+
 
         [HttpGet("GetList")]
         public async Task<IActionResult> GetList(UnitSpecFilterDto param)

@@ -171,7 +171,31 @@ namespace WebApp.Controllers
             }
         }
 
+        [HttpGet("get/getDecryptedCategory/{encrypt}")]
+        public IActionResult GetDecryptedCategory(string encrypt)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(encrypt))
+                {
+                    return BadRequest("The input is invalid or empty.");
+                }
 
+                // Attempt to decrypt the input
+                var decryptedCategory = EncryptionHelper.AesDecrypt(encrypt);
+
+                // Return the decrypted category as JSON
+                return Json(decryptedCategory);
+            }
+            catch (Exception ex)
+            {
+                // Log the error if necessary
+                Console.WriteLine($"Error during decryption: {ex.Message}");
+
+                // Return a BadRequest with the error message
+                return BadRequest("Decryption failed. Please check the input and try again.");
+            }
+        }
 
 
     }

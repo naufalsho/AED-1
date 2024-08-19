@@ -150,7 +150,7 @@ namespace Domain.Master
         {
             try
             {
-                var repoResult = await _uow.MstBrand.Set().Where(c => c.Flag == null).ToListAsync();
+                var repoResult = await _uow.MstBrand.Set().ToListAsync();
 
                 var result = _mapper.Map<IEnumerable<TMstBrandDto>>(repoResult);
 

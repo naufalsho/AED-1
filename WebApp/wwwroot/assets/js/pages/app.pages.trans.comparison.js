@@ -8,7 +8,8 @@ panelHideLoader('#panelDiv', '#panelLoader');
 
 
 !function () {
-
+    // Usage
+    const categoryValue = getQueryParameter('category');
     $(window).off('show.bs.modal').on('show.bs.modal', function () {
 
     });
@@ -148,4 +149,9 @@ function getData() {
     })
 }
 
+
+function getQueryParameter(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
 
