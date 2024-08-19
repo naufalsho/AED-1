@@ -55,7 +55,7 @@ namespace WebApp.Controllers.Master
             ViewData[ViewDataType.ModalType] = ModalType.Create;
             ViewData[ViewDataType.ModalTitle] ="Create New Brand";
 
-            var ret = new TMstBrandDto();
+            var ret = new TMstBrandCreateDto();
 
             var getLastCode = await _mstBrandService.GetLastCode();
 
@@ -67,7 +67,7 @@ namespace WebApp.Controllers.Master
 
         [HttpPost("Create")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(TMstBrandDto data)
+        public async Task<IActionResult> Create(TMstBrandCreateDto data)
         {
 
             if (!ModelState.IsValid)
@@ -96,7 +96,7 @@ namespace WebApp.Controllers.Master
             ViewData[ViewDataType.ModalType] = ModalType.Create;
             ViewData[ViewDataType.ModalTitle] = "Edit Brand";
 
-            var ret = new TMstBrandDto();
+            var ret = new TMstBrandCreateDto();
 
             var result = await _mstBrandService.GetById(Id);
 

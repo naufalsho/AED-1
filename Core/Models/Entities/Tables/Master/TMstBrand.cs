@@ -6,12 +6,12 @@
         public string Name { get; set; }
         public string Country { get; set; }
 
+        public string BrandImage { get; set; }
+        public string Flag { get; set; }
+
         public virtual ICollection<TMstCategoryDetail> CategoryDetails { get; set; } = new List<TMstCategoryDetail>();
 
         public virtual ICollection<TMstModel> Models { get; set; } = new List<TMstModel>();
-
-
-
 
     }
 }

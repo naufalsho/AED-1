@@ -57,4 +57,27 @@
         public int Month { get; set; }
         public IEnumerable<DeviceGeneralDto> Device { get; set; }
     }
+    public class DescriptionGroupDto
+    {
+        public string Description { get; set; }
+        public string DescriptionImage { get; set; }
+        public List<BrandWithFeaturesDto> Brands { get; set; }
+    }
+
+    public class BrandWithFeaturesDto
+    {
+        public string Code { get; set; }
+        public string Name { get; set; }
+        public string BrandImage { get; set; }
+        public string Country { get; set; }
+        public List<FeatureDto> Features { get; set; }
+    }
+
+    public class FeatureDto
+    {
+        public string Name { get; set; }
+        public string IconClass { get; set; }
+        public string Url { get; set; }
+        public bool IsAvailable { get; set; } // Flag to determine if the feature is available for the brand
+    }
 }

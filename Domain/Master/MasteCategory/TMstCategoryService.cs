@@ -46,34 +46,7 @@ namespace Domain.Master.MasterCategory
                 param.CreatedBy = user.NameIdentifier;
                 param.CreatedDate = DateTime.Now;
 
-                // Cek apakah file dikirim dari form
-                if (data.DescriptionImage != null && data.DescriptionImage.Length > 0)
-                {
-                    string folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "assets", "images", "product");
-
-                    if (!string.IsNullOrEmpty(param.DescriptionImage))
-                    {
-                        var previousFilePath = Path.Combine(folderPath, param.DescriptionImage);
-                        if (File.Exists(previousFilePath))
-                        {
-                            File.Delete(previousFilePath);
-                        }
-                    }
-
-                    var fileExtension = Path.GetExtension(data.DescriptionImage.FileName);
-
-                    string fileName = $"{data.Code}{fileExtension}";
-
-
-                    param.DescriptionImage = fileName;
-
-                    var filePath = Path.Combine(folderPath, fileName);
-
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await data.DescriptionImage.CopyToAsync(stream);
-                    }
-                }
+                
 
 
                 var categoryDetails = new List<TMstCategoryDetail>();
@@ -246,7 +219,6 @@ namespace Domain.Master.MasterCategory
                 }
 
                 string createdBy = repoResult.CreatedBy;
-                string previousImageFileName = repoResult.DescriptionImage;
 
 
                 var categoryDetails = data.BrandCode.Select(brandCode => new TMstCategoryDetail
@@ -262,34 +234,7 @@ namespace Domain.Master.MasterCategory
                 repoResult.CreatedBy = createdBy;
                 repoResult.UpdatedBy = user.NameIdentifier;
                 repoResult.UpdatedDate = DateTime.Now;
-                if (data.DescriptionImage != null && data.DescriptionImage.Length > 0)
-                {
-                    if (!string.IsNullOrEmpty(previousImageFileName))
-                    {
-                        var previousImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "assets", "images", "product", previousImageFileName);
-                        if (File.Exists(previousImagePath))
-                        {
-                            File.Delete(previousImagePath);
-                        }
-                    }
-
-
-                    var fileExtension = Path.GetExtension(data.DescriptionImage.FileName);
-
-                    string fileName = $"{data.Code}{fileExtension}";
-                    repoResult.DescriptionImage = fileName;
-
-                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "assets", "images", "product", fileName);
-
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await data.DescriptionImage.CopyToAsync(stream);
-                    }
-                }
-                else
-                {
-                    repoResult.DescriptionImage = previousImageFileName;
-                }
+                
 
                 _uow.MstCategory.Update(repoResult);
                 await _uow.CompleteAsync();
@@ -303,47 +248,32 @@ namespace Domain.Master.MasterCategory
             }
         }
 
-        public async Task<Result<IEnumerable<DescriptionGroupDto>>> GetDescriptionGroups()
-        {
-            try
-            {
-                // Fetch and filter categories based on the distributor
-                var categoryResult = await (from category in _uow.MstCategory.Set()
-                                                        .Include(c => c.CategoryDetails)
-                                                        .ThenInclude(cd => cd.Brand)
-                                            from categoryDetail in category.CategoryDetails
-                                            join model in _uow.MstModel.Set()
-                                                on categoryDetail.BrandCode equals model.BrandCode
-                                            where !category.IsDelete && model.Distributor == "PT. Traktor Nusantara"
-                                            select new
-                                            {
-                                                category.Description,
-                                                category.DescriptionImage,
-                                                Brand = categoryDetail.Brand
-                                            })
-                                            .Distinct()
-                                            .ToListAsync();
+        //public async Task<Result<IEnumerable<DescriptionGroupDto>>> GetDescriptionGroups()
+        //{
+        //    // Fetch all categories using the existing GetAll() method
+        //    var categoryResult = await GetAll();
 
-                // Map TMstBrand to TMstBrandDto and group the results by Description and DescriptionImage
-                var groupedDescriptions = categoryResult
-                    .GroupBy(r => new { r.Description, r.DescriptionImage })
-                    .Select(g => new DescriptionGroupDto
-                    {
-                        Description = g.Key.Description,
-                        DescriptionImage = g.Key.DescriptionImage,
-                        Brand = _mapper.Map<List<TMstBrandDto>>(g.Select(r => r.Brand).Distinct().ToList())
-                    })
-                    .ToList();
+        //    if (!categoryResult.IsSuccess)
+        //    {
+        //        return Result.Fail<IEnumerable<DescriptionGroupDto>>(categoryResult.Reasons.First().Message);
+        //    }
 
-                // Wrap the grouped descriptions in a Result and return
-                return Result.Ok(groupedDescriptions.AsEnumerable());
-            }
-            catch (Exception ex)
-            {
-                return Result.Fail<IEnumerable<DescriptionGroupDto>>($"An error occurred: {ex.Message}");
-            }
-        }
+        //    // Map TMstCategoryDto to DescriptionGroupDto
 
+        //    var groupedDescriptions = categoryResult.Value
+        //        .GroupBy(c => new { c.Description, c.DescriptionImage })
+        //        .Select(g => new DescriptionGroupDto
+        //        {
+        //            Description = g.Key.Description,
+        //            DescriptionImage = g.Key.DescriptionImage,
+        //            Brand = g.SelectMany(c => c.CategoryDetails)
+        //                      .Select(cd => cd.Brand)
+        //                      .ToList()
+        //        })
+        //        .ToList() as IEnumerable<DescriptionGroupDto>;
+
+        //    return Result.Ok(groupedDescriptions);
+        //}
     }
 
 }

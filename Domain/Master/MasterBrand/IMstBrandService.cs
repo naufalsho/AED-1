@@ -13,7 +13,7 @@ namespace Domain.Master
         Task<Result<TMstBrandDto>> GetListByParam(TMstBrandDto param);
         Task<Result<TMstBrandDto>> GetById(string id);
         Task<Result<TMstBrandDto>> GetByParam(TMstBrandDto param);
-        Task<Result<TMstBrandDto>> Create(UserClaimModel user, TMstBrandDto data);
+        Task<Result<TMstBrandDto>> Create(UserClaimModel user, TMstBrandCreateDto data);
         Task<Result<TMstBrandDto>> Update(UserClaimModel user, TMstBrandCreateDto data);
         Task<Result<TMstBrandDto>> Delete(UserClaimModel user, string id);
     }

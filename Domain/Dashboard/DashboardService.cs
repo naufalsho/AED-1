@@ -5,6 +5,7 @@ using Core.Helpers;
 using Core.Interfaces;
 using FluentResults;
 using Microsoft.EntityFrameworkCore;
+using static QRCoder.PayloadGenerator;
 
 namespace Domain.Dashboard
 {
@@ -237,6 +238,63 @@ namespace Domain.Dashboard
             {
                 return Result.Fail(ResponseStatusCode.InternalServerError + ":" + ex.GetMessage());
             }
+        }
+
+        public async Task<Result<IEnumerable<DescriptionGroupDto>>> GetDescriptionGroupsAsync()
+        {
+            var categoryResult = await (from category in _uow.MstCategory.Set()
+                                        .Include(c => c.CategoryDetails)
+                                        .ThenInclude(cd => cd.Brand)
+                                        from categoryDetail in category.CategoryDetails
+                                        join model in _uow.MstModel.Set()
+                                            on categoryDetail.BrandCode equals model.BrandCode
+                                        where !category.IsDelete 
+                                        select new
+                                        {
+                                            category.Description,
+                                            Brand = _mapper.Map<BrandWithFeaturesDto>(categoryDetail.Brand)
+                                        })
+                .Distinct()
+                .ToListAsync();
+
+            var groupedDescriptions = categoryResult
+                .GroupBy(r => new { r.Description })
+                .Select(g => new DescriptionGroupDto
+                {
+                    Description = g.Key.Description,
+                    Brands = g.Select(r => r.Brand)
+                              .Distinct()
+                              .ToList()
+                })
+                .ToList() as IEnumerable<DescriptionGroupDto>;
+
+            return Result.Ok(groupedDescriptions);
+        }
+
+        public async Task<Result<BrandWithFeaturesDto>> GetBrandFeaturesAsync(string brandName)
+        {
+            // Fetch brand features from database or static data
+            var brand = await _uow.MstBrand.Set()
+                .Where(b => b.Name == brandName)
+                .Select(b => new BrandWithFeaturesDto
+                {
+                    Code = b.Code,
+                    Name = b.Name,
+                    BrandImage = b.BrandImage,
+                    Country = b.Country,
+                    Features = new List<FeatureDto>
+                    {
+                        new FeatureDto { Name = "Productivity Calculator", IconClass = "fa-calculator", Url = "calculator-url", IsAvailable = true },
+                        new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = "specification-url", IsAvailable = true },
+                        new FeatureDto { Name = "Product Comparison", IconClass = "fa-repeat", Url = "comparison-url", IsAvailable = true },
+                        new FeatureDto { Name = "Application Handbook", IconClass = "fa-book-open-reader", Url = "handbook-url", IsAvailable = false }
+                    }
+                })
+                .FirstOrDefaultAsync();
+
+            return brand != null
+                ? Result.Ok(brand)
+                : Result.Fail<BrandWithFeaturesDto>("Brand not found.");
         }
     }
 }

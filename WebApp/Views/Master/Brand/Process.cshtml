@@ -1,4 +1,4 @@
-﻿@model Domain.Master.TMstBrandDto;
+﻿@model Domain.Master.TMstBrandCreateDto;
 @using Core;
 
 @{
@@ -32,6 +32,13 @@
                         <option value="Korea Selatan"></option>
                         <option value="China"></option>
                     </datalist>
+            </div>
+        </div>
+
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Brand Image</label>
+            <div class="col-md-9">
+                <input class="form-control" accept=".jpg, .jpeg, .png" asp-for="BrandImage">
             </div>
         </div>
 

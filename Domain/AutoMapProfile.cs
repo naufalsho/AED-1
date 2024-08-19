@@ -191,18 +191,30 @@ namespace Domain
                 .ForMember(dest => dest.DeviceStatusUI, opt => opt.MapFrom(x => AssetStatus.GetAssetStatusUI(x.DeviceStatus)));
             CreateMap<VwDsDeviceAllocated, DeviceAllocatedDto>();
 
-
-            // Mapping from TMstCategoryDto to DescriptionGroupDto
-            CreateMap<TMstCategoryDto, DescriptionGroupDto>()
+            // Map TMstCategory to DescriptionGroupDto
+            CreateMap<TMstCategory, DescriptionGroupDto>()
                 .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
-                .ForMember(dest => dest.DescriptionImage, opt => opt.MapFrom(src => src.DescriptionImage))
-                .ForMember(dest => dest.Brand, opt => opt.MapFrom(src => src.CategoryDetails.Select(cd => cd.Brand).FirstOrDefault()));
+                .ForMember(dest => dest.Brands, opt => opt.MapFrom(src => src.CategoryDetails.Select(cd => cd.Brand).Distinct().ToList()));
 
-            // Mapping from TMstCategoryDetailDto to TMstBrandDto
-            CreateMap<TMstCategoryDetailDto, TMstBrandDto>()
-                .ForMember(dest => dest.Code, opt => opt.MapFrom(src => src.Brand.Code))
-                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Brand.Name))
-                .ForMember(dest => dest.Country, opt => opt.MapFrom(src => src.Brand.Country));
+            // Map TMstBrand to BrandWithFeaturesDto
+            CreateMap<TMstBrand, BrandWithFeaturesDto>()
+                .ForMember(dest => dest.Code, opt => opt.MapFrom(src => src.Code))
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
+                .ForMember(dest => dest.BrandImage, opt => opt.MapFrom(src => src.BrandImage))
+                .ForMember(dest => dest.Country, opt => opt.MapFrom(src => src.Country))
+                .ForMember(dest => dest.Features, opt => opt.Ignore()); // Features are added manually in the service
+
+            //// Mapping from TMstCategoryDto to DescriptionGroupDto
+            //CreateMap<TMstCategoryDto, DescriptionGroupDto>()
+            //    .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+            //    .ForMember(dest => dest.Brand, opt => opt.MapFrom(src => src.CategoryDetails.Select(cd => cd.Brand).FirstOrDefault()));
+
+            //// Mapping from TMstCategoryDetailDto to TMstBrandDto
+            //CreateMap<TMstCategoryDetailDto, TMstBrandDto>()
+            //    .ForMember(dest => dest.Code, opt => opt.MapFrom(src => src.Brand.Code))
+            //    .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Brand.Name))
+            //    .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Brand.BrandImage))
+            //    .ForMember(dest => dest.Country, opt => opt.MapFrom(src => src.Brand.Country));
             #endregion
 
             #region Upload

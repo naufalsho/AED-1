@@ -11,7 +11,7 @@ var thisUrl = 'brand';
     $(window).off('show.bs.modal').on('show.bs.modal', function () {
        
 
-        ModalAction(getData);
+        ModalActionWithFile(getData);
 
     });
 
@@ -47,7 +47,18 @@ function initDt(response) {
 				},
 				{ data: 'code' },
 				{ data: 'name' },
-				{ data: 'country' },
+                { data: 'country' },
+                {
+                    data: 'brandImage',
+                    className: 'text-center',
+                    render: function (data) {
+                        if (data != null && data != '') {
+                            return `<img src="/assets/images/Product/${data}" style="max-width:50px; max-height:50px;" alt="Product Image" class="img-fluid rounded img-background">`;
+                        } else {
+                            return ``;
+                        }
+                    }
+                },
 				{ data: 'createdBy' },
 				{
 					data: 'createdDate',

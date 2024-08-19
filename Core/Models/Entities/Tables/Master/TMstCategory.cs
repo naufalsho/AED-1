@@ -8,7 +8,6 @@ namespace Core.Models.Entities.Tables.Master
         public string Description { get; set; }
         public string Tag { get; set; }
         public int Type{ get; set; }
-        public string DescriptionImage { get; set; }
         public virtual ICollection<TMstCategoryDetail> CategoryDetails { get; set; }
         public virtual ICollection<TMstSpecItem> SpecItems { get; set; } = new List<TMstSpecItem>();
 

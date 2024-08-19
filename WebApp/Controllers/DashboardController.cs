@@ -32,30 +32,70 @@ namespace WebApp.Controllers
 
         public async Task<IActionResult> Index()
         {
-
-            // var accessToken = await GetAccessToken();
-            // var embedToken = await GetEmbedToken(accessToken, Guid.Empty, Guid.Empty);
-
-            // ViewBag.EmbedUrl = $"https://app.powerbi.com/reportEmbed?reportId=YOUR_REPORT_ID&groupId=YOUR_GROUP_ID";
-            // ViewBag.EmbedToken = embedToken.Token;
-            // ViewBag.ReportId = "YOUR_REPORT_ID";
-
-            // Fetch the description groups data
-            var result = await _mstCategoryService.GetDescriptionGroups();
+            var result = await _dsSvc.GetDescriptionGroupsAsync();
 
             if (result.IsSuccess)
             {
+                // Initialize Features for each brand
+                foreach (var group in result.Value)
+                {
+                    foreach (var brand in group.Brands)
+                    {
+                        // Fetch brand-specific features (this logic can be adjusted as per your requirements)
+                        brand.Features = await GetBrandFeaturesAsync(brand.Name);
+                    }
+                }
+
                 return View(ViewPath.Dashboard2, result.Value);
             }
             else
             {
                 var resp = ResponseHelper.CreateFailResult(result.Reasons.First().Message);
-
                 return StatusCode(int.Parse(resp.StatusCode), resp.Message);
             }
-
-            
         }
+
+        // Action to get brand-specific features
+        public async Task<IActionResult> BrandDetails(string brandName)
+        {
+            var brandFeatures = await GetBrandFeaturesAsync(brandName);
+
+            if (brandFeatures == null)
+            {
+                return NotFound();
+            }
+
+            return View("BrandDetails", brandFeatures);
+        }
+
+        private async Task<List<FeatureDto>> GetBrandFeaturesAsync(string brandName)
+        {
+            // Simulate fetching brand-specific features from a service or database
+            // You can adjust this logic to actually fetch data from your database if needed
+            var features = new List<FeatureDto>
+        {
+            new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = Url.Action("Specification", "Dashboard", new { brandName }) },
+            new FeatureDto { Name = "Product Comparison", IconClass = "fa-repeat", Url = Url.Action("Comparison", "Dashboard", new { brandName }) },
+            new FeatureDto { Name = "Application Handbook", IconClass = "fa-book-open-reader", Url = "http://10.0.10.74:9590/moodle/login/index.php" },
+            new FeatureDto {Name = "Implement Compability", IconClass = "fa-folder-open", Url = Url.Action("", "ImplementCompability") },
+            //new FeatureDto { Name = "Productivity Calculator", IconClass = "fa-calculator", Url = Url.Action("Calculator", "Dashboard", new { brandName }) },
+
+        };
+
+            // You can add logic here to customize features per brand
+            // For example, removing certain features for specific brands
+            if (brandName == "Cannycom")
+            {
+                features = features.Take(3).ToList(); // Take only the first two features for this specific brand
+            }
+
+            return await Task.FromResult(features);
+        }
+
+        // Placeholder actions for demonstration purposes
+        public IActionResult Calculator(string brandName) => Content($"Calculator for {brandName}");
+        public IActionResult Specification(string brandName) => Content($"Specification for {brandName}");
+        public IActionResult Comparison(string brandName) => Content($"Comparison for {brandName}");
 
 
 

@@ -13,7 +13,6 @@ namespace Domain.Master.MasterCategory
         public string Description { get; set; }
         public string Tag { get; set; }
         public int Type{ get; set; }
-        public string DescriptionImage { get; set; }
         public bool? IsActived { get; set; }
 
         public List<TMstCategoryDetailDto> CategoryDetails { get; set; }  
@@ -32,7 +31,6 @@ namespace Domain.Master.MasterCategory
 
         [StringLength(100, ErrorMessage = "Tag cannot exceed 100 characters.")]
         public string Tag { get; set; }
-        public IFormFile DescriptionImage { get; set; }
         public bool IsActive { get; set; }
 
         public string CreatedBy { get; set; }
@@ -53,7 +51,6 @@ namespace Domain.Master.MasterCategory
 
         [StringLength(100, ErrorMessage = "Tag cannot exceed 100 characters.")]
         public string Tag { get; set; }
-        public IFormFile DescriptionImage { get; set; }
 
         public bool IsActive { get; set; }
 
@@ -72,12 +69,6 @@ namespace Domain.Master.MasterCategory
         public TMstBrandDto Brand { get; set; }
     }
 
-    public class DescriptionGroupDto
-    {
-        public string Description { get; set; }
-        public string DescriptionImage { get; set; }
-        public List<TMstBrandDto> Brand { get; set; }
-    }
 
 
 
