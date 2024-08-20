@@ -29,6 +29,17 @@
             </div>
         </div>
 
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3 required">Tag</label>
+            <div class="col-md-9">
+                <select asp-for="Tag" class="form-select">
+                    <option value="">Please select one</option>
+                    <option value="Non TN">Non TN</option>
+                    <option value="TN">TN</option>
+                </select>
+            </div>
+        </div>
+
         <div id="rowActive mt-2" class="row mb-15px">
             <label class="form-label col-form-label col-md-3">Active?</label>
             <div class="col-md-9">

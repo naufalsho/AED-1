@@ -7,6 +7,7 @@ namespace Domain.Master.MasterCategory
     public interface IMstCategoryService
     {
         Task<Result<IEnumerable<TMstCategoryDto>>> GetAll();
+        Task<Result<IEnumerable<TMstCategoryDto>>> GetAll(string type);
         Task<Result<string>> GetLastCode();
         Task<Result<IEnumerable<TMstCategoryDto>>> GetListByParam(TMstCategoryDto param);
         Task<Result<TMstCategoryDto>> GetById(string id);

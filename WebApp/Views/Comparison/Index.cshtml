@@ -6,7 +6,7 @@
 
 <div class="border-bottom mb-2">
 	
-<ul class="nav nav-pills mb-2">
+<ul class="nav nav-pills mb-2" hidden>
     @foreach(var item in Model.Category)
     {
     <li class="nav-item">
@@ -81,14 +81,14 @@
                             <a href="#" id="addMoreBtn" class="btn btn-lg btn-primary w-100">
                                 <div class="d-flex flex-column align-items-center justify-content-center">
                                     <i class="fas fa-plus fa-3x text-black"></i>
-                                    <div class="text-center">
+                                    <div class="text-center text-dark">
                                         <span class="d-block mt-2"><b>Add More</b></span>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <div class="col-12 mt-3">
-                            <a href="#" class="btn btn-lg btn-success w-100" id="compareNowBtn" onclick="compareModels()">Compare Now</a>
+                        <a href="#" class="btn btn-lg btn-success w-100 text-dark" id="compareNowBtn" onclick="compareModels()"><b>Compare Now</b></a>
                         </div>
                     </div>
                 </td>

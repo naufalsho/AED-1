@@ -243,7 +243,7 @@ namespace Domain.Dashboard
         public async Task<Result<IEnumerable<DescriptionGroupDto>>> GetDescriptionGroupsAsync()
         {
             var categoryResult = await (from category in _uow.MstCategory.Set()
-                                        .Where(a => a.Tag == "TN")
+                                        .Where(a => a.Tag == "TN" && a.IsActive)
                                         .Include(c => c.CategoryDetails)
                                         .ThenInclude(cd => cd.Brand)
                                         from categoryDetail in category.CategoryDetails

@@ -54,7 +54,28 @@ namespace WebApp.Controllers.Master
             }
         }
 
-        [HttpGet("Create")]
+		[HttpGet("GetList/{type}")]
+		public async Task<IActionResult> GetList(string type)
+		{
+
+			var ret = await _mstCategoryService.GetAll(type);
+
+			if (ret.IsSuccess)
+			{
+				return Ok(ret.Value);
+			}
+			else
+			{
+				var resp = ResponseHelper.CreateFailResult(ret.Reasons.First().Message);
+
+				return StatusCode(int.Parse(resp.StatusCode), resp.Message);
+			}
+
+			return StatusCode(400, ":Data Not Found");
+
+		}
+
+		[HttpGet("Create")]
         public async Task<IActionResult> CreateAsync()
         {
            ViewData[ViewDataType.ModalType] = ModalType.Create;
@@ -120,6 +141,7 @@ namespace WebApp.Controllers.Master
 
             ret.Code = result.Value.Code;
             ret.Description = result.Value.Description;
+            ret.Tag = result.Value.Tag;
             ret.IsActive = result.Value.IsActive;
             ret.Brands = await _commonService.SLGetBrand();
             ret.BrandCode = result.Value.CategoryDetails.Select(cd => cd.BrandCode).ToList();

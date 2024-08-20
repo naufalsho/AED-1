@@ -22,14 +22,14 @@ namespace WebApp.Controllers.Transaction
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index(string category)
+        public async Task<IActionResult> Index()
         {
             // Decrypt the 'encryptedType' parameter
-            string decryptedType = EncryptionHelper.AesDecrypt(category);
+            //string decryptedType = EncryptionHelper.AesDecrypt(category);
 
 
-            // Convert the decryptedType to the necessary type (e.g., integer)
-            string codeCategory = decryptedType;
+            //// Convert the decryptedType to the necessary type (e.g., integer)
+            //string codeCategory = decryptedType;
 
             // Fetch the categories
             var categoryResult = await _mstCategoryService.GetAll();
@@ -39,7 +39,8 @@ namespace WebApp.Controllers.Transaction
             {
                 SLClass = await _commonSvc.SLGetClass(),
                 Category = categoryResult.Value
-                                        .Where(r => r.Code == category)
+                                        //.Where(r => r.Type == 1 && r.Tag =="TN")
+                                        .Where(r => r.Type == 1)
                                         .Select(r => new TMstCategoryDto
                                         {
                                             Code = r.Code,

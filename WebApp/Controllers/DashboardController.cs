@@ -76,8 +76,8 @@ namespace WebApp.Controllers
             var features = new List<FeatureDto>
         {
             //new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = Url.Action("Specification", "Dashboard", new { brandName }) },
-            new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = Url.Action("Index", "ProductSpec", new { category = encryptedType }) },
-            new FeatureDto { Name = "Product Comparison", IconClass = "fa-repeat", Url = Url.Action("Index", "Comparison", new { category = encryptedType }) },
+            new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = Url.Action("Index", "ProductSpec", new { category = encryptedType , brandName = brandName}) },
+            new FeatureDto { Name = "Product Comparison", IconClass = "fa-repeat", Url = Url.Action("Index", "Comparison") },
             //new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = Url.Action("", "ProductSpec") },
             //new FeatureDto { Name = "Product Comparison", IconClass = "fa-repeat", Url = Url.Action("", "Comparison") },
             new FeatureDto { Name = "Application Handbook", IconClass = "fa-book-open-reader", Url = "http://10.0.10.74:9590/moodle/login/index.php" },

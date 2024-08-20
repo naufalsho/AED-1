@@ -115,7 +115,28 @@ namespace Domain.Master.MasterCategory
                 var repoResult = await _uow.MstCategory.Set().
                     Include(c => c.CategoryDetails)
                     .ThenInclude(cd => cd.Brand)
-                    .Where(a => !a.IsDelete).ToListAsync();
+                    .Where(a => !a.IsDelete && a.Tag != "TN").ToListAsync();
+
+
+                var result = _mapper.Map<IEnumerable<TMstCategoryDto>>(repoResult);
+
+                return Result.Ok(result.OrderBy(m => m.Code).AsEnumerable());
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail(ResponseStatusCode.InternalServerError + ":" + ex.GetMessage());
+            }
+            throw new NotImplementedException();
+        }
+
+        public async Task<Result<IEnumerable<TMstCategoryDto>>> GetAll(string type)
+        {
+            try
+            {
+                var repoResult = await _uow.MstCategory.Set().
+                    Include(c => c.CategoryDetails)
+                    .ThenInclude(cd => cd.Brand)
+                    .Where(a => !a.IsDelete && a.Tag == "TN").ToListAsync();
 
 
                 var result = _mapper.Map<IEnumerable<TMstCategoryDto>>(repoResult);
@@ -230,6 +251,7 @@ namespace Domain.Master.MasterCategory
                 repoResult.CategoryDetails = categoryDetails;
 
                 _mapper.Map(data, repoResult);
+                repoResult.Tag = data.Tag;
                 repoResult.Description = data.Description;
                 repoResult.CreatedBy = createdBy;
                 repoResult.UpdatedBy = user.NameIdentifier;

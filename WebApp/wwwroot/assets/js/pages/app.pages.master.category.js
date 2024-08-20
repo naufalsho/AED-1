@@ -45,6 +45,7 @@ const response = [
 !function () {
     getData();
 
+    let loadHandler = getData;
     $(window).off('show.bs.modal').on('show.bs.modal', function () {
         $('.form-select').select2({
             dropdownParent: $("#FormInput")
@@ -58,6 +59,29 @@ const response = [
 
         ShowAlertDelete($(this).data('type'), $(this).data('detail'), $(this).attr('href'), getData);
     });
+
+    $('a[data-bs-toggle="tab"]').on('show.bs.tab', function () {
+        let thisEle = $(this);
+        let tabShow = thisEle.data('table');
+
+
+        if (tabShow === 'tagNon') {
+
+            getData();
+            loadHandler = getData;
+        } else {
+
+            getDataTagTN();
+            loadHandler = getDataTagTN;
+        }
+
+
+        $('#app').on('click', '.btn-delete', function (e) {
+            e.preventDefault();
+
+            ShowAlertDelete($(this).data('type'), $(this).data('detail'), $(this).attr('href'), loadHandler);
+        });
+    });
 }();
 
 function getData() {
@@ -68,6 +92,20 @@ function getData() {
         HandleHttpRequestFail(response);
     })
 }
+
+function getDataTagTN() {
+
+    $.get(`${thisUrl}/GetList/TN`).done(function (response) {
+        panelShowLoader('#panelDiv', '#panelLoader');
+        setTimeout(() => {
+            initDt(response, 'classValue');
+            panelHideLoader('#panelDiv', '#panelLoader');
+        }, 1500);
+    }).fail(function (response) {
+        HandleHttpRequestFail(response);
+    })
+}
+
 
 function initDt(response) {
     let mdText = "test"

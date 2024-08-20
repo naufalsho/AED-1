@@ -5,6 +5,7 @@ var thisUrl = 'productSpec';
 var commonService = new webapp.CommonService();
 
 let Category;
+let brandName;
 
 
 $(".product-model").prop("hidden", true);
@@ -17,6 +18,8 @@ panelHideLoader('#panelDiv', '#panelLoader');
 
     // Usage
     const categoryValue = getQueryParameter('category');
+    brandName = getQueryParameter('brandName');
+
    
     // getData();
 
@@ -42,6 +45,15 @@ panelHideLoader('#panelDiv', '#panelLoader');
                 $.each(response, function (index, element) {
                     $('#FilterBrand').append(`<option value="${element.code}">${element.name}</option>`);
                 })
+
+                // Automatically select the option where element.name matches the brandName from the URL
+                $('#FilterBrand option').filter(function () {
+                    return $(this).text().toLowerCase() === brandName.toLowerCase();
+                }).prop('selected', true);
+
+
+                // Trigger change event if using select2
+                $('#FilterBrand').select2().trigger('change');
             });
         });
         
