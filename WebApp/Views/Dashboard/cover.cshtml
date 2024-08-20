@@ -1,0 +1,234 @@
+@{
+    ViewData["AppBodyClass"] = "pace-top";
+    ViewData["AppClass"] = "app-without-header h-100";
+    ViewData["AppContentClass"] = "p-0 h-100";
+    ViewData["AppMenuNone"] = "true";
+    
+
+}
+
+<style>
+    /* Styling for the cover container */
+    .cover-container {
+        position: relative; /* Establish a containing block for the pseudo-element */
+        max-width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #f8f9fa;
+        padding: 3rem;
+        z-index: 1; /* Make sure content is on top */
+    }
+
+        .cover-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/assets/images/traktor-nusantara.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with opacity */
+            opacity:0.3;
+            z-index: -1; /* Position the background behind the content */
+        }
+
+        .cover-container h3 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+
+        .cover-container nav a {
+            color: #f8f9fa;
+            margin-right: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease-in-out;
+        }
+
+            .cover-container nav a:hover {
+                color: #007bff;
+                text-decoration: none;
+            }
+
+        .cover-container main h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .cover-container main p.lead {
+            font-size: 1.5rem;
+            line-height: 1.5;
+            color: #dcdcdc;
+            text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .cover-container .btn {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+            font-weight: 700;
+            padding: 10px 30px;
+            border-radius: 50px;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+            .cover-container .btn:hover {
+                background-color: #0056b3;
+                transform: scale(1.05);
+                color: #fff;
+            }
+
+    footer {
+        font-size: 0.875rem;
+    }
+
+        footer a {
+            color: #f8f9fa;
+            text-decoration: underline;
+            transition: color 0.3s ease-in-out;
+        }
+
+            footer a:hover {
+                color: #007bff;
+            }
+
+    .business-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        padding: 20px;
+        border: 2px solid #606060;
+        border-radius: 5px;
+        transition: box-shadow 0.3s ease, border 0.3s ease, height 0.3s ease;
+        overflow: hidden;
+        min-height: 300px;
+        height: auto;
+        background-color: whitesmoke;
+    }
+
+        .business-card .image-wrapper {
+            width: 100%; /* Make the image-wrapper fill the parent width */
+            height: 200px; /* Set a fixed height for the image-wrapper */
+            overflow: hidden; /* Hide overflow to maintain aspect ratio */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .business-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Scale the image to cover the container while maintaining aspect ratio */
+            /* transition: opacity 0.3s ease, transform 0.3s ease;
+            opacity: 0.3; */
+        }
+
+        .business-card .read-more-btn {
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(20px);
+        }
+
+        .business-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 2px solid #007aff;
+            height: auto; /* Allow the card to expand */
+        }
+
+            .business-card:hover img {
+                opacity: 1;
+                transition: opacity 0.3s ease, transform 0.3s ease;
+                opacity: 0.3;
+            }
+
+            .business-card:hover .read-more-btn {
+                opacity: 1;
+                transform: translateY(0); /* Slide up on hover */
+            }
+</style>
+
+<div class="d-flex h-100 text-center bg-dark text-light">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        @* <header class="mb-auto">
+            <div>
+                <h3 class="float-md-start mb-0">Your Brand</h3>
+                <nav class="nav nav-masthead justify-content-center float-md-end">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">Contact</a>
+                </nav>
+            </div>
+        </header> *@
+
+        <main class="px-3 mt-auto">
+            <h1>Business Sector</h1><hr />
+            @* <p class="lead">This is a beautiful, one-page template built to make your website stand out. Customize it to showcase your brand and engage your audience.</p>
+ *@
+            <div class="row mt-4 text-dark justify-content-md-center">
+                        @* <div class="col-md-4 ">
+                            <div class="card business-card">
+                                <div class="content-wrapper">
+                                    <div class="image-wrapper">
+                                        <img src="/assets/images/product/kubota.png" alt="Industrial">
+                                    </div>
+                                    <div class="text-wrapper">
+                                        <h3>Industrial</h3>
+                                    </div>
+                                    <div class="button-wrapper">
+                                <a href="@Url.Action("Product", "Dashboard")" class="btn btn-primary read-more-btn">Continue</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> *@
+                        <div class="col-md-4">
+                            <div class="card business-card">
+                                <div class="content-wrapper">
+                                    <div class="image-wrapper">
+                                <img src="/assets/images/product/M00001.png" alt="Agriculture">
+                                    </div>
+                                    <div class="text-wrapper">
+                                        <h3>Agriculture</h3>
+                                    </div>
+                                    <div class="button-wrapper">
+                                <a href="@Url.Action("Product", "Dashboard")" class="btn btn-primary read-more-btn">Continue</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                @*
+                <div class="col-md-4">
+                            <div class="card business-card">
+                                <div class="content-wrapper">
+                                    <div class="image-wrapper">
+                                        <img src="/assets/images/product/genset_power.png" alt="Power Generation and Air Solution">
+                                    </div>
+                                    <div class="text-wrapper">
+                                        <h3>POWER</h3>
+                                    </div>
+                                    <div class="button-wrapper">
+                                <a href="@Url.Action("Product", "Dashboard")" class="btn btn-primary read-more-btn">Continue</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> *@
+                    </div>
+           
+        </main>
+
+        <footer class="mt-auto text-white-50">
+            <p>Copyright © 2024, traknus.co.id All rights reserved.</p>
+        </footer>
+    </div>
+
+</div>

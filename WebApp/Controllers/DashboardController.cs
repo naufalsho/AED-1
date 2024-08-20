@@ -32,6 +32,13 @@ namespace WebApp.Controllers
 
         public async Task<IActionResult> Index()
         {
+           
+                return View(ViewPath.Cover);
+            
+        }
+
+        public async Task<IActionResult> Product()
+        {
             var result = await _dsSvc.GetDescriptionGroupsAsync();
 
             if (result.IsSuccess)
@@ -54,7 +61,6 @@ namespace WebApp.Controllers
                 return StatusCode(int.Parse(resp.StatusCode), resp.Message);
             }
         }
-
         // Action to get brand-specific features
         public async Task<IActionResult> BrandDetails(string brandName, string codeCategory)
         {
