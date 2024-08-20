@@ -15,5 +15,7 @@
         public bool AllowCreate { get; set; }
         public bool AllowEdit { get; set; }
         public bool AllowDelete { get; set; }
+        public bool MG_IsActive { get; set; }
+        public bool M_IsActive { get; set; }
     }
 }

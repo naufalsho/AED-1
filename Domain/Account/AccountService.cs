@@ -64,7 +64,8 @@ namespace Domain.Account
                         Order = m.GroupOrder,
                         Name = m.GroupName,
                         Icon = m.GroupIcon,
-                        IsDirectMenu = m.IsDirectMenu
+                        IsDirectMenu = m.IsDirectMenu,
+                        IsActive = m.MG_IsActive
                     })
                     .OrderBy(m => m.Order)
                     .GroupBy(m => m.Order);
@@ -84,7 +85,8 @@ namespace Domain.Account
                             AllowView = m.AllowView,
                             AllowCreate = m.AllowCreate,
                             AllowEdit = m.AllowEdit,
-                            AllowDelete = m.AllowDelete
+                            AllowDelete = m.AllowDelete,
+                            IsActive = m.M_IsActive
                         })
                         .OrderBy(m => m.Order);
 

@@ -31,7 +31,7 @@ namespace Infrastructure.Filters
 
             if (!userMenus.Any() || !userMenuAll.Where(m => m.Controller == controllerName).Any() || !userMenu.AllowView)
             {
-                //context.Result = new RedirectToActionResult("Logout", "Account", null);
+                context.Result = new RedirectToActionResult("Logout", "Account", null);
             }
 
             controller.ViewData["UserMenus"] = userMenus;

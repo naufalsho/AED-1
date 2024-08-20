@@ -86,7 +86,7 @@ namespace WebApp.Controllers.Transaction
                 string codeCategory = decryptedType;
 
                 // Fetch the categories
-                var result = await _mstCategoryService.GetAll();
+                var result = await _mstCategoryService.GetAll("TN");
 
                 // Filter the categories based on the decrypted type
                 UnitSpecDto ret = new UnitSpecDto

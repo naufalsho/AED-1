@@ -34,6 +34,7 @@
         public string Name { get; set; }
         public string Icon { get; set; }
         public bool IsDirectMenu { get; set; }
+        public bool IsActive { get; set; }
         public IEnumerable<UserMenuDto> Menus { get; set; }
     }
 
@@ -46,5 +47,7 @@
         public bool AllowCreate { get; set; } = false;
         public bool AllowEdit { get; set; } = false;
         public bool AllowDelete { get; set; } = false;
+        public bool IsActive { get; set; }
+
     }
 }
