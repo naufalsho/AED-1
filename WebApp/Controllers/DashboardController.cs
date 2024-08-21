@@ -96,7 +96,7 @@ namespace WebApp.Controllers
             // For example, removing certain features for specific brands
             if (brandName == "Canycom")
             {
-                features = features.Take(3).ToList(); // Take only the first two features for this specific brand
+                features = features.Take(3).ToList(); // Take only the features for this specific brand
             }
 
             return await Task.FromResult(features);
