@@ -55,6 +55,22 @@ panelHideLoader('#panelDiv', '#panelLoader');
     });
     //#endregion
 
+    //#region Remove Last Column
+    $('#removeBtn').on('click', function (e) {
+        e.preventDefault();
+
+        var $columns = $('#dTbComparison tr td').not(':last');
+
+        if ($columns.length > 2) {
+            // Remove the last column if there is more than one column
+            $columns.last().remove();
+        } else {
+            alert("At least two comparison column is required.");
+        }
+    });
+    //#endregion
+
+
     //#region  Filter Class
     
     $('#FilterClass').off('change').on('change', function (e) {

@@ -50,6 +50,7 @@ function getData() {
 function initDataTable(response) {
     $(dTable).DataTable({
         destroy: true,
+        autoWidth: false,
         data: response,
         columns: [
             {

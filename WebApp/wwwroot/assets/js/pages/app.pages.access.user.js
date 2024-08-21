@@ -35,6 +35,7 @@ function getData() {
 function initDt(response) {
     if (!$.fn.DataTable.isDataTable(dTable)) {
         $dTable = $(dTable).DataTable({
+            autoWidth: false,
             data: response,
             columns: [
                 {

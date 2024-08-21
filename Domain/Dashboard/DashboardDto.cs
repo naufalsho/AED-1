@@ -79,5 +79,6 @@
         public string IconClass { get; set; }
         public string Url { get; set; }
         public bool IsAvailable { get; set; } // Flag to determine if the feature is available for the brand
+        public string Target { get; set; } = "_self";
     }
 }

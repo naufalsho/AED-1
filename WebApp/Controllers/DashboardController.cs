@@ -86,7 +86,7 @@ namespace WebApp.Controllers
             new FeatureDto { Name = "Product Comparison", IconClass = "fa-repeat", Url = Url.Action("Index", "Comparison") },
             //new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = Url.Action("", "ProductSpec") },
             //new FeatureDto { Name = "Product Comparison", IconClass = "fa-repeat", Url = Url.Action("", "Comparison") },
-            new FeatureDto { Name = "Application Handbook", IconClass = "fa-book-open-reader", Url = "http://10.0.10.74:9590/moodle/login/index.php" },
+            new FeatureDto { Name = "Application Handbook", IconClass = "fa-book-open-reader", Url = Url.Action("RedirectToApplicationHandbook", "Dashboard", new { brandName = brandName }), Target = "_blank" },
             new FeatureDto {Name = "Implement Compability", IconClass = "fa-folder-open", Url = Url.Action("", "ImplementCompability") },
             //new FeatureDto { Name = "Productivity Calculator", IconClass = "fa-calculator", Url = Url.Action("Calculator", "Dashboard", new { brandName }) },
 
@@ -94,7 +94,7 @@ namespace WebApp.Controllers
 
             // You can add logic here to customize features per brand
             // For example, removing certain features for specific brands
-            if (brandName == "Cannycom")
+            if (brandName == "Canycom")
             {
                 features = features.Take(3).ToList(); // Take only the first two features for this specific brand
             }
@@ -106,6 +106,22 @@ namespace WebApp.Controllers
         //public IActionResult Calculator(string brandName) => Content($"Calculator for {brandName}");
         //public IActionResult Specification(string brandName) => Content($"Specification for {brandName}");
         //public IActionResult Comparison(string brandName) => Content($"Comparison for {brandName}");
+
+        public IActionResult RedirectToApplicationHandbook(string brandName)
+        {
+            string url = "http://10.0.10.74:9590/moodle/login/index.php"; // default URL
+
+            if (brandName == "Massey Ferguson")
+            {
+                url = "http://10.0.10.74:9590/moodle/course/section.php?id=7";
+            }
+            else if (brandName == "Canycom")
+            {
+                url = "http://10.0.10.74:9590/moodle/course/section.php?id=9";
+            }
+
+            return Redirect(url);
+        }
 
         private async Task<EmbedToken> GetEmbedToken(string accessToken, Guid groupId, Guid reportId)
         {
