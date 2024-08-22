@@ -71,7 +71,7 @@ panelHideLoader('#panelDiv', '#panelLoader');
 
         
 
-        commonService.getModelByBrand(brandCode).done(function (response) {
+        commonService.getModelByBrandTN(brandCode).done(function (response) {
             console.log(response)
             if(response.length > 0 ) $('#FilterModel').prop("disabled", false)
             $('#FilterModel').empty()

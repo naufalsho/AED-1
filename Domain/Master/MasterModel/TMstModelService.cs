@@ -233,6 +233,22 @@ namespace Domain.Master.MasterModel
                 return Result.Fail(ResponseStatusCode.InternalServerError + ":" + ex.GetMessage());
             }
         }
+        public async Task<Result<IEnumerable<TMstModelDto>>> GetByBrandTN(string brandCode)
+        {
+            try
+            {
+                //
+				var repoResult = await _uow.MstModel.Set().Where(m => m.BrandCode == brandCode && m.Type == MasterModelType.Unit && EF.Functions.Like(m.Distributor.ToUpper(), "%TRAKTOR NUSANTARA%")).ToListAsync();
+
+				var result = _mapper.Map<IEnumerable<TMstModelDto>>(repoResult);
+
+                return Result.Ok(result.OrderBy(m => m.Code).AsEnumerable());
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail(ResponseStatusCode.InternalServerError + ":" + ex.GetMessage());
+            }
+        }
 
         public async Task<Result<TMstModelDto>> Update(UserClaimModel user, TMstModelCreatedDto data)
         {

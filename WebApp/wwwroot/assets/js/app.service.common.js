@@ -109,7 +109,19 @@
         return dfd.promise();
     }
 
-    
+    commonService.prototype.getModelByBrandTN = function (ModelId) {
+        var dfd = $.Deferred();
+
+        $.getJSON(`/get/modelByBrandTN/${ModelId}`).done(function (result) {
+
+            dfd.resolve(result);
+        }).fail(function (response) {
+            HandleHttpRequestFail(response);
+            dfd.reject(response);
+        });
+
+        return dfd.promise();
+    }
 
 
     commonService.prototype.getBrandByCategory = function (CategoryId) {

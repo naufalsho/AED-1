@@ -10,6 +10,7 @@ namespace Domain.Master.MasterModel
         Task<Result<string>> GetLastCode();
         Task<Result<IEnumerable<TMstModelDto>>> GetByCategory(string categoryCode);
         Task<Result<IEnumerable<TMstModelDto>>> GetByBrand(string brandCode);
+        Task<Result<IEnumerable<TMstModelDto>>> GetByBrandTN(string brandCode);
         Task<Result<TMstModelDto>> GetById(string id);
         Task<Result<TMstModelDto>> GetByParam(TMstModelDto param);
         Task<Result<TMstModelDto>> Create(UserClaimModel user, TMstModelCreatedDto data);

@@ -86,6 +86,23 @@ namespace WebApp.Controllers
                 return StatusCode(int.Parse(resp.StatusCode), resp.Message);
             }
         }
+        
+        [HttpGet("get/modelByBrandTN/{brandCode}")]
+        public async Task<IActionResult> GetModelByBrandTNId(string brandCode)
+        {
+            
+            var ret = await _mstModelService.GetByBrandTN(brandCode);
+            if (ret.IsSuccess)
+            {
+                return Ok(ret.Value);
+            }
+            else
+            {
+                var resp = ResponseHelper.CreateFailResult(ret.Reasons.First().Message);
+
+                return StatusCode(int.Parse(resp.StatusCode), resp.Message);
+            }
+        }
 
 
 
