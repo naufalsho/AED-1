@@ -1,134 +1,164 @@
-﻿@model Domain.Comparison.ComparisonDto; 
+﻿@model Domain.Comparison.ComparisonDto;
 
 @section Scripts {
-	<script src="~/assets/js/pages/app.pages.trans.comparison.js" asp-append-version="true"></script>
+    <script src="~/assets/js/pages/app.pages.trans.comparison.js" asp-append-version="true"></script>
 }
 
 <style>
-    #dTbComparison {
-        display: block;
-        white-space: nowrap;
-        width: auto;
-        min-height: 400px !important;
+    .table-responsive {
+        position: relative;
     }
+
+    .table thead th {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: #343a40; /* Same color as the table-dark class */
+        color: white;
+    }
+
+    #dTbComparison {
+        white-space: nowrap;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+        #dTbComparison tbody td {
+            min-width: 200px;
+            white-space: normal;
+        }
+
+    .table tbody tr td {
+        border: 1px solid #dee2e6;
+    }
+
+    .d-flex.justify-content-center.my-4 .btn {
+        width: 200px; /* Adjust button width if necessary */
+    }
+
 </style>
 
 <div class="border-bottom mb-2">
-	
-<ul class="nav nav-pills mb-2" hidden>
-    @foreach(var item in Model.Category)
-    {
-    <li class="nav-item">
-		<a href="#tab-parent" data-bs-toggle="tab" class="nav-link active mr-3" data-table="@item.Code">
-			<span class="d-sm-none">@item.Description</span>
-			<span class="d-sm-block d-none">@item.Description</span>
-		</a>
-	</li>
-    }
-</ul>
+
+    <ul class="nav nav-pills mb-2" hidden>
+        @foreach (var item in Model.Category)
+        {
+            <li class="nav-item">
+                <a href="#tab-parent" data-bs-toggle="tab" class="nav-link active mr-3" data-table="@item.Code">
+                    <span class="d-sm-none">@item.Description</span>
+                    <span class="d-sm-block d-none">@item.Description</span>
+                </a>
+            </li>
+        }
+    </ul>
 
 </div>
 
 <div class="table-responsive">
-    <table id="dTbComparison" class="table table-striped table-bordered">
+    <table id="dTbComparison" class="table table-bordered">
+        <thead class="table-dark" style="position:sticky!important;">
+            <tr class="text-center">
+                <th class="col-6">Product TN</th>
+                <th class="col-6" colspan="100">Competitor Product</th>
+            </tr>
+        </thead>
+        <tbody>
             <tr>
-                @* <th class="col-md-1"></th> *@
-                <td class="col-auto">
+                <td colspan="100">
                     <div class="row">
                         <div class="col-12">
                             <label for="FilterClass" class="form-label">Class</label>
-                            <select class="form-select select2" id="FilterClass" asp-items="@Model.SLClass">
-                            </select>
+                            <select class="form-select select2" id="FilterClass" asp-items="@Model.SLClass"></select>
                         </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="p-3">
+                    <div class="row g-2">
                         <div class="col-12">
                             <label for="FilterBrand1" class="form-label">Brand</label>
-                        <select class="form-select select2 FilterBrand" data-brand="1">
-                            <option value="">Please select one</option>
-                            @* <option value="1">1</option> *@
+                            <select class="form-select select2 FilterBrand" data-brand="1">
+                                <option value="">Please select one</option>
                             </select>
                         </div>
                         <div class="col-12">
                             <label for="FilterDistributor1" class="form-label">Distributor</label>
-                             <select class="form-select select2 FilterDistributor"  data-distributor="1">
+                            <select class="form-select select2 FilterDistributor" data-distributor="1">
                                 <option value="">Please select one</option>
                             </select>
                         </div>
                         <div class="col-12">
                             <label for="FilterModel1" class="form-label">Product Model</label>
-                        <select class="form-select select2 FilterModel" data-model="1">
+                            <select class="form-select select2 FilterModel" data-model="1">
                                 <option value="">Please select one</option>
                             </select>
                         </div>
                     </div>
                 </td>
-                <td class="col-auto">
-                    <div class="row">
+                <td class="p-3">
+                    <div class="row g-2">
                         <div class="col-12">
                             <label for="FilterBrand2" class="form-label">Brand</label>
-                        <select class="form-select select2 FilterBrand" data-brand="2">
-                            <option value="">Please select one</option>
-                            @* <option value="2">2</option> *@
+                            <select class="form-select select2 FilterBrand" data-brand="2">
+                                <option value="">Please select one</option>
                             </select>
                         </div>
                         <div class="col-12">
                             <label for="FilterDistributor2" class="form-label">Distributor</label>
-                        <select class="form-select select2 FilterDistributor" data-distributor="2">
+                            <select class="form-select select2 FilterDistributor" data-distributor="2">
                                 <option value="">Please select one</option>
                             </select>
                         </div>
                         <div class="col-12">
                             <label for="FilterModel2" class="form-label">Product Model</label>
-                        <select class="form-select select2 FilterModel" data-model="2">
+                            <select class="form-select select2 FilterModel" data-model="2">
                                 <option value="">Please select one</option>
                             </select>
                         </div>
                     </div>
                 </td>
-                <td class="col-md-2 align-middle text-center">
-                    <div class="row">
-                        <div class="col-12">
-                            <a href="#" id="addMoreBtn" class="btn btn-lg btn-primary w-100">
-                                <div class="d-flex flex-column align-items-center justify-content-center">
-                                    <i class="fas fa-plus fa-3x text-black"></i>
-                                    <div class="text-center text-dark">
-                                        <span class="d-block mt-2"><b>Add More</b></span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-12 mt-3">
-                            <a href="#" id="removeBtn" class="btn btn-lg btn-danger w-100">
-                                <div class="d-flex flex-column align-items-center justify-content-center">
-                                    <i class="fas fa-minus fa-3x text-black"></i>
-                                    <div class="text-center text-black">
-                                        <span class="d-block mt-2"><b>Remove</b></span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-12 mt-3">
-                        <a href="#" class="btn btn-lg btn-success w-100 text-dark" id="compareNowBtn" onclick="compareModels()"><b>Compare Now</b></a>
-                        </div>
-                    </div>
-                </td>
             </tr>
+        </tbody>
     </table>
-
 </div>
 
+<div class="d-flex justify-content-center my-4">
+    <div class="mx-2">
+        <a href="#" id="addMoreBtn" class="btn btn-primary btn-lg d-flex align-items-center justify-content-center">
+            <i class="fas fa-plus"></i>
+            <span class="ms-2">Add More</span>
+        </a>
+    </div>
+    <div class="mx-2">
+        <a href="#" id="removeBtn" class="btn btn-danger btn-lg d-flex align-items-center justify-content-center">
+            <i class="fas fa-minus"></i>
+            <span class="ms-2">Remove</span>
+        </a>
+    </div>
+    <div class="mx-2">
+        <a href="#" class="btn btn-success btn-lg d-flex align-items-center justify-content-center" id="compareNowBtn" onclick="compareModels()">
+            <span>Compare Now</span>
+        </a>
+    </div>
+</div>
 
 <div class="col-md-12">
     <div class="row justify-content-center img-notfound">
         <div class="col-auto text-center">
-            <img class="align-middle" src="@Url.Content("~/assets/images/png/undraw_Loading_re_5axr.png")"
-                alt="Not Found Image" width="60%">
+            <img class="align-middle" src="@Url.Content("~/assets/images/png/undraw_Loading_re_5axr.png")" alt="Not Found Image" width="60%">
             <h5>Waiting for Searching!</h5>
         </div>
     </div>
 </div>
 
+
+
+
+
+
 <div class="table-responsive">
     <div class="table-responsive mt-2">
-    <div id="dTable"></div>
+        <div id="dTable"></div>
     </div>
 </div>

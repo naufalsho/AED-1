@@ -51,7 +51,8 @@ panelHideLoader('#panelDiv', '#panelLoader');
 
 
         $lastColumn.after($newColumn);
-
+        // Make sure the table container scrolls to the new column
+        $('.table-responsive').scrollLeft($('.table-responsive')[0].scrollWidth);
     });
     //#endregion
 

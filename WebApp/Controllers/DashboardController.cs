@@ -94,7 +94,12 @@ namespace WebApp.Controllers
 
             // You can add logic here to customize features per brand
             // For example, removing certain features for specific brands
-            if (brandName == "Canycom")
+            //if (brandName == "Canycom")
+            //{
+            //    features = features.Take(3).ToList(); // Take only the features for this specific brand
+            //}
+
+            if (brandName != "Massey Ferguson")
             {
                 features = features.Take(3).ToList(); // Take only the features for this specific brand
             }
