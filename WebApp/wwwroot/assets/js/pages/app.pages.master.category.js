@@ -81,6 +81,21 @@ const response = [
 
             ShowAlertDelete($(this).data('type'), $(this).data('detail'), $(this).attr('href'), loadHandler);
         });
+        $(window).on('hidden.bs.modal', function () {
+            let thisEle = $(this);
+            let tabShow = thisEle.data('table');
+
+
+            if (tabShow === 'tagNon') {
+
+                getData();
+                loadHandler = getData;
+            } else {
+
+                getDataTagTN();
+                loadHandler = getDataTagTN;
+            }
+        });
     });
 }();
 
