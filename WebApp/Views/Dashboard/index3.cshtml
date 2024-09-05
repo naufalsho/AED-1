@@ -240,6 +240,12 @@
                 $(this).addClass('active').css('opacity', '1');
             });
 
+            // Activate tab based on hash in the URL
+            var hash = window.location.hash;
+            if (hash) {
+                var tabToActivate = 'a[href="' + hash + '"]';
+                $(tabToActivate).tab('show');  // Activates the tab
+            }
 
             $('#productTab a').on('shown.bs.tab', function (e) {
                 var target = $(e.target).attr("href"); // activated tab
