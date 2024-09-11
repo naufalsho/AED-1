@@ -247,8 +247,8 @@ namespace Domain.Dashboard
                                         .Include(c => c.CategoryDetails)
                                         .ThenInclude(cd => cd.Brand)
                                         from categoryDetail in category.CategoryDetails
-                                        join model in _uow.MstModel.Set()
-                                            on categoryDetail.BrandCode equals model.BrandCode
+                                        //join model in _uow.MstModel.Set()
+                                        //    on categoryDetail.BrandCode equals model.BrandCode
                                         where !category.IsDelete 
                                         select new
                                         {

@@ -21,7 +21,7 @@ namespace Domain.Master
     public class TMstBrandCreateDto
     {
         [Required(ErrorMessage = "Code is required.")]
-        [StringLength(5, MinimumLength = 2, ErrorMessage = "Code must be between 2 and 5 characters.")]
+        [StringLength(6, MinimumLength = 2, ErrorMessage = "Code must be between 2 and 6 characters.")]
         public string Code { get; set; }
 
         [Required(ErrorMessage = "Name is required.")]

@@ -38,12 +38,19 @@ namespace Domain.Master
         {
             try
             {
+                // Check for existing brand code
                 var check = await _uow.MstBrand.Set().FirstOrDefaultAsync(m => m.Code == data.Code);
+                if (check != null) // Ensure check is not null before accessing its properties
+                {
+                    return Result.Fail(ResponseStatusCode.BadRequest + ": Code not available. Please change the code!");
+                }
+
+                // Check for existing brand name
                 var checkName = await _uow.MstBrand.Set().FirstOrDefaultAsync(m => m.Name == data.Name);
-
-                if (check.Code != null) return Result.Fail(ResponseStatusCode.BadRequest + ": Code not available. Please change the code!");
-                if (check.Name != null) return Result.Fail(ResponseStatusCode.BadRequest + ": Name of brand available. Please change the code!");
-
+                if (checkName != null) // Ensure checkName is not null before accessing its properties
+                {
+                    return Result.Fail(ResponseStatusCode.BadRequest + ": Name of brand available. Please change the name!");
+                }
 
                 var param = _mapper.Map<TMstBrand>(data);
                 param.Name = data.Name;
@@ -202,7 +209,7 @@ namespace Domain.Master
 
                 string nextCode = $"{prefix}{lastNumber:D5}"; 
 
-                Console.WriteLine(nextCode);
+                //Console.WriteLine(nextCode);
 
                 
                 return Result.Ok(nextCode);
