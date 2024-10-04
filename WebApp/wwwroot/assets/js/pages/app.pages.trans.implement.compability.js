@@ -9,6 +9,13 @@ panelHideLoader('#panelDiv', '#panelLoader');
 
 getDataImplement($("#FilterImplement").val())
 
+//NO Print fungsional
+var autoBlur = true;
+var noPrint = true;
+var noCopy = true;
+var noScreenshot = true;
+var noSelectText = true;
+
 !function () {
 
     $(window).off('show.bs.modal').on('show.bs.modal', function () {

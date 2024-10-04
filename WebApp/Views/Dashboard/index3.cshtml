@@ -128,7 +128,6 @@
             }
         </ul>
     }
-
     <!-- Tab Content -->
     <div class="tab-content" id="productTabContent">
         @for (int i = 0; i < Model.Count(); i++)
@@ -247,8 +246,21 @@
                 $(tabToActivate).tab('show');  // Activates the tab
             }
 
+            // $('#productTab a').on('shown.bs.tab', function (e) {
+            //     var target = $(e.target).attr("href"); // activated tab
+            //     $(target).find('.logo-slider, .slider-for').slick('setPosition');
+            // });
+
+
+            // Handle URL update when tab is changed
             $('#productTab a').on('shown.bs.tab', function (e) {
-                var target = $(e.target).attr("href"); // activated tab
+                var target = $(e.target).attr("href"); // Get the activated tab's href (ID)
+
+                // Update the URL hash without reloading the page
+                var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + target;
+                history.pushState(null, null, newUrl); // Update URL with the selected tab
+
+                // Reposition sliders when switching tabs
                 $(target).find('.logo-slider, .slider-for').slick('setPosition');
             });
         });
