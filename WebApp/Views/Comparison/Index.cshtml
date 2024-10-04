@@ -5,8 +5,10 @@
 }
 
 <style>
+    /* Tabel responsive untuk desktop */
     .table-responsive {
         position: relative;
+        overflow-x: auto;
     }
 
     .table thead th {
@@ -20,13 +22,12 @@
     #dTbComparison {
         white-space: nowrap;
         width: 100%;
-        overflow-x: auto;
     }
 
-        #dTbComparison tbody td {
-            min-width: 200px;
-            white-space: normal;
-        }
+    #dTbComparison tbody td {
+        min-width: 200px;
+        white-space: normal;
+    }
 
     .table tbody tr td {
         border: 1px solid #dee2e6;
@@ -39,7 +40,6 @@
 </style>
 
 <div class="border-bottom mb-2">
-
     <ul class="nav nav-pills mb-2" hidden>
         @foreach (var item in Model.Category)
         {
@@ -51,18 +51,18 @@
             </li>
         }
     </ul>
-
 </div>
 
 <div class="table-responsive">
     <table id="dTbComparison" class="table table-bordered">
-        <thead class="table-dark" style="position:sticky!important;">
+        <thead class="table-dark">
             <tr class="text-center">
                 <th class="col-6">Product TN</th>
                 <th class="col-6" colspan="100">Competitor Product</th>
             </tr>
         </thead>
         <tbody>
+            <!-- Filter Section -->
             <tr>
                 <td colspan="100">
                     <div class="row">
@@ -74,6 +74,7 @@
                 </td>
             </tr>
             <tr>
+                <!-- Product TN Section -->
                 <td class="p-3">
                     <div class="row g-2">
                         <div class="col-12">
@@ -96,6 +97,7 @@
                         </div>
                     </div>
                 </td>
+                <!-- Competitor Product Section -->
                 <td class="p-3">
                     <div class="row g-2">
                         <div class="col-12">
@@ -123,14 +125,15 @@
     </table>
 </div>
 
-<div class="d-flex justify-content-center my-4">
-    <div class="mx-2">
+<!-- Tombol dengan lebar penuh pada mobile -->
+<div class="d-flex justify-content-center my-4 flex-column flex-md-row" style="align-items:center;">
+    <div class="mx-2 mb-2 mb-md-0">
         <a href="#" id="addMoreBtn" class="btn btn-primary btn-lg d-flex align-items-center justify-content-center">
             <i class="fas fa-plus"></i>
             <span class="ms-2">Add More</span>
         </a>
     </div>
-    <div class="mx-2">
+    <div class="mx-2 mb-2 mb-md-0">
         <a href="#" id="removeBtn" class="btn btn-danger btn-lg d-flex align-items-center justify-content-center">
             <i class="fas fa-minus"></i>
             <span class="ms-2">Remove</span>
@@ -143,6 +146,7 @@
     </div>
 </div>
 
+<!-- Gambar jika tidak ada pencarian -->
 <div class="col-md-12">
     <div class="row justify-content-center img-notfound">
         <div class="col-auto text-center">
@@ -152,13 +156,6 @@
     </div>
 </div>
 
-
-
-
-
-
-<div class="table-responsive">
-    <div class="table-responsive mt-2">
-        <div id="dTable"></div>
-    </div>
+<div class="table-responsive mt-2">
+    <div id="dTable"></div>
 </div>
