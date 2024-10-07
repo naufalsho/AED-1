@@ -83,7 +83,7 @@ namespace WebApp.Controllers
         {
             //new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = Url.Action("Specification", "Dashboard", new { brandName }) },
             new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = Url.Action("Index", "ProductSpec", new { category = encryptedType , brandName = brandName}) },
-            new FeatureDto { Name = "Product Comparison", IconClass = "fa-repeat", Url = Url.Action("Index", "Comparison") },
+            new FeatureDto { Name = "Product Comparison", IconClass = "fa-repeat", Url = Url.Action("Index", "Comparison", new { brandName = brandName}) },
             //new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = Url.Action("", "ProductSpec") },
             //new FeatureDto { Name = "Product Comparison", IconClass = "fa-repeat", Url = Url.Action("", "Comparison") },
             new FeatureDto { Name = "Application Handbook", IconClass = "fa-book-open-reader", Url = Url.Action("RedirectToApplicationHandbook", "Dashboard", new { brandName = brandName }), Target = "_blank" },

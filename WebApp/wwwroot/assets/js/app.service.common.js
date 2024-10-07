@@ -138,10 +138,10 @@
         return dfd.promise();
     }
 
-    commonService.prototype.getBrandByClass = function (ClassId) {
+    commonService.prototype.getBrandByClass = function (ClassId, Distributor) {
         var dfd = $.Deferred();
 
-        $.getJSON(`/get/brandByClass/${ClassId}` ).done(function (result) {
+        $.getJSON(`/get/brandByClass/${ClassId}/${Distributor}`).done(function (result) {
 
             dfd.resolve(result);
         }).fail(function (response) {

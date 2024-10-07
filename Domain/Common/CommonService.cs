@@ -1,8 +1,12 @@
 ﻿using Core;
+using Core.Extensions;
+using Core.Helpers;
 using Core.Interfaces;
 using Core.Models.Entities.Tables.Master;
+using Domain.Master;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Server.IISIntegration;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 namespace Domain.Common
@@ -102,6 +106,42 @@ namespace Domain.Common
             var result = repoResult.Select(m => new SelectListItem() { Value = m.Code, Text = m.Name });
 
             return result;
+
+        }
+
+        public async Task<IEnumerable<SelectListItem>> SLGetClassByBrand(string brand, string distributor)
+        {
+            // Ensure the brand parameter is not null or empty
+            if (string.IsNullOrWhiteSpace(brand))
+            {
+                throw new ArgumentException("Brand parameter cannot be null or empty", nameof(brand));
+            }
+
+            try
+            {
+                // Define the parameters for the stored procedure
+                var parameters = new SqlParameter[]
+                {
+                    new SqlParameter("BrandName", brand),
+                    new SqlParameter("Distributor", distributor),
+                };
+                // Execute the stored procedure
+                var repoResult = await _uow.MstClass.ExecuteStoredProcedure("sp_SLGetClassByBrand", parameters);
+
+                // Map the results to SelectListItem
+                var result = repoResult.Select(m => new SelectListItem
+                {
+                    Value = m.Code, // Ensure Code is a property in your model
+                    Text = m.Name // Ensure Name is a property in your model
+                }).ToList(); // Convert to list
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions (log if necessary)
+                throw new Exception("An error occurred while retrieving classes by brand: " + ex.Message);
+            }
         }
 
         public async Task<IEnumerable<SelectListItem>> SLGetCategory()
@@ -113,20 +153,20 @@ namespace Domain.Common
             return result;
         }
 
-		public async Task<IEnumerable<SelectListItem>> SLGetModel(string type)
-		{
-			IQueryable<TMstModel> query = _uow.MstModel.Set().Where(m => m.IsActive && !m.IsDelete);
+        public async Task<IEnumerable<SelectListItem>> SLGetModel(string type)
+        {
+            IQueryable<TMstModel> query = _uow.MstModel.Set().Where(m => m.IsActive && !m.IsDelete);
 
-			if (!string.IsNullOrEmpty(type))
-			{
-				query = query.Where(m => m.Type == type);
-			}
+            if (!string.IsNullOrEmpty(type))
+            {
+                query = query.Where(m => m.Type == type);
+            }
 
-			var repoResult = await query.ToListAsync();
-			var result = repoResult.Select(m => new SelectListItem() { Value = m.Code, Text = m.Model });
+            var repoResult = await query.ToListAsync();
+            var result = repoResult.Select(m => new SelectListItem() { Value = m.Code, Text = m.Model });
 
-			return result;
-		}
+            return result;
+        }
 
-	}
+    }
 }

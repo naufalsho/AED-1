@@ -9,7 +9,7 @@ namespace Domain.Master
         Task<Result<IEnumerable<TMstBrandDto>>> GetAll();
         Task<Result<string>> GetLastCode();
         Task<Result<IEnumerable<TMstBrandDto>>> GetByCategory(string categoryCode);
-        Task<Result<IEnumerable<TMstBrandDto>>> GetByClass(string classCode);
+        Task<Result<IEnumerable<TMstBrandDto>>> GetByClass(string classCode, string distributor);
         Task<Result<TMstBrandDto>> GetListByParam(TMstBrandDto param);
         Task<Result<TMstBrandDto>> GetById(string id);
         Task<Result<TMstBrandDto>> GetByParam(TMstBrandDto param);

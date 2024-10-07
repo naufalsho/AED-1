@@ -123,11 +123,11 @@ namespace WebApp.Controllers
             }
         }
 
-        [HttpGet("get/brandByClass/{classCode}")]
-        public async Task<IActionResult> GetBrandByClass(string classCode)
+        [HttpGet("get/brandByClass/{classCode}/{distributor}")]
+        public async Task<IActionResult> GetBrandByClass(string classCode, string distributor)
         {
 
-            var ret = await _mstBrandService.GetByClass(classCode);
+            var ret = await _mstBrandService.GetByClass(classCode, distributor);
             if (ret.IsSuccess)
             {
                 return Ok(ret.Value);
@@ -175,8 +175,8 @@ namespace WebApp.Controllers
             {
                 var filteredData = ret.Value
                    .Where(m => (string.IsNullOrEmpty(brandCode) || m.BrandCode == brandCode) &&
-                               (string.IsNullOrEmpty(distributor) || m.Distributor == distributor) &&
-                               (string.IsNullOrEmpty(classCode) || m.ClassCode == classCode))
+                               (string.IsNullOrEmpty(distributor) || m.Distributor == distributor) 
+                               && (string.IsNullOrEmpty(classCode) || m.ClassCode == classCode))
                    .ToList();
                 return Ok(filteredData);
             }

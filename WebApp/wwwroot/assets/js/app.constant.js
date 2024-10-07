@@ -37,3 +37,8 @@ var assetStatus = Object.freeze({
     'BackToVendor': 'BACK_TO_VENDOR',
     'AssetLost': 'ASSET_LOST'
 });
+
+var distributor = Object.freeze({
+    'ProductTN': 'PT. Traktor Nusantara',
+    'ProductCompetitor': 'Competitor'
+});

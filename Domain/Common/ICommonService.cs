@@ -7,6 +7,7 @@ namespace Domain.Common
         Task<IEnumerable<SelectListItem>> SLGetCategory();
         Task<IEnumerable<SelectListItem>> SLGetClassValue();
         Task<IEnumerable<SelectListItem>> SLGetClass();
+        Task<IEnumerable<SelectListItem>> SLGetClassByBrand(string brand, string distributor);
         Task<IEnumerable<SelectListItem>> SLGetBrand();
         Task<IEnumerable<SelectListItem>> SLGetGroupMenu();
         Task<IEnumerable<SelectListItem>> SLGetRole();

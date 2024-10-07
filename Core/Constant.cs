@@ -114,6 +114,11 @@
         public static string Reject => "REJECT";
     }
 
+    public static class Distributor
+    {
+        public static string ProductTN => "PT. Traktor Nusantara";
+    }
+
     public static class ViewPath
     {
         #region Shared

@@ -287,14 +287,15 @@ namespace Domain.Master
             }
             throw new NotImplementedException();
         }
-
-        public async Task<Result<IEnumerable<TMstBrandDto>>> GetByClass(string classCode)
+        
+        public async Task<Result<IEnumerable<TMstBrandDto>>> GetByClass(string classCode, string distributor)
         {
             try
             {
                 var parameters = new SqlParameter[]
                 {
                     new SqlParameter("ClassCode", classCode),
+                    new SqlParameter("Distributor", distributor)
                 };
                 var repoResult = await _uow.MstBrand.ExecuteStoredProcedure("sp_GetBrandByClass", parameters);
 

@@ -29,38 +29,42 @@ var noSelectText = true;
 
 
 
-    //#region  Add More
-    $('#addMoreBtn').on('click', function(e) {
+    //#region Add More
+    $('#addMoreBtn').on('click', function (e) {
         e.preventDefault();
 
+        // Pilih kolom terakhir dari Competitor Product (td ke-2)
+        var $lastCompetitorColumn = $('#dTbComparison tr').find('td:nth-child(2)').last();
+        var $newColumn = $lastCompetitorColumn.clone();
 
-        var $lastColumn = $('#dTbComparison tr td').not(':last').last();
-        var $newColumn = $lastColumn.clone();
+        // Debugging: Log kolom terakhir
 
-        var lastBrand = parseInt($lastColumn.find('.FilterBrand').attr('data-brand'));
-        var lastDistributor = parseInt($lastColumn.find('[data-distributor]').attr('data-distributor'));
-        var lastModel = parseInt($lastColumn.find('.filter-model').attr('data-model'));
+        // Ambil nilai dari kolom terakhir berdasarkan competitor
+        var lastBrand = parseInt($lastCompetitorColumn.find('.FilterBrand[data-brand="2"]').attr('data-brand'));
+        var lastDistributor = parseInt($lastCompetitorColumn.find('.FilterDistributor[data-distributor]').attr('data-distributor'));
+        var lastModel = parseInt($lastCompetitorColumn.find('.FilterModel[data-model="2"]').attr('data-model'));
 
         var number = lastBrand + 1;
 
-        $newColumn.find('.FilterBrand')
-                  .attr('data-brand', number)
-                  .val("");
+        // Ubah untuk memastikan kita menggunakan competitor
+        $newColumn.find('.FilterBrand[data-brand="2"]')
+            .attr('data-brand', number)
+            .val("");
 
-        $newColumn.find('.FilterDistributor')
-                  .attr('data-distributor', number)
-                  .val("");
+        $newColumn.find('.FilterDistributor[data-distributor]')
+            .attr('data-distributor', number)
+            .val("");
 
-        $newColumn.find('.FilterModel')
-                  .attr('data-model', number)
-                  .val("");
+        $newColumn.find('.FilterModel[data-model="2"]')
+            .attr('data-model', number)
+            .val("");
 
-
-        $lastColumn.after($newColumn);
-        // Make sure the table container scrolls to the new column
+        $lastCompetitorColumn.after($newColumn);
+        // Pastikan kontainer tabel menggulir ke kolom baru
         $('.table-responsive').scrollLeft($('.table-responsive')[0].scrollWidth);
     });
     //#endregion
+
 
     //#region Remove Last Column
     $('#removeBtn').on('click', function (e) {
@@ -78,52 +82,98 @@ var noSelectText = true;
     //#endregion
 
 
-    //#region  Filter Class
     
-    $('#FilterClass').off('change').on('change', function (e) {
-        const code = $(this).val()
-        // $('.form-select').select2();
-        commonService.getBrandByClass($(this).val()).done(function (response) {
-            console.log(response)
-            if(response.length > 0 ) $('.FilterBrand').prop("disabled", false)
-            $('.FilterBrand').empty()
-            $('.FilterBrand').append('<option value="" disabled selected>Please select one</option>');
-            $.each(response, function (index, element) {
-                $('.FilterBrand').append(`<option value="${element.code}">${element.name}</option>`);
-            })
-        });
-    }); 
-    //#endregion
 
-    $(document).ready(function() {
-        // #region Filter Brand
-        $(document).on('change', '.FilterBrand', function(e) {
-            const brandNumber = $(this).data('brand');
-            var $distributorSelect = $(`[data-distributor="${brandNumber}"]`);
-    
-            commonService.getDistributorByBrand($(this).val()).done(function (response) {
-                console.log(response);
-                if (response.length > 0) $distributorSelect.prop("disabled", false);
-                $distributorSelect.empty();
-                $distributorSelect.append('<option value="" disabled selected>Please select one</option>');
-                $.each(response, function (index, element) {
-                    $distributorSelect.append(`<option value="${element}">${element}</option>`);
-                });
-            });
+
+    //$(document).ready(function() {
+    //    // #region Filter Brand
+    //    $(document).on('change', '.FilterBrand', function(e) {
+    //        const brandNumber = $(this).data('brand');
+    //        var $distributorSelect = $(`[data-distributor="${brandNumber}"]`);
+
+    //        commonService.getDistributorByBrand($(this).val()).done(function (response) {
+    //            console.log(response);
+    //            if (response.length > 0) $distributorSelect.prop("disabled", false);
+    //            $distributorSelect.empty();
+    //            $distributorSelect.append('<option value="" disabled selected>Please select one</option>');
+    //            $.each(response, function (index, element) {
+    //                $distributorSelect.append(`<option value="${element}">${element}</option>`);
+    //            });
+    //        });
+    //    });
+    //    // #endregion
+
+    //    // #region Filter Distributor
+    //    $(document).on('change', '.FilterDistributor', function(e) {
+    //        const distNumber = $(this).data('distributor');
+    //        const brandCode = $(`.FilterBrand[data-brand="${distNumber}"]`).val();
+    //        const distributor = $(this).val();
+    //        const classCode = $("#FilterClass").val();
+
+    //        var $modelSelect = $(`[data-model="${distNumber}"]`);
+
+    //        commonService.getModelByParam(brandCode, distributor, classCode).done(function (response) {
+    //            console.log(response);
+    //            if (response.length > 0) $modelSelect.prop("disabled", false);
+    //            $modelSelect.empty();
+    //            $modelSelect.append('<option value="" disabled selected>Please select one</option>');
+    //            $.each(response, function (index, element) {
+    //                $modelSelect.append(`<option value="${element.code}">${element.model}</option>`);
+    //            });
+    //        });
+    //    });
+    //    // #endregion
+    //    $(document).on('click', '#compareNowBtn', function() {
+    //        getData();
+    //    });
+    //});
+    $(document).ready(function () {
+        // Inisialisasi FilterClass dan panggil API untuk mengisi FilterBrand
+        const initialClassCode = $('#FilterClass').val();
+        if (initialClassCode) {
+            loadBrands(initialClassCode);
+        }
+
+        // #region Filter Class
+        $('#FilterClass').off('change').on('change', function (e) {
+            const code = $(this).val();
+            loadBrands(code);
         });
         // #endregion
-    
-        // #region Filter Distributor
-        $(document).on('change', '.FilterDistributor', function(e) {
-            const distNumber = $(this).data('distributor');
-            const brandCode = $(`.FilterBrand[data-brand="${distNumber}"]`).val();
-            const distributor = $(this).val();
+
+        // Fungsi untuk memuat brand berdasarkan class yang dipilih
+        function loadBrands(classCode) {
+            commonService.getBrandByClass(classCode, distributor.ProductTN).done(function (response) {
+                $('.FilterBrand[data-brand="1"]').empty().prop("disabled", true);
+                if (response.length > 0) $('.FilterBrand[data-brand="1"]').prop("disabled", false);
+                $('.FilterBrand[data-brand="1"]').append('<option value="" disabled selected>Please select one</option>');
+                $.each(response, function (index, element) {
+                    $('.FilterBrand[data-brand="1"]').append(`<option value="${element.code}">${element.name}</option>`);
+                });
+            });
+
+            commonService.getBrandByClass(classCode, distributor.ProductCompetitor).done(function (response) {
+                $('.FilterBrand[data-brand="2"]').empty().prop("disabled", true);
+                if (response.length > 0) $('.FilterBrand[data-brand="2"]').prop("disabled", false);
+                $('.FilterBrand[data-brand="2"]').append('<option value="" disabled selected>Please select one</option>');
+                $.each(response, function (index, element) {
+                    $('.FilterBrand[data-brand="2"]').append(`<option value="${element.code}">${element.name}</option>`);
+                });
+            });
+        }
+
+        // #region Filter Brand
+        $(document).on('change', '.FilterBrand', function (e) {
+            const brandNumber = $(this).data('brand');
+            const type = brandNumber === 1 ? distributor.ProductTN : ' '; // Tentukan type berdasarkan data-brand
+            var $modelSelect = $(`[data-model="${brandNumber}"]`);
+
+            // Panggil API untuk mendapatkan model berdasarkan Brand yang dipilih
+            const brandCode = $(this).val();
             const classCode = $("#FilterClass").val();
-    
-            var $modelSelect = $(`[data-model="${distNumber}"]`);
-    
-            commonService.getModelByParam(brandCode, distributor, classCode).done(function (response) {
-                console.log(response);
+
+            // Panggil API dengan parameter type (distributor)
+            commonService.getModelByParam(brandCode, type, classCode).done(function (response) {
                 if (response.length > 0) $modelSelect.prop("disabled", false);
                 $modelSelect.empty();
                 $modelSelect.append('<option value="" disabled selected>Please select one</option>');
@@ -133,7 +183,8 @@ var noSelectText = true;
             });
         });
         // #endregion
-        $(document).on('click', '#compareNowBtn', function() {
+
+        $(document).on('click', '#compareNowBtn', function () {
             getData();
         });
     });

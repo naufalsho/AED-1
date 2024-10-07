@@ -22,7 +22,7 @@ namespace WebApp.Controllers.Transaction
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string brandName)
         {
             // Decrypt the 'encryptedType' parameter
             //string decryptedType = EncryptionHelper.AesDecrypt(category);
@@ -34,10 +34,9 @@ namespace WebApp.Controllers.Transaction
             // Fetch the categories
             var categoryResult = await _mstCategoryService.GetAll();
 
-
             var ret = new ComparisonDto
             {
-                SLClass = await _commonSvc.SLGetClass(),
+                SLClass = await _commonSvc.SLGetClassByBrand(brandName, Distributor.ProductTN),
                 Category = categoryResult.Value
                                         //.Where(r => r.Type == 1 && r.Tag =="TN")
                                         .Where(r => r.Type == 1)
