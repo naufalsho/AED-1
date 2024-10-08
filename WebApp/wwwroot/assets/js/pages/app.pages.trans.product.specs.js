@@ -4,9 +4,9 @@ var dTable = '#dTable';
 var thisUrl = 'productSpec';
 var commonService = new webapp.CommonService();
 
-let Category;
 let brandName;
-
+let brandCode;
+let Category;
 
 $(".product-model").prop("hidden", true);
 $('.form-select').select2();
@@ -27,42 +27,8 @@ var noSelectText = true;
 
    
     // getData();
-
     $(window).off('show.bs.modal').on('show.bs.modal', function () {
       
-    });
-
-    $('a[data-bs-toggle="tab"]').on('show.bs.tab', function () {
-        let thisEle = $(this);
-        /*Category = thisEle.data('table');*/
-        $(".img-notfound").prop("hidden", false)
-        $(dTable).empty()
-
-        $('.form-select').val(null).select2().trigger('change.select2');
-
-        commonService.getDecryptedCategory(categoryValue).done(function (response) {
-            Category = response;
-
-            commonService.getBrandByCategory(Category).done(function (response) {
-                if (response.length > 0) $('#FilterBrand').prop("disabled", false)
-                $('#FilterBrand').empty()
-                $('#FilterBrand').append('<option value="" disabled selected>Please select one</option>');
-                $.each(response, function (index, element) {
-                    $('#FilterBrand').append(`<option value="${element.code}">${element.name}</option>`);
-                })
-
-                // Automatically select the option where element.name matches the brandName from the URL
-                $('#FilterBrand option').filter(function () {
-                    return $(this).text().toLowerCase() === brandName.toLowerCase();
-                }).prop('selected', true);
-
-
-                // Trigger change event if using select2
-                $('#FilterBrand').select2().trigger('change');
-            });
-        });
-        
-
     });
 
     $('#app').on('click', '.btn-delete', function (e) {
@@ -71,24 +37,26 @@ var noSelectText = true;
         ShowAlertDelete($(this).data('type'), $(this).data('detail'), $(this).attr('href'), getData);
     });
 
-    $('#FilterBrand').on('change', function () {
-        let brandCode = $('#FilterBrand').val()
+    // Panggil commonService untuk mendapatkan Brand berdasarkan kategori
+    commonService.getDecryptedCategory(categoryValue).done(function (response) {
+        debugger;
+        Category = response;
 
-        
+        // Mengambil Brand berdasarkan Category dan menyimpan brandCode
+        commonService.getBrandByCategory(Category).done(function (response) {
+            debugger;
+            if (response.length > 0) {
+                // Ambil brandCode dari response dan simpan di hidden input
+                const brandElement = response.find(element => element.name.toLowerCase() === getQueryParameter('brandName').toLowerCase());
+                if (brandElement) {
+                    brandCode = brandElement.code;
 
-        commonService.getModelByBrandTN(brandCode).done(function (response) {
-            console.log(response)
-            if(response.length > 0 ) $('#FilterModel').prop("disabled", false)
-            $('#FilterModel').empty()
-            $('#FilterModel').append('<option value="" disabled selected>Please select one</option>');
-            $.each(response, function (index, element) {
-                $('#FilterModel').append(`<option value="${element.code}">${element.model}</option>`);
-            })
+                    // Panggil fungsi untuk memuat Model berdasarkan brandCode
+                    loadModelsForBrand(brandCode);
+                }
+            }
         });
-
     });
-
-
 
     $('#FilterModel').on('change', function () {
         getData()
@@ -98,10 +66,25 @@ var noSelectText = true;
     if (activeTab.length) {
         activeTab.trigger('show.bs.tab');
     }
-
-    
-    
+    document.querySelectorAll('.nav-link span').forEach(function (span) {
+        span.textContent = brandName; // Mengganti teks dengan brandName dari URL
+    });
 }();
+
+function loadModelsForBrand(brandCode) {
+    // Panggil model berdasarkan brandCode yang telah disimpan di hidden input
+    commonService.getModelByBrandTN(brandCode).done(function (response) {
+        debugger;
+        if (response.length > 0) {
+            $('#FilterModel').prop("disabled", false);
+            $('#FilterModel').empty();
+            $('#FilterModel').append('<option value="" disabled selected>Please select one</option>');
+            $.each(response, function (index, element) {
+                $('#FilterModel').append(`<option value="${element.code}">${element.model}</option>`);
+            });
+        }
+    });
+}
 
 function getData() {
     panelShowLoader('#panelDiv', '#panelLoader');

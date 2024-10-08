@@ -16,13 +16,19 @@
 /* Mencegah saat print, layar putih semua */
 @media print {
     * {
-        background: white !important;  Set background putih untuk semua elemen 
-        color: white !important;  Set warna teks menjadi putih 
-        box-shadow: none !important;  Hilangkan semua shadow 
-        border: none !important;  Hilangkan semua border 
+        background: white !important;  /*Set background putih untuk semua elemen */
+        color: white !important;  /*Set warna teks menjadi putih */
+        box-shadow: none !important;  /*Hilangkan semua shadow*/ 
+        border: none !important;  /*Hilangkan semua border */
     }
 
     html,body {
         display: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .app-header-fixed {
+        padding-top: 3rem !important; 
     }
 }
