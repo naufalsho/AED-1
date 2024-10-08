@@ -38,6 +38,7 @@ namespace Infrastructure.Filters
             controller.ViewData["CurrentMenu"] = userMenu;
             controller.ViewData["GroupMenuName"] = userMenuGroup?.Name;
             controller.ViewData["MenuName"] = userMenu?.Name;
+            controller.ViewData["UserSession"] = currentUser.Name;
             controller.ViewData[ViewDataType.Controller] = controller.RouteData.Values["controller"]?.ToString();
             controller.ViewData[ViewDataType.Action] = controller.RouteData.Values["action"]?.ToString();
 
