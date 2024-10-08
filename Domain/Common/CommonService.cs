@@ -167,6 +167,21 @@ namespace Domain.Common
 
             return result;
         }
+        
+        public async Task<IEnumerable<SelectListItem>> SLGetModelProductTN(string type)
+        {
+            IQueryable<TMstModel> query = _uow.MstModel.Set().Where(m => m.IsActive && m.Distributor == Distributor.ProductTN && !m.IsDelete);
+
+            if (!string.IsNullOrEmpty(type))
+            {
+                query = query.Where(m => m.Type == type);
+            }
+
+            var repoResult = await query.ToListAsync();
+            var result = repoResult.Select(m => new SelectListItem() { Value = m.Code, Text = m.Model });
+
+            return result;
+        }
 
     }
 }

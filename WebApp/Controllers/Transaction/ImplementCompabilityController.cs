@@ -32,7 +32,7 @@ namespace WebApp.Controllers.Transaction
         {
             var ret = new ImplementDto();
             ret.SLModelAttachment = await _commonSvc.SLGetModel(MasterModelType.Attachment);
-            ret.SLModelUnit = await _commonSvc.SLGetModel(MasterModelType.Unit);
+            ret.SLModelUnit = await _commonSvc.SLGetModelProductTN(MasterModelType.Unit);
             return View(ViewPath.ImplementCompability, ret);
         }
 

@@ -13,6 +13,7 @@ namespace Domain.Common
         Task<IEnumerable<SelectListItem>> SLGetRole();
 
 		Task<IEnumerable<SelectListItem>> SLGetModel(string type = null);
+		Task<IEnumerable<SelectListItem>> SLGetModelProductTN(string type = null);
 
 
 		IEnumerable<SelectListItem> SLGetEmployeeStatus();
