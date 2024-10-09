@@ -146,9 +146,15 @@ namespace Domain.Common
 
         public async Task<IEnumerable<SelectListItem>> SLGetCategory()
         {
-            var repoResult = await _uow.MstCategory.Set().Where(m => m.IsActive && m.Tag != "TN").ToListAsync();
+            //var repoResult = await _uow.MstCategory.Set().Where(m => m.IsActive).ToListAsync();
+            var repoResult = await _uow.MstCategory.Set()
+                        .Where(m => m.IsActive)
+                        .GroupBy(m => m.Description)
+                        .Select(g => g.OrderBy(m => m.Code).FirstOrDefault())
+                        .ToListAsync();
 
-            var result = repoResult.Select(m => new SelectListItem() { Value = m.Code, Text = m.Description });
+
+            var result = repoResult.Select(m => new SelectListItem() { Value = m.Code, Text = m.Description }).OrderBy(m => m.Value);
 
             return result;
         }
