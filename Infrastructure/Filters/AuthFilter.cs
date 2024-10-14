@@ -29,10 +29,10 @@ namespace Infrastructure.Filters
             var userMenuAll = userMenus.SelectMany(m => m.Menus);
             var userMenu = userMenuAll.Where(m => m.Controller == controllerName).FirstOrDefault();
 
-            if (!userMenus.Any() || !userMenuAll.Where(m => m.Controller == controllerName).Any() || !userMenu.AllowView)
-            {
-                //context.Result = new RedirectToActionResult("Logout", "Account", null);
-            }
+            //if (!userMenus.Any() || !userMenuAll.Where(m => m.Controller == controllerName).Any() || !userMenu.AllowView)
+            //{
+            //    context.Result = new RedirectToActionResult("Logout", "Account", null);
+            //}
 
             controller.ViewData["UserMenus"] = userMenus;
             controller.ViewData["CurrentMenu"] = userMenu;

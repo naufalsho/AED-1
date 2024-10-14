@@ -128,6 +128,19 @@ panelHideLoader('#panelDiv', '#panelLoader');
     //    });
     //});
     $(document).ready(function () {
+        // Get the brand name from the URL
+        const brandName = getQueryParameter('brandName');
+
+        // Toggle the visibility of MHD and non-MHD sections based on the brand name
+        if (brandName && brandName.toLowerCase() === 'toyota') {
+            $('.MHD').show(); // Show MHD section for Toyota
+            $('.non-MHD').hide(); // Hide non-MHD section
+        } else {
+            $('.MHD').hide(); // Hide MHD section
+            $('.non-MHD').show(); // Show non-MHD section for other brands
+        }
+
+
         // Inisialisasi FilterClass dan panggil API untuk mengisi FilterBrand
         const initialClassCode = $('#FilterClass').val();
         if (initialClassCode) {
