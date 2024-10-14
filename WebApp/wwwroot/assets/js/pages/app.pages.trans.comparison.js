@@ -7,11 +7,11 @@ var thisUrl = 'comparison';
 panelHideLoader('#panelDiv', '#panelLoader');
 
 //NO Print fungsional
-var autoBlur = true;
-var noPrint = true;
-var noCopy = true;
-var noScreenshot = true;
-var noSelectText = true;
+//var autoBlur = true;
+//var noPrint = true;
+//var noCopy = true;
+//var noScreenshot = true;
+//var noSelectText = true;
 
 !function () {
     // Usage

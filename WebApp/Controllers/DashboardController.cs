@@ -82,7 +82,7 @@ namespace WebApp.Controllers
             var features = new List<FeatureDto>
         {
             //new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = Url.Action("Specification", "Dashboard", new { brandName }) },
-            new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = Url.Action("Index", "ProductSpec", new { category = encryptedType , brandName = brandName}) },
+            new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = Url.Action("RedirectProductSpec", "Dashboard", new { category = encryptedType , brandName = brandName}) },
             new FeatureDto { Name = "Product Comparison", IconClass = "fa-repeat", Url = Url.Action("Index", "Comparison", new { brandName = brandName}) },
             //new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = Url.Action("", "ProductSpec") },
             //new FeatureDto { Name = "Product Comparison", IconClass = "fa-repeat", Url = Url.Action("", "Comparison") },
@@ -123,6 +123,19 @@ namespace WebApp.Controllers
             else if (brandName == "Canycom")
             {
                 url = "http://10.0.10.74:9590/moodle/course/section.php?id=9";
+            }
+
+            return Redirect(url);
+        }
+
+        public IActionResult RedirectProductSpec(string category, string brandName)
+        {
+            string url = $"/productspec?category={category}&brandName={brandName}"; // Default URL structure
+
+
+            if (brandName == "Toyota")
+            {
+                url = "https://www.tmhg-sss.jp/";
             }
 
             return Redirect(url);
