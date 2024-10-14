@@ -29,7 +29,7 @@
     {
         public static string Unit = "Unit";
         public static string Attachment = "Attachment";
-	}
+    }
 
     public static class ViewDataType
     {
@@ -171,7 +171,7 @@
         public static string MasterClassProcess => "~/Views/Master/Class/Process.cshtml";
 
 
-        // Class
+        // Model
         public static string MasterModel => "~/Views/Master/Model/Index.cshtml";
         public static string MasterModelProcess => "~/Views/Master/Model/Process.cshtml";
 
@@ -181,7 +181,24 @@
         public static string MasterSpecItemProcess => "~/Views/Master/SpecItems/Process.cshtml";
 
 
+        // Cap
+        public static string MasterCap => "~/Views/Master/Cap/Index.cshtml";
+        public static string MasterCapProcess => "~/Views/Master/Cap/Process.cshtml";
 
+
+        // LiftingHeight
+        public static string MasterLiftingHeight => "~/Views/Master/LiftingHeight/Index.cshtml";
+        public static string MasterLiftingHeightProcess => "~/Views/Master/LiftingHeight/Process.cshtml";
+
+
+        // MastType
+        public static string MasterMastType => "~/Views/Master/MastType/Index.cshtml";
+        public static string MasterMastTypeProcess => "~/Views/Master/MastType/Process.cshtml";
+
+
+        // Tire
+        public static string MasterTire => "~/Views/Master/Tire/Index.cshtml";
+        public static string MasterTireProcess => "~/Views/Master/Tire/Process.cshtml";
 
 
         #endregion
@@ -195,7 +212,7 @@
 
         // Implement
         public static string ImplementConf => "~/Views/Setting/Implement/Index.cshtml";
-        public static string ImplementProcess=> "~/Views/Setting/Implement/Process.cshtml";
+        public static string ImplementProcess => "~/Views/Setting/Implement/Process.cshtml";
         public static string ImplementCompability => "~/Views/Transaction/Implement/Index.cshtml";
         public static string ImplementCompabilityDetail => "~/Views/Transaction/Implement/Detail.cshtml";
 

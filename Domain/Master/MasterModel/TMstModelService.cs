@@ -238,7 +238,7 @@ namespace Domain.Master.MasterModel
             try
             {
                 //
-				var repoResult = await _uow.MstModel.Set().Where(m => m.BrandCode == brandCode && m.Type == MasterModelType.Unit && EF.Functions.Like(m.Distributor.ToUpper(), "%TRAKTOR NUSANTARA%")).ToListAsync();
+				var repoResult = await _uow.MstModel.Set().Where(m => m.BrandCode == brandCode && m.Type == MasterModelType.Unit && EF.Functions.Like(m.Distributor.ToUpper(), "%TRAKTOR NUSANTARA%") && m.IsActive && !m.IsDelete).ToListAsync();
 
 				var result = _mapper.Map<IEnumerable<TMstModelDto>>(repoResult);
 

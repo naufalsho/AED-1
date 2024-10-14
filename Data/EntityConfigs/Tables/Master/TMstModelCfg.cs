@@ -37,19 +37,38 @@ namespace Data.EntityConfigs.Tables.Master
                    .HasForeignKey(cv => cv.Code)
                    .OnDelete(DeleteBehavior.Restrict);
 
-			builder.HasMany(e => e.AttachedImplements)
-				   .WithOne(cv => cv.ModelAttach)
-				   .HasForeignKey(cv => cv.ModelCodeAttach)
-				   .OnDelete(DeleteBehavior.Restrict);
+            builder.HasMany(e => e.AttachedImplements)
+                   .WithOne(cv => cv.ModelAttach)
+                   .HasForeignKey(cv => cv.ModelCodeAttach)
+                   .OnDelete(DeleteBehavior.Restrict);
 
-			builder.HasMany(e => e.ProductImplements)
-				   .WithOne(cv => cv.ModelProduct)
-				   .HasForeignKey(cv => cv.ModelCode)
-				   .OnDelete(DeleteBehavior.Restrict);
+            builder.HasMany(e => e.ProductImplements)
+                   .WithOne(cv => cv.ModelProduct)
+                   .HasForeignKey(cv => cv.ModelCode)
+                   .OnDelete(DeleteBehavior.Restrict);
+
+            // Define foreign keys and relationships
+            builder.HasOne(e => e.Cap)
+                   .WithMany(b => b.Models)
+                   .HasForeignKey(e => e.CapCode)
+                   .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne(e => e.LiftingHeight)
+                   .WithMany(b => b.Models)
+                   .HasForeignKey(e => e.LiftingHeightCode)
+                   .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne(e => e.MastType)
+                   .WithMany(b => b.Models)
+                   .HasForeignKey(e => e.MastTypeCode)
+                   .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne(e => e.Tire)
+                   .WithMany(b => b.Models)
+                   .HasForeignKey(e => e.TireCode)
+                   .OnDelete(DeleteBehavior.Restrict);
 
 
-
-
-		}
+        }
     }
 }

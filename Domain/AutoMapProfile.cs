@@ -11,11 +11,15 @@ using Domain.AccessUser;
 using Domain.Account;
 using Domain.Dashboard;
 using Domain.Master;
+using Domain.Master.Cap;
 using Domain.Master.Class;
 using Domain.Master.ClassValue;
+using Domain.Master.LiftingHeight;
 using Domain.Master.MasterCategory;
 using Domain.Master.MasterModel;
 using Domain.Master.MasterSpecItem;
+using Domain.Master.MastType;
+using Domain.Master.Tire;
 using Domain.MasterComparisonType;
 using Domain.MasterEmployee;
 using Domain.MasterGeneral;
@@ -32,7 +36,7 @@ namespace Domain
     {
         public AutoMapProfile()
         {
-        
+
             #region Authentication
             CreateMap<TAccUser, UserSessionDto>();
             CreateMap<TAccRole, UserRoleDto>();
@@ -90,14 +94,12 @@ namespace Domain
 
             #region Master Data
             // Master Brand
-            
             CreateMap<TMstBrand, TMstBrandDto>();
             CreateMap<TMstBrandDto, TMstBrand>();
             CreateMap<TMstBrandCreateDto, TMstBrand>();
             CreateMap<TMstBrand, TMstBrandCreateDto>();
 
             //Category
-
             CreateMap<TMstCategoryCreatedDto, TMstCategory>();
             CreateMap<TMstCategoryUpdatedDto, TMstCategory>();
             CreateMap<TMstCategory, TMstCategoryCreatedDto>();
@@ -106,7 +108,6 @@ namespace Domain
 
 
             // Category Detail
-
             CreateMap<TMstCategoryDetail, TMstCategoryDetailDto>();
 
             CreateMap<TMstCategoryDetailDto, TMstBrandDto>()
@@ -117,16 +118,12 @@ namespace Domain
 
 
             // Class 
-
-            
-
-
             CreateMap<TMstClassCreatedDto, TMstClass>();
             CreateMap<TMstClass, TMstClassDto>();
             CreateMap<TMstClassDto, TMstClass>();
 
             // Class Value
-            CreateMap<TMstClassCreatedDto, TMstClassValue>();            
+            CreateMap<TMstClassCreatedDto, TMstClassValue>();
             CreateMap<TMstClassValue, TMstClassValueDto>();
             CreateMap<TMstClassValueDto, TMstClassValue>();
 
@@ -136,7 +133,7 @@ namespace Domain
                 .ForMember(dest => dest.Brand, opt => opt.MapFrom(src => src.Brand))
                 .ForMember(dest => dest.Classes, opt => opt.MapFrom(src => src.Classes));
 
-            CreateMap<TMstModelCreatedDto,TMstModel>();
+            CreateMap<TMstModelCreatedDto, TMstModel>();
             CreateMap<TMstModelCreatedDto, TMstModelDto>();
 
 
@@ -146,6 +143,25 @@ namespace Domain
 
             CreateMap<TMstSpecItemsCreatedDto, TMstSpecItem>();
 
+            // Cap 
+            CreateMap<TMstCapCreatedDto, TMstCap>();
+            CreateMap<TMstCap, TMstCapDto>();
+            CreateMap<TMstCap, TMstCap>();
+
+            // LiftingHeight 
+            CreateMap<TMstLiftingHeightCreatedDto, TMstLiftingHeight>();
+            CreateMap<TMstLiftingHeight, TMstLiftingHeightDto>();
+            CreateMap<TMstLiftingHeightDto, TMstLiftingHeight>();
+
+            // MastType 
+            CreateMap<TMstMastTypeCreatedDto, TMstMastType>();
+            CreateMap<TMstMastType, TMstMastTypeDto>();
+            CreateMap<TMstMastTypeDto, TMstMastType>();
+
+            // Tire 
+            CreateMap<TMstTireCreatedDto, TMstTire>();
+            CreateMap<TMstTire, TMstTireDto>();
+            CreateMap<TMstTireDto, TMstTire>();
             #endregion
 
             #region Transaction
@@ -170,7 +186,7 @@ namespace Domain
             CreateMap<VwUnitSpec, UnitSpecDto>();
 
 
-            
+
 
 
 

@@ -28,20 +28,24 @@ namespace Data
         public DbSet<TMstComparisonType> MstComparisonType { get; set; }
 
         #region Master
-        public DbSet<TMstBrand> MstBrand{ get; set; }
-        public DbSet<TMstCategory> MstCategory{ get; set; }
-        public DbSet<TMstCategoryDetail> MstCategoryDetail{ get; set; }
-        public DbSet<TMstClass> MstClass{ get; set; }
-        public DbSet<TMstClassValue> MstClassValue{ get; set; }
-        public DbSet<TMstModel> MstModel{ get; set; }
-        public DbSet<TMstSpecItem> MstSpecItem{ get; set; }
+        public DbSet<TMstBrand> MstBrand { get; set; }
+        public DbSet<TMstCategory> MstCategory { get; set; }
+        public DbSet<TMstCategoryDetail> MstCategoryDetail { get; set; }
+        public DbSet<TMstClass> MstClass { get; set; }
+        public DbSet<TMstClassValue> MstClassValue { get; set; }
+        public DbSet<TMstModel> MstModel { get; set; }
+        public DbSet<TMstSpecItem> MstSpecItem { get; set; }
+        public DbSet<TMstCap> MstCap { get; set; }
+        public DbSet<TMstLiftingHeight> MstLiftingHeight { get; set; }
+        public DbSet<TMstMastType> MstMastType { get; set; }
+        public DbSet<TMstTire> MstTire { get; set; }
 
         #endregion
 
         #region Transaction
 
-        public DbSet<TTrnSpecValues> TrnSpecValues{ get; set; }
-        public DbSet<TTrnImplement> TrnImplement{ get; set; }
+        public DbSet<TTrnSpecValues> TrnSpecValues { get; set; }
+        public DbSet<TTrnImplement> TrnImplement { get; set; }
 
 
         #endregion
@@ -76,6 +80,10 @@ namespace Data
             builder.ApplyConfiguration(new TMstClassValueCfg());
             builder.ApplyConfiguration(new TMstModelCfg());
             builder.ApplyConfiguration(new TMstSpecItemCfg());
+            builder.ApplyConfiguration(new TMstCapCfg());
+            builder.ApplyConfiguration(new TMstLiftingHeightCfg());
+            builder.ApplyConfiguration(new TMstMastTypeCfg());
+            builder.ApplyConfiguration(new TMstTireCfg());
 
             #endregion
 

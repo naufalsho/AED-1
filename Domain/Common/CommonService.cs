@@ -180,7 +180,7 @@ namespace Domain.Common
 
             if (!string.IsNullOrEmpty(type))
             {
-                query = query.Where(m => m.Type == type);
+                query = query.Where(m => m.Type == type && m.IsActive && !m.IsDelete);
             }
 
             var repoResult = await query.ToListAsync();

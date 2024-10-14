@@ -27,14 +27,18 @@ namespace Core.Interfaces
         IMstClassValueRepo MstClassValue { get; }
         IMstModelRepo MstModel { get; }
         IMstSpecItemRepo MstSpecItem { get; }
+        IMstCapRepo MstCap { get; }
+        IMstLiftingHeightRepo MstLiftingHeight { get; }
+        IMstTireRepo MstTire { get; }
+        IMstMastTypeRepo MstMastType { get; }
 
-		#endregion
+        #endregion
 
 
-		#region Transaction
+        #region Transaction
 
-		ITrnSpecValuesRepo TrnSpecValues { get; }
-		ITrnImplementRepo TrnImplement{ get; }
+        ITrnSpecValuesRepo TrnSpecValues { get; }
+        ITrnImplementRepo TrnImplement { get; }
 
         #endregion
 

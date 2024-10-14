@@ -19,14 +19,22 @@ namespace Core.Models.Entities.Tables.Master
 
         public string BrandCode { get; set; }
         public string ClassCode { get; set; }
+        public string CapCode { get; set; }
+        public string LiftingHeightCode { get; set; }
+        public string MastTypeCode { get; set; }
+        public string TireCode { get; set; }
 
 
 
         public virtual TMstBrand Brand { get; set; }
         public virtual TMstClass Classes { get; set; }
-        public virtual ICollection<TTrnSpecValues> SpecValues{get;set;}
-		public virtual ICollection<TTrnImplement> AttachedImplements { get; set; }
-		public virtual ICollection<TTrnImplement> ProductImplements { get; set; }
-		public virtual ICollection<TMstClassValue> ClassValues{get;set; }
+        public virtual TMstCap Cap { get; set; }
+        public virtual TMstLiftingHeight LiftingHeight { get; set; }
+        public virtual TMstMastType MastType { get; set; }
+        public virtual TMstTire Tire { get; set; }
+        public virtual ICollection<TTrnSpecValues> SpecValues { get; set; }
+        public virtual ICollection<TTrnImplement> AttachedImplements { get; set; }
+        public virtual ICollection<TTrnImplement> ProductImplements { get; set; }
+        public virtual ICollection<TMstClassValue> ClassValues { get; set; }
     }
 }

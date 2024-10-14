@@ -1,0 +1,33 @@
+﻿@model Domain.Master.Tire.TMstTireCreatedDto;
+@using Core;
+
+@{
+    Layout = ViewPath.ModalLayout;
+}
+
+    <form id="FormInput" asp-controller="@ViewData[ViewDataType.Controller]" asp-action="@ViewData[ViewDataType.Action]" asp-antiforgery="true" class="form-horizontal">
+
+
+         <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Code</label>
+            <div class="col-md-9">
+                <input class="form-control" asp-for="Code" required />
+            </div>
+        </div>
+
+        <div class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Name</label>
+            <div class="col-md-9">
+                <input class="form-control" asp-for="Name" required />
+            </div>
+        </div>
+
+        <div id="rowActive mt-2" class="row mb-15px">
+            <label class="form-label col-form-label col-md-3">Active?</label>
+            <div class="col-md-9">
+                <div class="form-check mt-2 mb-2">
+                    <input  type="checkbox" class="form-check-input" asp-for="IsActive" checked="@Model.IsActive" autocomplete="off" />
+                </div>
+            </div>
+        </div>
+    </form>

@@ -14,6 +14,10 @@ using Domain.Master.ClassValue;
 using Domain.Master.MasterCategory;
 using Domain.Master.MasterModel;
 using Domain.Master.MasterSpecItem;
+using Domain.Master.Cap;
+using Domain.Master.LiftingHeight;
+using Domain.Master.MastType;
+using Domain.Master.Tire;
 using Domain.MasterComparisonType;
 using Domain.MasterEmployee;
 using Domain.MasterGeneral;
@@ -56,12 +60,16 @@ namespace Infrastructure
             services.AddTransient<IMstModelService, TMstModelService>();
             services.AddTransient<ITMstSpecItemsService, TMstSpecItemsService>();
             services.AddTransient<IMasterComparisonService, MasterComparisonTypeService>();
+            services.AddTransient<IMstCapService, TMstCapService>();
+            services.AddTransient<IMstLiftingHeightService, TMstLiftingHeightService>();
+            services.AddTransient<IMstMastTypeService, TMstMastTypeService>();
+            services.AddTransient<IMstTireService, TMstTireService>();
 
-			#endregion
+            #endregion
 
 
-			#region Transaction
-	
+            #region Transaction
+
             services.AddTransient<ITrnSpecValuesService, TTrnSpecValuesService>();
             services.AddTransient<ITrnImplementService, TTrnImplementsService>();
             services.AddTransient<IUnitSpecService, UnitSpecService>();

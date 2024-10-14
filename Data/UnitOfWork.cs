@@ -24,7 +24,7 @@ namespace Data
 
 
         private IDbContextTransaction _transaction;
-        
+
 
 
 
@@ -40,7 +40,7 @@ namespace Data
 
         #region Master
 
-        public IMstBrandRepo MstBrand { get; private set;}
+        public IMstBrandRepo MstBrand { get; private set; }
 
         public IMstCategoryRepo MstCategory { get; private set; }
         public IMstCategoryDetailRepo MstCategoryDetail { get; private set; }
@@ -52,6 +52,10 @@ namespace Data
         public IMstModelRepo MstModel { get; private set; }
 
         public IMstSpecItemRepo MstSpecItem { get; private set; }
+        public IMstCapRepo MstCap { get; private set; }
+        public IMstLiftingHeightRepo MstLiftingHeight { get; private set; }
+        public IMstMastTypeRepo MstMastType { get; private set; }
+        public IMstTireRepo MstTire { get; private set; }
 
 
         #endregion
@@ -78,9 +82,9 @@ namespace Data
         public IVwDsDeviceStockByCategoryRepo VwDsDeviceStockByCategory { get; }
         public IVwDsDeviceStockByStatusRepo VwDsDeviceStockByStatus { get; }
         public IVwDsDeviceYoYRepo VwDsDeviceYoY { get; }
-        public IVwSpecValueMatriksRepo VwSpecValueMatriks{ get; }
-        public IVwUnitSpecRepo VwUnitSpec{ get; }
-        public IVwComparisonRepo VwComparison{ get; }
+        public IVwSpecValueMatriksRepo VwSpecValueMatriks { get; }
+        public IVwUnitSpecRepo VwUnitSpec { get; }
+        public IVwComparisonRepo VwComparison { get; }
 
         #endregion
 
@@ -109,11 +113,16 @@ namespace Data
             MstClassValue = new TMstClassValueRepo(_context);
             MstModel = new TMstModelRepo(_context);
             MstSpecItem = new TMstSpecItemRepo(_context);
+            MstCap = new TMstCapRepo(_context);
+            MstLiftingHeight = new TMstLiftingHeightRepo(_context);
+            MstMastType = new TMstMastTypeRepo(_context);
+            MstTire = new TMstTireRepo(_context);
+
 
             #endregion
 
             #region Transaction
-            
+
             TrnSpecValues = new TTrnSpecValuesRepo(_context);
             TrnImplement = new TTrnImplementRepo(_context);
 
