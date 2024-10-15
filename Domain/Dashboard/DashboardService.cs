@@ -240,10 +240,10 @@ namespace Domain.Dashboard
             }
         }
 
-        public async Task<Result<IEnumerable<DescriptionGroupDto>>> GetDescriptionGroupsAsync()
+        public async Task<Result<IEnumerable<DescriptionGroupDto>>> GetDescriptionGroupsAsync(string categoryDesc = null)
         {
             var categoryResult = await (from category in _uow.MstCategory.Set()
-                                        .Where(a => a.Tag == "TN" && a.IsActive)
+                                        .Where(a => a.Tag == "TN" && a.IsActive && a.Description.ToLower() == categoryDesc.ToLower())
                                         .Include(c => c.CategoryDetails)
                                         .ThenInclude(cd => cd.Brand)
                                         from categoryDetail in category.CategoryDetails

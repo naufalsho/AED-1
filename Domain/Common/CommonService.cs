@@ -189,5 +189,44 @@ namespace Domain.Common
             return result;
         }
 
+        public async Task<IEnumerable<SelectListItem>> SLGetCap()
+        {
+            var repoResult = await _uow.MstCap.Set().Where(m => m.IsActive).ToListAsync();
+
+            var result = repoResult.Select(m => new SelectListItem() { Value = m.Code, Text = m.Name });
+
+            return result;
+
+        }
+
+        public async Task<IEnumerable<SelectListItem>> SLGetLiftingHeight()
+        {
+            var repoResult = await _uow.MstLiftingHeight.Set().Where(m => m.IsActive).ToListAsync();
+
+            var result = repoResult.Select(m => new SelectListItem() { Value = m.Code, Text = m.Name });
+
+            return result;
+
+        }
+
+        public async Task<IEnumerable<SelectListItem>> SLGetMastType()
+        {
+            var repoResult = await _uow.MstMastType.Set().Where(m => m.IsActive).ToListAsync();
+
+            var result = repoResult.Select(m => new SelectListItem() { Value = m.Code, Text = m.Name });
+
+            return result;
+
+        }
+
+        public async Task<IEnumerable<SelectListItem>> SLGetTire()
+        {
+            var repoResult = await _uow.MstTire.Set().Where(m => m.IsActive).ToListAsync();
+
+            var result = repoResult.Select(m => new SelectListItem() { Value = m.Code, Text = m.Name });
+
+            return result;
+
+        }
     }
 }

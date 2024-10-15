@@ -131,7 +131,11 @@ namespace Domain
             // Model
             CreateMap<TMstModel, TMstModelDto>()
                 .ForMember(dest => dest.Brand, opt => opt.MapFrom(src => src.Brand))
-                .ForMember(dest => dest.Classes, opt => opt.MapFrom(src => src.Classes));
+                .ForMember(dest => dest.Classes, opt => opt.MapFrom(src => src.Classes))
+                .ForMember(dest => dest.Cap, opt => opt.MapFrom(src => src.Cap))
+                .ForMember(dest => dest.LiftingHeight, opt => opt.MapFrom(src => src.LiftingHeight))
+                .ForMember(dest => dest.MastType, opt => opt.MapFrom(src => src.MastType))
+                .ForMember(dest => dest.Tire, opt => opt.MapFrom(src => src.Tire));
 
             CreateMap<TMstModelCreatedDto, TMstModel>();
             CreateMap<TMstModelCreatedDto, TMstModelDto>();

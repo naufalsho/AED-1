@@ -15,7 +15,11 @@ namespace Domain.Common
 		Task<IEnumerable<SelectListItem>> SLGetModel(string type = null);
 		Task<IEnumerable<SelectListItem>> SLGetModelProductTN(string type = null);
 
+        Task<IEnumerable<SelectListItem>> SLGetCap();
+        Task<IEnumerable<SelectListItem>> SLGetLiftingHeight();
+        Task<IEnumerable<SelectListItem>> SLGetMastType();
+        Task<IEnumerable<SelectListItem>> SLGetTire();
 
-		IEnumerable<SelectListItem> SLGetEmployeeStatus();
+        IEnumerable<SelectListItem> SLGetEmployeeStatus();
     }
 }

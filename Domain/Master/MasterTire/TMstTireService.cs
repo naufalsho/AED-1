@@ -134,24 +134,27 @@ namespace Domain.Master.Tire
         {
             try
             {
-                var lastBrandCode = await _uow.MstTire.Set().OrderByDescending(b => b.CreatedDate).FirstOrDefaultAsync();
+                var lastNum = await _uow.MstTire.Set().OrderByDescending(b => b.CreatedDate).FirstOrDefaultAsync();
 
-                if (lastBrandCode == null)
-                    return Result.Ok("TR0001");
+                if (lastNum == null)
+                    return Result.Ok("Tr001");
 
 
-                string prefix = lastBrandCode.Code.Substring(0, 2); // Misalnya, 'B' dari 'B000'
-                int lastNumber = int.Parse(lastBrandCode.Code.Substring(2)); // Misalnya, 000 dari 'B000'
+                // Assuming the code format is always something like 'CapXXXXX' (e.g., Cap00001, Cap00002, etc.)
+                string lastCode = lastNum.Code;
 
-                // Menambahkan 1 pada bagian nomor
+                // Extract the prefix, in this case 'Cap'
+                string prefix = new string(lastCode.TakeWhile(char.IsLetter).ToArray());
+
+                // Extract the numeric part after the prefix, and increment it
+                string numericPart = new string(lastCode.SkipWhile(char.IsLetter).ToArray());
+                int lastNumber = int.Parse(numericPart);
+
+                // Increment the number and format it with leading zeros (4 digits)
                 lastNumber++;
+                string nextCode = $"{prefix}{lastNumber:D3}";
 
-                // Menggabungkan kembali bagian huruf dan bagian nomor yang telah diubah
-                string nextCode = $"{prefix}{lastNumber:D5}"; // Format nomor agar selalu tiga digit
-
-                Console.WriteLine(nextCode);
-
-                
+                // Return the next code
                 return Result.Ok(nextCode);
             }
             catch (Exception ex)

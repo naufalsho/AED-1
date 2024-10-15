@@ -37,20 +37,24 @@ namespace WebApp.Controllers
             
         }
 
-        public async Task<IActionResult> Product()
+
+        [HttpGet("Product/{category}")]
+        public async Task<IActionResult> Product(string category)
         {
-            var result = await _dsSvc.GetDescriptionGroupsAsync();
+            var result = await _dsSvc.GetDescriptionGroupsAsync(category);
 
             if (result.IsSuccess)
             {
                 // Initialize Features for each brand
                 foreach (var group in result.Value)
                 {
-                    foreach (var brand in group.Brands)
-                    {
-                        // Fetch brand-specific features (this logic can be adjusted as per your requirements)
-                        brand.Features = await GetBrandFeaturesAsync(brand.Name, group.Code);
-                    }
+                        foreach (var brand in group.Brands)
+                        {
+                            // Fetch brand-specific features (this logic can be adjusted as per your requirements)
+                            brand.Features = await GetBrandFeaturesAsync(brand.Name, group.Code);
+                        }
+                    
+                    
                 }
 
                 return View(ViewPath.Dashboard2, result.Value);

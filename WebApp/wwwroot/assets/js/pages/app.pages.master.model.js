@@ -4,6 +4,10 @@ var dTable = '#dTable';
 var thisUrl = 'model';
 
 !function () {
+    //besarkan modal
+    $('.modal-dialog').addClass('modal-lg');
+
+
     getData();
 
     $(window).off('show.bs.modal').on('show.bs.modal', function () {
@@ -67,6 +71,46 @@ function initDt(response) {
                             return `${data} - ${row.classes.name !== null ? row.classes.name : null}`;
                         }
                         return '';
+                    }
+                }, 
+                {
+                    data: 'cap.code',
+                    title: 'Cap',
+                    render: function (data, type, row, meta) {
+                        if (data != null) {
+                            return `${data} - ${row.cap.name !== null ? row.cap.name : null}`;
+                        }
+                        return '-';
+                    }
+                }, 
+                {
+                    data: 'liftingHeight.code',
+                    title: 'LiftingHeight',
+                    render: function (data, type, row, meta) {
+                        if (data != null) {
+                            return `${data} - ${row.liftingHeight.name !== null ? row.liftingHeight.name : null}`;
+                        }
+                        return '-';
+                    }
+                }, 
+                {
+                    data: 'mastType.code',
+                    title: 'MastType',
+                    render: function (data, type, row, meta) {
+                        if (data != null) {
+                            return `${data} - ${row.mastType.name !== null ? row.mastType.name : null}`;
+                        }
+                        return '-';
+                    }
+                }, 
+                {
+                    data: 'tire.code',
+                    title: 'Tire',
+                    render: function (data, type, row, meta) {
+                        if (data != null) {
+                            return `${data} - ${row.tire.name !== null ? row.tire.name : null}`;
+                        }
+                        return '-';
                     }
                 }, 
 				{ data: 'distributor' },

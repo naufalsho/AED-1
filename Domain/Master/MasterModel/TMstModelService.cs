@@ -123,6 +123,10 @@ namespace Domain.Master.MasterModel
                 var repoResult = await _uow.MstModel.Set().Where(m => !m.IsDelete)
                     .Include(m => m.Brand)
                     .Include(c => c.Classes)
+                    .Include(m => m.Cap)
+                    .Include(m => m.LiftingHeight)
+                    .Include(m => m.MastType)
+                    .Include(m => m.Tire)
                     .ToListAsync();
 
                 var result = _mapper.Map<IEnumerable<TMstModelDto>>(repoResult);

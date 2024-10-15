@@ -1,19 +1,9 @@
 ﻿using Core;
 using Core.Extensions;
 using Core.Helpers;
-using Core.Models;
-using Domain.AccessMenu;
 using Domain.Common;
-using Domain.Master;
 using Domain.Master.MasterModel;
-using Domain.MasterComparisonType;
-using Domain.MasterYardArea;
-using FluentResults;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using System.Transactions;
-using ZXing.Common.ReedSolomon;
-using ZXing.QrCode.Internal;
 
 namespace WebApp.Controllers.Master
 {
@@ -26,7 +16,7 @@ namespace WebApp.Controllers.Master
         public ModelController(ICommonService commonSvc, IMstModelService mstModelService)
         {
             _commonSvc = commonSvc;
-            _mstModelService  = mstModelService;
+            _mstModelService = mstModelService;
         }
 
         [HttpGet]
@@ -55,8 +45,8 @@ namespace WebApp.Controllers.Master
         [HttpGet("Create")]
         public async Task<IActionResult> CreateAsync()
         {
-           ViewData[ViewDataType.ModalType] = ModalType.Create;
-           ViewData[ViewDataType.ModalTitle] = "Create New Model";
+            ViewData[ViewDataType.ModalType] = ModalType.Create;
+            ViewData[ViewDataType.ModalTitle] = "Create New Model";
 
             var getLastCode = await _mstModelService.GetLastCode();
 
@@ -65,7 +55,11 @@ namespace WebApp.Controllers.Master
                 Code = getLastCode.Value,
                 IsActive = true,
                 Class = await _commonSvc.SLGetClass(),
-                Brand = await _commonSvc.SLGetBrand()
+                Brand = await _commonSvc.SLGetBrand(),
+                Cap = await _commonSvc.SLGetCap(),
+                LiftingHeight = await _commonSvc.SLGetLiftingHeight(),
+                MastType = await _commonSvc.SLGetMastType(),
+                Tire = await _commonSvc.SLGetTire()
             };
 
             return View(ViewPath.MasterModelProcess, ret);
@@ -106,16 +100,24 @@ namespace WebApp.Controllers.Master
 
             var result = await _mstModelService.GetById(Id);
 
-            ret.Code        = result.Value.Code;
-            ret.Model       = result.Value.Model;
-            ret.Type        = result.Value.Type;
+            ret.Code = result.Value.Code;
+            ret.Model = result.Value.Model;
+            ret.Type = result.Value.Type;
             ret.Distributor = result.Value.Distributor;
-            ret.ClassCode   = result.Value.ClassCode;
-            ret.BrandCode   = result.Value.BrandCode;
-            ret.Country     = result.Value.Country;
-            ret.IsActive    = result.Value.IsActive;
-            ret.Class       = await _commonSvc.SLGetClass();
-            ret.Brand       = await _commonSvc.SLGetBrand();
+            ret.ClassCode = result.Value.ClassCode;
+            ret.BrandCode = result.Value.BrandCode;
+            ret.Country = result.Value.Country;
+            ret.IsActive = result.Value.IsActive;
+            ret.Class = await _commonSvc.SLGetClass();
+            ret.Brand = await _commonSvc.SLGetBrand();
+            ret.CapCode = result.Value.CapCode;
+            ret.LiftingHeightCode = result.Value.LiftingHeightCode;
+            ret.MastTypeCode = result.Value.MastTypeCode;
+            ret.TireCode = result.Value.TireCode;
+            ret.Cap = await _commonSvc.SLGetCap();
+            ret.LiftingHeight = await _commonSvc.SLGetLiftingHeight();
+            ret.MastType = await _commonSvc.SLGetMastType();
+            ret.Tire = await _commonSvc.SLGetTire();
 
             return View(ViewPath.MasterModelProcess, ret);
         }
