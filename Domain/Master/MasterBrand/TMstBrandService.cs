@@ -46,7 +46,7 @@ namespace Domain.Master
                 }
 
                 // Check for existing brand name
-                var checkName = await _uow.MstBrand.Set().FirstOrDefaultAsync(m => m.Name == data.Name);
+                var checkName = await _uow.MstBrand.Set().FirstOrDefaultAsync(m => m.Name.ToLower() == data.Name.ToLower());
                 if (checkName != null) // Ensure checkName is not null before accessing its properties
                 {
                     return Result.Fail(ResponseStatusCode.BadRequest + ": Name of brand available. Please change the name!");
@@ -157,7 +157,7 @@ namespace Domain.Master
         {
             try
             {
-                var repoResult = await _uow.MstBrand.Set().ToListAsync();
+                var repoResult = await _uow.MstBrand.Set().Where(m => !m.IsDelete).ToListAsync();
 
                 var result = _mapper.Map<IEnumerable<TMstBrandDto>>(repoResult);
 
