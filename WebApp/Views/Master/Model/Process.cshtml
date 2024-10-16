@@ -18,7 +18,7 @@
                 <div class="row mb-15px">
                     <label class="form-label col-form-label col-md-3">Code</label>
                     <div class="col-md-9">
-                        <input class="form-control" asp-for="Code" required />
+                        <input class="form-control" asp-for="Code" required  readonly/>
                     </div>
                 </div>
 
@@ -68,7 +68,7 @@
                                 <option value="PT. Altrak 1978"></option>
                                 <option value="PT. Agrisarana"></option>
                                 <option value="PT. Bina Pertiwi"></option>
-                                <option value="Japan"></option>
+                                <option value="PT. Swadaya Harapan Nusantara"></option>
                                 <option value="PT. Satrindo Mitra Utama"></option>
                             </datalist>
                     </div>
@@ -77,8 +77,8 @@
                 <div class="row mb-15px">
                     <label class="form-label col-form-label col-md-3">Country</label>
                     <div class="col-md-9">
-                        <input class="form-control" list="datalistOptions" asp-for="Country" placeholder="Type to search...">
-                            <datalist id="datalistOptions">
+                        <input class="form-control" list="datalistOptionsCountry" asp-for="Country" placeholder="Type to search...">
+                            <datalist id="datalistOptionsCountry">
                                 <option value="Indonesia"></option>
                                 <option value="India"></option>
                                 <option value="Japan"></option>
