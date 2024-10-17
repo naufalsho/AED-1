@@ -14,5 +14,6 @@ namespace Domain.Master.MastType
         Task<Result<TMstMastTypeDto>> Create(UserClaimModel user, TMstMastTypeCreatedDto data);
         Task<Result<TMstMastTypeDto>> Update(UserClaimModel user, TMstMastTypeCreatedDto data);
         Task<Result<TMstMastTypeDto>> Delete(UserClaimModel user, string id);
+        Task<Result<IEnumerable<TMstMastTypeDto>>> GetByCap(string brandCode, string classCode, string distributor, string capCode);
     }
 }

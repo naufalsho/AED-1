@@ -8,10 +8,12 @@ using Core.Interfaces;
 using Core.Models;
 using Core.Models.Entities.Tables;
 using Core.Models.Entities.Tables.Master;
+using Domain.Master.Cap;
 using Domain.Master.MasterCategory;
 using Domain.Master.MastType;
 using Domain.MasterYardArea;
 using FluentResults;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -204,6 +206,30 @@ namespace Domain.Master.Class
             throw new NotImplementedException();
         }
 
+        public async Task<Result<IEnumerable<TMstMastTypeDto>>> GetByCap(string brandCode, string classCode, string distributor, string capCode)
+        {
+            try
+            {
+                var parameters = new SqlParameter[]
+                {
+                    new SqlParameter("BrandCode", brandCode),
+                    new SqlParameter("ClassCode", classCode),
+                    new SqlParameter("Distributor", distributor),
+                    new SqlParameter("CapCode", capCode)
+                };
+                var repoResult = await _uow.MstMastType.ExecuteStoredProcedure("sp_GetMastTypeByCap", parameters);
+
+
+                var result = _mapper.Map<IEnumerable<TMstMastTypeDto>>(repoResult);
+
+                return Result.Ok(result.OrderBy(m => m.Code).AsEnumerable());
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail(ResponseStatusCode.InternalServerError + ":" + ex.GetMessage());
+            }
+            throw new NotImplementedException();
+        }
 
 
 

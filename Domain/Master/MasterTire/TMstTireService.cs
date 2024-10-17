@@ -8,9 +8,11 @@ using Core.Interfaces;
 using Core.Models;
 using Core.Models.Entities.Tables;
 using Core.Models.Entities.Tables.Master;
+using Domain.Master.LiftingHeight;
 using Domain.Master.MasterCategory;
 using Domain.MasterYardArea;
 using FluentResults;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -204,6 +206,32 @@ namespace Domain.Master.Tire
         }
 
 
+        public async Task<Result<IEnumerable<TMstTireDto>>> GetByLiftingHeight(string brandCode, string classCode, string distributor, string capCode, string mastTypeCode, string liftingHeightCode)
+        {
+            try
+            {
+                var parameters = new SqlParameter[]
+                {
+                    new SqlParameter("BrandCode", brandCode),
+                    new SqlParameter("ClassCode", classCode),
+                    new SqlParameter("Distributor", distributor),
+                    new SqlParameter("CapCode", capCode),
+                    new SqlParameter("MastTypeCode", mastTypeCode),
+                    new SqlParameter("LiftingHeightCode", liftingHeightCode)
+                };
+                var repoResult = await _uow.MstTire.ExecuteStoredProcedure("sp_GetTireByLiftingHeight", parameters);
+
+
+                var result = _mapper.Map<IEnumerable<TMstTireDto>>(repoResult);
+
+                return Result.Ok(result.OrderBy(m => m.Code).AsEnumerable());
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail(ResponseStatusCode.InternalServerError + ":" + ex.GetMessage());
+            }
+            throw new NotImplementedException();
+        }
 
 
 

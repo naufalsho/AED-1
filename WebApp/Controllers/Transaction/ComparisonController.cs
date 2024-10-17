@@ -22,7 +22,7 @@ namespace WebApp.Controllers.Transaction
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index(string brandName)
+        public async Task<IActionResult> Index(string brandName, string category)
         {
             // Decrypt the 'encryptedType' parameter
             //string decryptedType = EncryptionHelper.AesDecrypt(category);

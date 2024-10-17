@@ -57,7 +57,12 @@ panelHideLoader('#panelDiv', '#panelLoader');
             $('#ModelFilter').empty()
             $('#ModelFilter').append('<option value="" disabled selected>Please select one</option>');
             $.each(response, function (index, element) {
-                $('#ModelFilter').append(`<option value="${element.code}">${element.model}</option>`);
+                //jika MHB maka 
+                if (element.classCode == "CL00023") {
+                    $('#ModelFilter').append(`<option value="${element.code}">${element.model} -  </option>`);
+                } else {
+                    $('#ModelFilter').append(`<option value="${element.code}">${element.model}</option>`);
+                }
             })
         });
     }); 

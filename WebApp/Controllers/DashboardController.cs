@@ -17,7 +17,7 @@ namespace WebApp.Controllers
         private readonly IMstCategoryService _mstCategoryService;
         private readonly IMstBrandService _mstBrandService;
         private string urlPowerBiServiceApiRoot;
-
+            
         public DashboardController(IDashboardService dsSvc, IMstCategoryService mstCategoryService, IMstBrandService mstBrandService)
         {
             _mstCategoryService = mstCategoryService;
@@ -87,7 +87,7 @@ namespace WebApp.Controllers
         {
             //new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = Url.Action("Specification", "Dashboard", new { brandName }) },
             new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = Url.Action("RedirectProductSpec", "Dashboard", new { category = encryptedType , brandName = brandName}) },
-            new FeatureDto { Name = "Product Comparison", IconClass = "fa-repeat", Url = Url.Action("Index", "Comparison", new { brandName = brandName}) },
+            new FeatureDto { Name = "Product Comparison", IconClass = "fa-repeat", Url = Url.Action("Index", "Comparison", new { category = codeCategory, brandName = brandName}) },
             //new FeatureDto { Name = "Product Specification", IconClass = "fa-list", Url = Url.Action("", "ProductSpec") },
             //new FeatureDto { Name = "Product Comparison", IconClass = "fa-repeat", Url = Url.Action("", "Comparison") },
             new FeatureDto { Name = "Application Handbook", IconClass = "fa-book-open-reader", Url = Url.Action("RedirectToApplicationHandbook", "Dashboard", new { brandName = brandName }), Target = "_blank" },
@@ -110,11 +110,6 @@ namespace WebApp.Controllers
 
             return await Task.FromResult(features);
         }
-
-        // Placeholder actions for demonstration purposes
-        //public IActionResult Calculator(string brandName) => Content($"Calculator for {brandName}");
-        //public IActionResult Specification(string brandName) => Content($"Specification for {brandName}");
-        //public IActionResult Comparison(string brandName) => Content($"Comparison for {brandName}");
 
         public IActionResult RedirectToApplicationHandbook(string brandName)
         {

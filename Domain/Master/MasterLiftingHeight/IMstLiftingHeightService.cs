@@ -14,5 +14,6 @@ namespace Domain.Master.LiftingHeight
         Task<Result<TMstLiftingHeightDto>> Create(UserClaimModel user, TMstLiftingHeightCreatedDto data);
         Task<Result<TMstLiftingHeightDto>> Update(UserClaimModel user, TMstLiftingHeightCreatedDto data);
         Task<Result<TMstLiftingHeightDto>> Delete(UserClaimModel user, string id);
+        Task<Result<IEnumerable<TMstLiftingHeightDto>>> GetByMastType(string brandCode, string classCode, string distributor, string capCode, string mastTypeCode);
     }
 }

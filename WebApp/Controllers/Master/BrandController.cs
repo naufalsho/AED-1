@@ -5,6 +5,7 @@ using Core.Models;
 using Domain.AccessMenu;
 using Domain.Common;
 using Domain.Master;
+using Domain.Master.MasterModel;
 using Domain.MasterComparisonType;
 using Domain.MasterYardArea;
 using FluentResults;
@@ -60,6 +61,7 @@ namespace WebApp.Controllers.Master
             var getLastCode = await _mstBrandService.GetLastCode();
 
             ret.Code = getLastCode.Value;
+            ret.IsActive = true;
 
             return View(ViewPath.MasterBrandProcess, ret);
         }

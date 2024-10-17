@@ -14,5 +14,6 @@ namespace Domain.Master.Cap
         Task<Result<TMstCapDto>> Create(UserClaimModel user, TMstCapCreatedDto data);
         Task<Result<TMstCapDto>> Update(UserClaimModel user, TMstCapCreatedDto data);
         Task<Result<TMstCapDto>> Delete(UserClaimModel user, string id);
+        Task<Result<IEnumerable<TMstCapDto>>> GetByBrand(string brandCode, string classCode, string distributor);
     }
 }

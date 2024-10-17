@@ -14,5 +14,6 @@ namespace Domain.Master.Tire
         Task<Result<TMstTireDto>> Create(UserClaimModel user, TMstTireCreatedDto data);
         Task<Result<TMstTireDto>> Update(UserClaimModel user, TMstTireCreatedDto data);
         Task<Result<TMstTireDto>> Delete(UserClaimModel user, string id);
+        Task<Result<IEnumerable<TMstTireDto>>> GetByLiftingHeight(string brandCode, string classCode, string distributor, string capCode, string mastTypeCode, string liftingHeightCode);
     }
 }

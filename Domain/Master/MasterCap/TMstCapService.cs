@@ -12,6 +12,7 @@ using Core.Models.Entities.Tables.Master;
 using Domain.Master.MasterCategory;
 using Domain.MasterYardArea;
 using FluentResults;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -205,7 +206,29 @@ namespace Domain.Master.Cap
         }
 
 
+        public async Task<Result<IEnumerable<TMstCapDto>>> GetByBrand(string brandCode, string classCode, string distributor)
+        {
+            try
+            {
+                var parameters = new SqlParameter[]
+                {
+                    new SqlParameter("BrandCode", brandCode),
+                    new SqlParameter("ClassCode", classCode),
+                    new SqlParameter("Distributor", distributor)
+                };
+                var repoResult = await _uow.MstCap.ExecuteStoredProcedure("sp_GetCapByBrand", parameters);
 
+
+                var result = _mapper.Map<IEnumerable<TMstCapDto>>(repoResult);
+
+                return Result.Ok(result.OrderBy(m => m.Code).AsEnumerable());
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail(ResponseStatusCode.InternalServerError + ":" + ex.GetMessage());
+            }
+            throw new NotImplementedException();
+        }
 
 
     }

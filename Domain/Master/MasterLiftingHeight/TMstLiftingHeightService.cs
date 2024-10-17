@@ -9,8 +9,10 @@ using Core.Models;
 using Core.Models.Entities.Tables;
 using Core.Models.Entities.Tables.Master;
 using Domain.Master.MasterCategory;
+using Domain.Master.MastType;
 using Domain.MasterYardArea;
 using FluentResults;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -203,7 +205,31 @@ namespace Domain.Master.LiftingHeight
             throw new NotImplementedException();
         }
 
+        public async Task<Result<IEnumerable<TMstLiftingHeightDto>>> GetByMastType(string brandCode, string classCode, string distributor, string capCode, string mastTypeCode)
+        {
+            try
+            {
+                var parameters = new SqlParameter[]
+                {
+                    new SqlParameter("BrandCode", brandCode),
+                    new SqlParameter("ClassCode", classCode),
+                    new SqlParameter("Distributor", distributor),
+                    new SqlParameter("CapCode", capCode),
+                    new SqlParameter("MastTypeCode", mastTypeCode)
+                };
+                var repoResult = await _uow.MstLiftingHeight.ExecuteStoredProcedure("sp_GetLiftingHeightByMastType", parameters);
 
+
+                var result = _mapper.Map<IEnumerable<TMstLiftingHeightDto>>(repoResult);
+
+                return Result.Ok(result.OrderBy(m => m.Code).AsEnumerable());
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail(ResponseStatusCode.InternalServerError + ":" + ex.GetMessage());
+            }
+            throw new NotImplementedException();
+        }
 
 
 

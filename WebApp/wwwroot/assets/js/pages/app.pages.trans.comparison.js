@@ -41,7 +41,6 @@ panelHideLoader('#panelDiv', '#panelLoader');
 
         // Ambil nilai dari kolom terakhir berdasarkan competitor
         var lastBrand = parseInt($lastCompetitorColumn.find('.FilterBrand[data-brand="2"]').attr('data-brand'));
-        var lastDistributor = parseInt($lastCompetitorColumn.find('.FilterDistributor[data-distributor]').attr('data-distributor'));
         var lastModel = parseInt($lastCompetitorColumn.find('.FilterModel[data-model="2"]').attr('data-model'));
 
         var number = lastBrand + 1;
@@ -49,10 +48,6 @@ panelHideLoader('#panelDiv', '#panelLoader');
         // Ubah untuk memastikan kita menggunakan competitor
         $newColumn.find('.FilterBrand[data-brand="2"]')
             .attr('data-brand', number)
-            .val("");
-
-        $newColumn.find('.FilterDistributor[data-distributor]')
-            .attr('data-distributor', number)
             .val("");
 
         $newColumn.find('.FilterModel[data-model="2"]')
@@ -80,53 +75,7 @@ panelHideLoader('#panelDiv', '#panelLoader');
         }
     });
     //#endregion
-
-
     
-
-
-    //$(document).ready(function() {
-    //    // #region Filter Brand
-    //    $(document).on('change', '.FilterBrand', function(e) {
-    //        const brandNumber = $(this).data('brand');
-    //        var $distributorSelect = $(`[data-distributor="${brandNumber}"]`);
-
-    //        commonService.getDistributorByBrand($(this).val()).done(function (response) {
-    //            console.log(response);
-    //            if (response.length > 0) $distributorSelect.prop("disabled", false);
-    //            $distributorSelect.empty();
-    //            $distributorSelect.append('<option value="" disabled selected>Please select one</option>');
-    //            $.each(response, function (index, element) {
-    //                $distributorSelect.append(`<option value="${element}">${element}</option>`);
-    //            });
-    //        });
-    //    });
-    //    // #endregion
-
-    //    // #region Filter Distributor
-    //    $(document).on('change', '.FilterDistributor', function(e) {
-    //        const distNumber = $(this).data('distributor');
-    //        const brandCode = $(`.FilterBrand[data-brand="${distNumber}"]`).val();
-    //        const distributor = $(this).val();
-    //        const classCode = $("#FilterClass").val();
-
-    //        var $modelSelect = $(`[data-model="${distNumber}"]`);
-
-    //        commonService.getModelByParam(brandCode, distributor, classCode).done(function (response) {
-    //            console.log(response);
-    //            if (response.length > 0) $modelSelect.prop("disabled", false);
-    //            $modelSelect.empty();
-    //            $modelSelect.append('<option value="" disabled selected>Please select one</option>');
-    //            $.each(response, function (index, element) {
-    //                $modelSelect.append(`<option value="${element.code}">${element.model}</option>`);
-    //            });
-    //        });
-    //    });
-    //    // #endregion
-    //    $(document).on('click', '#compareNowBtn', function() {
-    //        getData();
-    //    });
-    //});
     $(document).ready(function () {
         // Get the brand name from the URL
         const brandName = getQueryParameter('brandName');
@@ -185,20 +134,167 @@ panelHideLoader('#panelDiv', '#panelLoader');
             const brandCode = $(this).val();
             const classCode = $("#FilterClass").val();
 
-            // Panggil API dengan parameter type (distributor)
-            commonService.getModelByParam(brandCode, type, classCode).done(function (response) {
-                if (response.length > 0) $modelSelect.prop("disabled", false);
-                $modelSelect.empty();
-                $modelSelect.append('<option value="" disabled selected>Please select one</option>');
-                $.each(response, function (index, element) {
-                    $modelSelect.append(`<option value="${element.code}">${element.model}</option>`);
+            if (brandName.toLowerCase() == 'toyota') {
+                var $capSelect = $(`[data-cap="${brandNumber}"]`);
+                commonService.getCapByBrand(brandCode, classCode, type).done(function (response) {
+                    if (response.length > 0) $capSelect.prop("disabled", false);
+                    $capSelect.empty();
+                    $capSelect.append('<option value="" disabled selected>Please select one</option>');
+                    $.each(response, function (index, element) {
+                        $capSelect.append(`<option value="${element.code}">${element.name}</option>`);
+                    });
                 });
-            });
+            } else {
+                // Panggil API dengan parameter type (distributor)
+                commonService.getModelByParam(brandCode, type, classCode).done(function (response) {
+                    if (response.length > 0) $modelSelect.prop("disabled", false);
+                    $modelSelect.empty();
+                    $modelSelect.append('<option value="" disabled selected>Please select one</option>');
+                    $.each(response, function (index, element) {
+                        $modelSelect.append(`<option value="${element.code}">${element.model}</option>`);
+                    });
+                });
+            } 
         });
         // #endregion
 
+        // #region Filter cap
+        $(document).on('change', '.Cap', function (e) {
+            if (brandName.toLowerCase() == 'toyota') {
+                const capNumber = $(this).data('cap');
+                const type = capNumber === 1 ? distributor.ProductTN : ' '; // Tentukan type berdasarkan data-brand
+                var $modelSelect = $(`[data-model="${capNumber}"]`);
+
+                // Panggil API untuk mendapatkan model berdasarkan Brand yang dipilih
+                const brandCode = $(`.MHD .FilterBrand[data-brand="${capNumber}"]`).val();
+
+                const capCode = $(this).val();
+                const classCode = $("#FilterClass").val();
+                commonService.getModelByParam(brandCode, type, classCode, capCode).done(function (response) {
+                    if (response.length > 0) $modelSelect.prop("disabled", false);
+                    $modelSelect.empty();
+                    $modelSelect.append('<option value="" disabled selected>Please select one</option>');
+                    $.each(response, function (index, element) {
+                        $modelSelect.append(`<option value="${element.code}">${element.model}</option>`);
+                    });
+                });
+            } 
+        });
+
+        // #region Filter model mhb
+        $(document).on('change', '.FilterModel', function (e) {
+            if (brandName.toLowerCase() == 'toyota') {
+                const modNumber = $(this).data('model');
+                const type = modNumber === 1 ? distributor.ProductTN : ' '; // Tentukan type berdasarkan data-brand
+                var $mastTypeSelect = $(`[data-mastType="${modNumber}"]`);
+
+                // Panggil API untuk mendapatkan model berdasarkan Brand yang dipilih
+                const brandCode = $(`.MHD .FilterBrand[data-brand="${modNumber}"]`).val();
+
+                const capCode = $(`.MHD .Cap[data-cap="${modNumber}"]`).val();
+                const classCode = $("#FilterClass").val();
+                commonService.getMastTypeByCap(brandCode, classCode, type, capCode).done(function (response) {
+                    console.log(response);
+                    if (response.length > 0) $mastTypeSelect.prop("disabled", false);
+                    $mastTypeSelect.empty();
+                    $mastTypeSelect.append('<option value="" disabled selected>Please select one</option>');
+                    $.each(response, function (index, element) {
+                        $mastTypeSelect.append(`<option value="${element.code}">${element.name}</option>`);
+                    });
+                });
+            }
+        });
+
+        // #region Filter masttype mhb
+        $(document).on('change', '.MastType', function (e) {
+            if (brandName.toLowerCase() == 'toyota') {
+                const masNumber = $(this).data('masttype');
+                const type = masNumber === 1 ? distributor.ProductTN : ' '; // Tentukan type berdasarkan data-brand
+                var $liftingHeightSelect = $(`[data-liftingheight="${masNumber}"]`);
+
+                // Panggil API untuk mendapatkan model berdasarkan Brand yang dipilih
+                const brandCode = $(`.MHD .FilterBrand[data-brand="${masNumber}"]`).val();
+
+                const capCode = $(`.MHD .Cap[data-cap="${masNumber}"]`).val();
+                const mastTypeCode = $(this).val();
+                const classCode = $("#FilterClass").val();
+                commonService.getLiftingHeightByMastType(brandCode, classCode, type, capCode, mastTypeCode).done(function (response) {
+                    console.log(response);
+                    if (response.length > 0) $liftingHeightSelect.prop("disabled", false);
+                    $liftingHeightSelect.empty();
+                    $liftingHeightSelect.append('<option value="" disabled selected>Please select one</option>');
+                    $.each(response, function (index, element) {
+                        $liftingHeightSelect.append(`<option value="${element.code}">${element.name}</option>`);
+                    });
+                });
+            }
+        });
+
+
+        // #region Filter liftingheight mhb
+        $(document).on('change', '.LiftingHeight', function (e) {
+            if (brandName.toLowerCase() == 'toyota') {
+                const lifNumber = $(this).data('liftingheight');
+                const type = lifNumber === 1 ? distributor.ProductTN : ' '; // Tentukan type berdasarkan data-brand
+                var $tireSelect = $(`[data-tire="${lifNumber}"]`);
+
+                // Panggil API untuk mendapatkan model berdasarkan Brand yang dipilih
+                const brandCode = $(`.MHD .FilterBrand[data-brand="${lifNumber}"]`).val();
+                const capCode = $(`.MHD .Cap[data-cap="${lifNumber}"]`).val();
+                const mastTypeCode = $(`.MHD .MastType[data-masttype="${lifNumber}"]`).val();
+                const liftingHeightCode = $(this).val();
+                const classCode = $("#FilterClass").val();
+                commonService.getTireByLiftingHeight(brandCode, classCode, type, capCode, mastTypeCode, liftingHeightCode).done(function (response) {
+                    console.log(response);
+                    if (response.length > 0) $tireSelect.prop("disabled", false);
+                    $tireSelect.empty();
+                    $tireSelect.append('<option value="" disabled selected>Please select one</option>');
+                    var typeDistributor = $(`.TypeDistributor[data-distributor="${lifNumber}"]`).val(type);
+                    $.each(response, function (index, element) {
+                        $tireSelect.append(`<option value="${element.code}">${element.name}</option>`);
+                    });
+                });
+            }
+        });
+
+        $(document).on('change', '.Tire', function (e) {
+            debugger;
+            if (brandName.toLowerCase() == 'toyota') {
+                const $class = $(`#FilterClass`).val();
+                const tireNumber = $(this).data('tire');
+
+                const $brand = $(`.MHD .FilterBrand[data-brand="${tireNumber}"]`).val();
+                const $distributor = $(`.MHD .TypeDistributor[data-distributor="${tireNumber}"]`).val();
+                const $capSelect = $(`.MHD .Cap[data-cap="${tireNumber}"]`).val();
+                const $mastTypeSelect = $(`.MHD .MastType[data-masttype="${tireNumber}"]`).val();
+                const $liftingHeightSelect = $(`.MHD .LiftingHeight[data-liftingheight="${tireNumber}"]`).val();
+                const $tireSelect = $(this).val();
+
+
+                $.get(`get/getModelByParam/${$brand}/${$distributor}/${$class}?capCode=${$capSelect}&mastTypeCode=${$mastTypeSelect}&liftingHeightCode=${$liftingHeightSelect}&tireCode=${$tireSelect}`).done(function (response) {
+                    var model = response.map(item => item.code);
+                    $(`.MHD FilterModel[data-model="${tireNumber}"]`).val(model);
+                    console.log("here = " +  model);
+                }).fail(function (response) {
+                    HandleHttpRequestFail(response);
+                })
+            }
+        });
+
         $(document).on('click', '#compareNowBtn', function () {
-            getData();
+            if (brandName.toLowerCase() == 'toyota') {
+                const $capSelect = $(`.MHD .Cap`).val();
+                const $mastTypeSelect = $(`.MHD .MastType`).val();
+                const $liftingHeightSelect = $(`.MHD .LiftingHeight`).val();
+                const $tireSelect = $(`.MHD .Tire`).val();
+                if ($capSelect == '' || $mastTypeSelect == '' || $liftingHeightSelect == '' || $tireSelect == '') {
+                    console.log("fail");
+                } else {
+                    getData();
+                }
+            } else {
+                getData();
+            }
         });
     });
         //#endregion
@@ -208,10 +304,10 @@ panelHideLoader('#panelDiv', '#panelLoader');
 var columnIndex = 1;
 
 function getData() {
-    const modelSelectors = $('.FilterModel'); 
+    const modelSelectors = $('.FilterModel');
     let models = [];
 
-    modelSelectors.each(function() {
+    modelSelectors.each(function () {
         let model = $(this).val();
         if (model) {
             models.push(model);
@@ -221,8 +317,8 @@ function getData() {
     let modelCode = models.join(',');
 
     var data = {
-        modelCode : modelCode,
-        categoryCode : $('.nav-link.active[data-table]').data('table')
+        modelCode: modelCode,
+        categoryCode: $('.nav-link.active[data-table]').data('table')
     }
 
     panelShowLoader('#panelDiv', '#panelLoader');
