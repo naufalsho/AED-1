@@ -239,12 +239,12 @@ namespace Domain.Master
                 if (repoResult == null)
                     return Result.Fail(ResponseStatusCode.BadRequest + ":Data not found!");
 
-                // Check for existing brand name
-                var checkName = await _uow.MstBrand.Set().FirstOrDefaultAsync(m => m.Name.ToLower() == data.Name.ToLower());
-                if (checkName != null) // Ensure checkName is not null before accessing its properties
-                {
-                    return Result.Fail(ResponseStatusCode.BadRequest + ": Name of brand available. Please change the name!");
-                }
+                //// Check for existing brand name
+                //var checkName = await _uow.MstBrand.Set().FirstOrDefaultAsync(m => m.Name.ToLower() == data.Name.ToLower());
+                //if (checkName != null) // Ensure checkName is not null before accessing its properties
+                //{
+                //    return Result.Fail(ResponseStatusCode.BadRequest + ": Name of brand available. Please change the name!");
+                //}
 
                 _mapper.Map(data, repoResult);
                 repoResult.Name= data.Name;

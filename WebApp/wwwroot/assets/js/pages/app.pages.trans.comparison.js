@@ -66,16 +66,16 @@ panelHideLoader('#panelDiv', '#panelLoader');
     $('#removeBtn').on('click', function (e) {
         e.preventDefault();
 
-        var $columns = $('#dTbComparison tr td').not(':last');
+        var $columns = $('#dTbComparison tr td'); // Pilih semua kolom
 
-        if ($columns.length > 2) {
-            // Remove the last column if there is more than one column
-            $columns.last().remove();
+        if ($columns.length > 2) { // Pastikan minimal ada dua kolom
+            $columns.last().remove(); // Hapus kolom paling kanan (terakhir ditambahkan)
         } else {
-            alert("At least two comparison column is required.");
+            alert("At least two comparison columns are required.");
         }
     });
     //#endregion
+
     
     $(document).ready(function () {
         // Get the brand name from the URL
