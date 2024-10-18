@@ -4,8 +4,8 @@ var dTable = '#dTable';
 var thisUrl = 'model';
 
 !function () {
-    //besarkan modal
-    $('.modal-dialog').addClass('modal-lg');
+    ////besarkan modal
+    //$('.modal-dialog').addClass('modal-lg');
 
 
     getData();

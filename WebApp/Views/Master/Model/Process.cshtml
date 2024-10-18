@@ -8,17 +8,17 @@
 <div>
     <form id="FormInput" asp-controller="@ViewData[ViewDataType.Controller]" asp-action="@ViewData[ViewDataType.Action]" asp-antiforgery="true" class="form-horizontal" enctype="multipart/form-data">
         
-        <div class="row">
+        @* <div class="row">
             <div class="col-yard col-md-8 border-end">
                 <!-- Model Description Section -->
                 <div class="border-bottom mb-2">
                     <h5>Model Description</h5>
                 </div>
-
+ *@
                 <div class="row mb-15px">
                     <label class="form-label col-form-label col-md-3">Code</label>
                     <div class="col-md-9">
-                        <input class="form-control" asp-for="Code" required  readonly/>
+                        <input class="form-control" asp-for="Code" required  reqd/>
                     </div>
                 </div>
 
@@ -61,18 +61,19 @@
                 <div class="row mb-15px">
                     <label class="form-label col-form-label col-md-3">Distributor</label>
                     <div class="col-md-9">
-                        <input class="form-control" list="datalistOptions" asp-for="Distributor" placeholder="Type to search...">
-                            <datalist id="datalistOptions">
-                                <option value="PT. Traktor Nusantara"></option>
-                                <option value="PT. Wahana Inti Selaras"></option>
-                                <option value="PT. Altrak 1978"></option>
-                                <option value="PT. Agrisarana"></option>
-                                <option value="PT. Bina Pertiwi"></option>
-                                <option value="PT. Swadaya Harapan Nusantara"></option>
-                                <option value="PT. Satrindo Mitra Utama"></option>
-                            </datalist>
+                        <select class="form-select" id="datalistOptions" asp-for="Distributor" placeholder="Select or type to search...">
+                            <option value="" disabled selected>Select a distributor...</option>
+                            <option value="PT. Traktor Nusantara">PT. Traktor Nusantara</option>
+                            <option value="PT. Wahana Inti Selaras">PT. Wahana Inti Selaras</option>
+                            <option value="PT. Altrak 1978">PT. Altrak 1978</option>
+                            <option value="PT. Agrisarana">PT. Agrisarana</option>
+                            <option value="PT. Bina Pertiwi">PT. Bina Pertiwi</option>
+                            <option value="PT. Swadaya Harapan Nusantara">PT. Swadaya Harapan Nusantara</option>
+                            <option value="PT. Satrindo Mitra Utama">PT. Satrindo Mitra Utama</option>
+                        </select>
                     </div>
                 </div>
+
 
                 <div class="row mb-15px">
                     <label class="form-label col-form-label col-md-3">Country</label>
@@ -97,7 +98,7 @@
 
 
 
-                <div id="rowActive mt-2" class="row mb-15px"> 
+                <div id="rowActive mt-2" class="row mb-15px">
                     <label class="form-label col-form-label col-md-3">Active?</label>
                     <div class="col-md-9">
                         <div class="form-check mt-2 mb-2">
@@ -105,11 +106,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
+           @*  </div>
 
 
 
-            <div class="col-capacity col-md-4">
+            <div class="col-capacity col-md-4" >
                 <!-- Optional Description Section -->
                 <div class="border-bottom mb-2 optional-description">
                     <h5>Optional Description</h5>
@@ -151,7 +152,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> *@
     </form>
 </div>
 
