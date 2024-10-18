@@ -4,6 +4,7 @@ var dTable = '#dTable';
 var thisUrl = 'comparison';
 
 
+
 panelHideLoader('#panelDiv', '#panelLoader');
 
 //NO Print fungsional
@@ -78,7 +79,9 @@ panelHideLoader('#panelDiv', '#panelLoader');
     
     $(document).ready(function () {
         // Get the brand name from the URL
-        const brandName = getQueryParameter('brandName');
+        //const brandName = getQueryParameter('brandName');
+        const brandName ='me';
+
 
         // Toggle the visibility of MHD and non-MHD sections based on the brand name
         if (brandName && brandName.toLowerCase() === 'toyota') {
@@ -145,8 +148,10 @@ panelHideLoader('#panelDiv', '#panelLoader');
                     });
                 });
             } else {
+                debugger;
                 // Panggil API dengan parameter type (distributor)
                 commonService.getModelByParam(brandCode, type, classCode).done(function (response) {
+                    debugger
                     if (response.length > 0) $modelSelect.prop("disabled", false);
                     $modelSelect.empty();
                     $modelSelect.append('<option value="" disabled selected>Please select one</option>');
@@ -293,6 +298,7 @@ panelHideLoader('#panelDiv', '#panelLoader');
                     getData();
                 }
             } else {
+                debugger;
                 getData();
             }
         });
@@ -304,7 +310,8 @@ panelHideLoader('#panelDiv', '#panelLoader');
 var columnIndex = 1;
 
 function getData() {
-    const modelSelectors = $('.FilterModel');
+    debugger;
+    const modelSelectors = $('.non-MHD .FilterModel');
     let models = [];
 
     modelSelectors.each(function () {
@@ -324,6 +331,7 @@ function getData() {
     panelShowLoader('#panelDiv', '#panelLoader');
 
     $.get(`${thisUrl}/GetList`, data).done(function (response) {
+        debugger;
         $('.img-notfound').prop('hidden', true)
         $(dTable).html(response)
         panelHideLoader('#panelDiv', '#panelLoader');

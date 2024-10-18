@@ -180,60 +180,85 @@ namespace WebApp.Controllers
             }
         }
 
+        //[HttpGet("get/getModelByParam/{brandCode}/{distributor}/{classCode}")]
+        //public async Task<IActionResult> GetModelByParam(
+        //                                             string brandCode,
+        //                                             string distributor,
+        //                                             string classCode,
+        //                                             string? capCode = null,  // Parameter opsional untuk MHB
+        //                                             string? mastTypeCode = null,
+        //                                             string? liftingHeightCode = null,
+        //                                             string? tireCode = null)
+        //{
+        //    var ret = await _mstModelService.GetAll();
+
+        //    if (ret.IsSuccess)
+        //    {
+
+        //        var filteredData = ret.Value
+        //            .Where(m => (string.IsNullOrEmpty(brandCode) || m.BrandCode == brandCode)
+        //                        && (string.IsNullOrEmpty(distributor) || m.Distributor == distributor)
+        //                        && (string.IsNullOrEmpty(classCode) || m.ClassCode == classCode)
+        //                        && m.IsActive
+        //                        )
+        //            .ToList();
+
+        //        // filter jika untuk MHB
+        //        if (capCode != null)
+        //        {
+        //            filteredData = ret.Value
+        //            .Where(m => (string.IsNullOrEmpty(brandCode) || m.BrandCode == brandCode)
+        //                        && (string.IsNullOrEmpty(distributor) || m.Distributor == distributor)
+        //                        && (string.IsNullOrEmpty(classCode) || m.ClassCode == classCode)
+        //                        // Filter untuk MHB: hanya diterapkan jika capCode dan parameter lain tidak null
+        //                        && (string.IsNullOrEmpty(capCode) || m.CapCode == capCode)
+        //                        && (string.IsNullOrEmpty(mastTypeCode) || m.MastTypeCode == mastTypeCode)
+        //                        && (string.IsNullOrEmpty(liftingHeightCode) || m.LiftingHeightCode == liftingHeightCode)
+        //                        && (string.IsNullOrEmpty(tireCode) || m.TireCode == tireCode)
+        //                        && m.IsActive
+        //                        )
+        //                        // Grouping berdasarkan kolom tertentu yang diinginkan
+        //                        .GroupBy(m => new
+        //                        {
+        //                            m.Model,
+        //                            m.Type,
+        //                            m.Distributor,
+        //                            m.Country,
+        //                            m.BrandCode,
+        //                            m.ClassCode,
+        //                            m.ModelImage,
+        //                            m.CapCode
+        //                        })
+        //                        // Mengambil item pertama dalam setiap group
+        //                        .Select(g => g.First()) // Mengambil perwakilan dari setiap grup
+        //            .ToList();
+        //        }
+
+        //        return Ok(filteredData);
+        //    }
+        //    else
+        //    {
+        //        var resp = ResponseHelper.CreateFailResult(ret.Reasons.First().Message);
+
+        //        return StatusCode(int.Parse(resp.StatusCode), resp.Message);
+        //    }
+        //}
+
+
         [HttpGet("get/getModelByParam/{brandCode}/{distributor}/{classCode}")]
-        public async Task<IActionResult> GetModelByParam(
-                                                     string brandCode,
-                                                     string distributor,
-                                                     string classCode,
-                                                     string? capCode = null,  // Parameter opsional untuk MHB
-                                                     string? mastTypeCode = null,
-                                                     string? liftingHeightCode = null,
-                                                     string? tireCode = null)
+        public async Task<IActionResult> GetModelByParam(string brandCode, string distributor, string classCode)
         {
+
             var ret = await _mstModelService.GetAll();
+
 
             if (ret.IsSuccess)
             {
-
                 var filteredData = ret.Value
-                    .Where(m => (string.IsNullOrEmpty(brandCode) || m.BrandCode == brandCode)
-                                && (string.IsNullOrEmpty(distributor) || m.Distributor == distributor)
-                                && (string.IsNullOrEmpty(classCode) || m.ClassCode == classCode)
-                                && m.IsActive
-                                )
-                    .ToList();
-
-                // filter jika untuk MHB
-                if (capCode != null)
-                {
-                    filteredData = ret.Value
-                    .Where(m => (string.IsNullOrEmpty(brandCode) || m.BrandCode == brandCode)
-                                && (string.IsNullOrEmpty(distributor) || m.Distributor == distributor)
-                                && (string.IsNullOrEmpty(classCode) || m.ClassCode == classCode)
-                                // Filter untuk MHB: hanya diterapkan jika capCode dan parameter lain tidak null
-                                && (string.IsNullOrEmpty(capCode) || m.CapCode == capCode)
-                                && (string.IsNullOrEmpty(mastTypeCode) || m.MastTypeCode == mastTypeCode)
-                                && (string.IsNullOrEmpty(liftingHeightCode) || m.LiftingHeightCode == liftingHeightCode)
-                                && (string.IsNullOrEmpty(tireCode) || m.TireCode == tireCode)
-                                && m.IsActive
-                                )
-                                // Grouping berdasarkan kolom tertentu yang diinginkan
-                                .GroupBy(m => new
-                                {
-                                    m.Model,
-                                    m.Type,
-                                    m.Distributor,
-                                    m.Country,
-                                    m.BrandCode,
-                                    m.ClassCode,
-                                    m.ModelImage,
-                                    m.CapCode
-                                })
-                                // Mengambil item pertama dalam setiap group
-                                .Select(g => g.First()) // Mengambil perwakilan dari setiap grup
-                    .ToList();
-                }
-
+                   .Where(m => (string.IsNullOrEmpty(brandCode) || m.BrandCode == brandCode) &&
+                               (string.IsNullOrEmpty(distributor) || m.Distributor == distributor)
+                               && (string.IsNullOrEmpty(classCode) || m.ClassCode == classCode))
+                   .ToList();
                 return Ok(filteredData);
             }
             else

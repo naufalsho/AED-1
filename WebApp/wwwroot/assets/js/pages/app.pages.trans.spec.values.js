@@ -59,7 +59,7 @@ panelHideLoader('#panelDiv', '#panelLoader');
             $.each(response, function (index, element) {
                 //jika MHB maka 
                 if (element.classCode == "CL00023") {
-                    $('#ModelFilter').append(`<option value="${element.code}">${element.model} -  </option>`);
+                    $('#ModelFilter').append(`<option value="${element.code}">${element.model}</option>`);
                 } else {
                     $('#ModelFilter').append(`<option value="${element.code}">${element.model}</option>`);
                 }

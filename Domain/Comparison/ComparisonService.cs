@@ -44,7 +44,7 @@ namespace Domain.Comparison
             try
             {
                 var parameters = new DynamicParameters();
-                parameters.Add("@CategoryCode", param.CategoryCode);
+                //parameters.Add("@CategoryCode", param.CategoryCode);
                 parameters.Add("@ModelCode", param.ModelCode);
 
                 var connectionString = "Server=10.0.10.73;Initial Catalog=AED;User ID=sa;Password=tnhc1$d13;TrustServerCertificate=False;Connection Timeout=30;";
